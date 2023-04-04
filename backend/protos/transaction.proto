@@ -1,0 +1,53 @@
+syntax = "proto3";
+package transaction;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+service TransactionPiggyBankService {
+  rpc deposit(DepositRequest) returns (TransactionResponse);
+  rpc withdraw(WithdrawRequest) returns (TransactionResponse);
+  rpc getTransactionDetails(google.protobuf.StringValue) returns (TransactionResponse);
+}
+
+message WithdrawRequest {
+  string account_id = 1;
+  float amount = 4;
+  optional TransactionType type = 5;
+}
+
+message TransactionResponse {
+  bool successful = 1;
+  string message = 2;
+  optional Transaction transaction = 3;
+}
+
+message DepositRequest {
+  string sender_account_id = 2;
+  string recipient_account_id = 3;
+  float amount = 4;
+  optional TransactionType type = 5;
+}
+
+message Transaction {
+  string id = 1;
+  string sender_account_id = 2;
+  string recipient_account_id = 3;
+  float amount = 4;
+  optional string narration = 8;
+  optional TransactionType type = 5;
+  google.protobuf.Timestamp date_issued = 6;
+  google.protobuf.Timestamp created_at = 7;
+}
+
+enum TransactionType {
+  CASH = 0;
+  DIGITAL_TRANSFER = 1;
+}
+
+enum TransactionStatus {
+  PENDING = 0;
+  SUCCESSFUL = 1;
+  FAILED = 2;
+}

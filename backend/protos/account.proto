@@ -1,0 +1,53 @@
+syntax = "proto3";
+package account;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+service AccountPiggyBankService {
+  rpc getAllAccount(GetAllAccountRequest) returns (stream GetAllAccountResponse);
+  rpc createUser(PiggyBankAccount) returns (SingleAccountResponse);
+  rpc updateUser(PiggyBankAccount) returns (SingleAccountResponse);
+  rpc deleteUser(google.protobuf.StringValue) returns (DeleteResponse);
+  rpc getUser(google.protobuf.StringValue) returns (SingleAccountResponse);
+}
+
+message GetAllAccountRequest {
+  optional int32 pageSize = 1;
+  optional int32 previousPage = 2;
+  optional int32 offset = 3;
+}
+
+message GetAllAccountResponse {
+  repeated PiggyBankAccount accounts = 1 [lazy = true];
+}
+
+message SingleAccountResponse {
+  bool successful = 1;
+  optional string message = 2;
+  optional PiggyBankAccount account = 3 [lazy = true];
+}
+
+message DeleteResponse {
+  bool successful = 1;
+  optional string message = 2;
+}
+
+message PiggyBankAccount {
+  string id = 1;
+  string user_id = 2;
+  float balance = 3;
+  AccountStatus status = 4;
+  string currency = 5;
+  google.protobuf.Timestamp created_at = 10;
+  google.protobuf.Timestamp updated_at = 11;
+}
+
+enum AccountStatus {
+  ACTIVE = 0;
+  DORMANT = 1;
+  SUSPENDED = 2;
+  BLOCKED = 3;
+  UNKNOWN = 4;
+}

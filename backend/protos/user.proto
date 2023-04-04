@@ -1,0 +1,46 @@
+syntax = "proto3";
+package user;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+service UserPiggyBankService {
+  rpc getAllUsers(GetAllUsersRequest) returns (stream GetAllUsersResponse);
+  rpc createUser(PiggyBankUser) returns (SingleUserResponse);
+  rpc updateUser(PiggyBankUser) returns (SingleUserResponse);
+  rpc deleteUser(google.protobuf.StringValue) returns (DeleteResponse);
+  rpc getUser(google.protobuf.StringValue) returns (SingleUserResponse);
+}
+
+message GetAllUsersRequest {
+  optional int32 pageSize = 1;
+  optional int32 previousPage = 2;
+  optional int32 offset = 3;
+}
+
+message GetAllUsersResponse {
+  repeated PiggyBankUser users = 1 [lazy = true];
+}
+
+message SingleUserResponse {
+  bool successful = 1;
+  optional string message = 2;
+  optional PiggyBankUser user = 3 [lazy = true];
+}
+
+message DeleteResponse {
+  bool successful = 1;
+  optional string message = 2;
+}
+
+message PiggyBankUser {
+  string id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string date_of_birth = 4;
+  optional string city = 5;
+  optional string mobile_no = 6;
+  optional string email = 7;
+  google.protobuf.Timestamp created_at = 10;
+}
