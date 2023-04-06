@@ -1,5 +1,5 @@
 [package]
-name = "piggybank"
+name = "customer-piggybank"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 tonic = { version = "0.9.1", features = [] }
+tonic-reflection = "0.9.1"
 bytes = "1.4.0"
 prost = "0.11.8"
 prost-derive = "0.11.8"
