@@ -7,29 +7,9 @@
     <cargoProject FILE="$PROJECT_DIR$/customer-server/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="go works">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savings-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savings-server/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savings-server/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savings-server/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savings-server/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/piggybank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/piggybank.iml" afterDir="false" />
+    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="kotlin server compiles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen-dart-protos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gen-dart-protos.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen-ruby-protos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gen-ruby-protos.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/savings.pb.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/savings.pb.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/savings.pbenum.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/savings.pbenum.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/savings.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/savings.pbgrpc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/savings.pbjson.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/savings.pbjson.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savings-server/Gemfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/savings-server/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/savings-server/savings-server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/savings-server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +266,7 @@
       <updated>1680787540098</updated>
       <workItem from="1680787542814" duration="32000" />
       <workItem from="1680787729748" duration="6113000" />
-      <workItem from="1680793915046" duration="2226000" />
+      <workItem from="1680793915046" duration="2277000" />
     </task>
     <task id="LOCAL-00001" summary="rust works">
       <created>1680788053657</created>
@@ -302,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680788371585</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="kotlin server compiles">
+      <created>1680800001111</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680800001111</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +298,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rust works" />
     <MESSAGE value="go works" />
-    <option name="LAST_COMMIT_MESSAGE" value="go works" />
+    <MESSAGE value="kotlin server compiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="kotlin server compiles" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
