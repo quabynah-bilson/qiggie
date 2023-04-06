@@ -2,9 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile/core/di/injection.dart';
 import 'package:mobile/core/utils/constants.dart';
-import 'package:mobile/protos/bank.pbgrpc.dart';
-import 'package:mobile/protos/customer.pbgrpc.dart';
-import 'package:protobuf_google/protobuf_google.dart';
+import 'package:mobile/protos/savings.pbgrpc.dart';
 import 'package:shared_utils/shared_utils.dart';
 
 /// welcome page for all users
@@ -17,7 +15,6 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
-
   @override
   void initState() {
     super.initState();
@@ -55,8 +52,10 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 
   void _testGrpc() async {
-    var client = getIt<CustomerServiceClient>();
-    client.getCurrentCustomer(Empty()).listen((value) {
+    var client = getIt<SavingsServiceClient>();
+    client
+        .listSavings(ListSavingsRequest(customerId: 'hello', piggybankId: 'gi'))
+        .listen((value) {
       logger.d('current customer: $value');
     });
   }

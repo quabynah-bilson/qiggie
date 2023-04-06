@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/bank-server/bank-server.iml" filepath="$PROJECT_DIR$/bank-server/bank-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/customer-server/customer-server.iml" filepath="$PROJECT_DIR$/customer-server/customer-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/piggybank.iml" filepath="$PROJECT_DIR$/.idea/piggybank.iml" />
-      <module fileurl="file://$PROJECT_DIR$/savings-server/savings-server.iml" filepath="$PROJECT_DIR$/savings-server/savings-server.iml" />
     </modules>
   </component>
 </project>

@@ -17,3 +17,15 @@ mobile-deps:
  #server.add_http2_port('0.0.0.0:1151', :this_port_is_insecure)
  #server.handle(SavingsServer.new)
  #server.run_till_terminated
+
+# def add_savings(savings, _call)
+  #    # Implement your logic here
+  #  end
+  #
+  #  def get_savings(savings_id, _call)
+  #    # Implement your logic here
+  #  end
+  #
+  #  def list_savings(list_savings_request, _call)
+  #    # Implement your logic here
+  #  end

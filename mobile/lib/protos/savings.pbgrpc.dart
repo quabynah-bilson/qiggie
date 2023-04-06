@@ -24,10 +24,10 @@ class SavingsServiceClient extends $grpc.Client {
       ($1.StringValue value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Savings.fromBuffer(value));
   static final _$listSavings =
-      $grpc.ClientMethod<$0.ListSavingsRequest, $0.SavingsList>(
+      $grpc.ClientMethod<$0.ListSavingsRequest, $0.Savings>(
           '/savings.SavingsService/ListSavings',
           ($0.ListSavingsRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.SavingsList.fromBuffer(value));
+          ($core.List<$core.int> value) => $0.Savings.fromBuffer(value));
 
   SavingsServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -45,8 +45,7 @@ class SavingsServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getSavings, request, options: options);
   }
 
-  $grpc.ResponseStream<$0.SavingsList> listSavings(
-      $0.ListSavingsRequest request,
+  $grpc.ResponseStream<$0.Savings> listSavings($0.ListSavingsRequest request,
       {$grpc.CallOptions? options}) {
     return $createStreamingCall(
         _$listSavings, $async.Stream.fromIterable([request]),
@@ -72,14 +71,14 @@ abstract class SavingsServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.StringValue.fromBuffer(value),
         ($0.Savings value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.ListSavingsRequest, $0.SavingsList>(
+    $addMethod($grpc.ServiceMethod<$0.ListSavingsRequest, $0.Savings>(
         'ListSavings',
         listSavings_Pre,
         false,
         true,
         ($core.List<$core.int> value) =>
             $0.ListSavingsRequest.fromBuffer(value),
-        ($0.SavingsList value) => value.writeToBuffer()));
+        ($0.Savings value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.Savings> getSavings_Pre(
@@ -87,7 +86,7 @@ abstract class SavingsServiceBase extends $grpc.Service {
     return getSavings(call, await request);
   }
 
-  $async.Stream<$0.SavingsList> listSavings_Pre($grpc.ServiceCall call,
+  $async.Stream<$0.Savings> listSavings_Pre($grpc.ServiceCall call,
       $async.Future<$0.ListSavingsRequest> request) async* {
     yield* listSavings(call, await request);
   }
@@ -96,6 +95,6 @@ abstract class SavingsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $async.Stream<$0.Savings> request);
   $async.Future<$0.Savings> getSavings(
       $grpc.ServiceCall call, $1.StringValue request);
-  $async.Stream<$0.SavingsList> listSavings(
+  $async.Stream<$0.Savings> listSavings(
       $grpc.ServiceCall call, $0.ListSavingsRequest request);
 }

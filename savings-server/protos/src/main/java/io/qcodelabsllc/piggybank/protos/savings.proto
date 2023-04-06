@@ -1,0 +1,28 @@
+syntax = "proto3";
+package savings;
+option java_multiple_files = true;
+option java_package = "io.qcodelabsllc.piggybank.protos";
+option java_outer_classname = "SavingsService";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+
+service SavingsService {
+  rpc add_savings(stream Savings) returns (google.protobuf.StringValue);
+  rpc get_savings(google.protobuf.StringValue) returns (Savings);
+  rpc list_savings(ListSavingsRequest) returns (stream Savings);
+}
+
+message ListSavingsRequest {
+  string customer_id = 1;
+  string piggybank_id = 2;
+}
+
+message Savings {
+  string id = 1;
+  string piggybank_id = 2;
+  double amount = 3;
+  google.protobuf.Timestamp transaction_date = 4;
+}

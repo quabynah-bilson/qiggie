@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="savings-server.main" target="17" />
+      <module name="savings-server.protos" target="17" />
+      <module name="savings-server.protos.main" target="17" />
+      <module name="savings-server.protos.test" target="17" />
+      <module name="savings-server.stub" target="1.8" />
+      <module name="savings-server.stub.main" target="1.8" />
+      <module name="savings-server.stub.test" target="1.8" />
+      <module name="savings-server.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

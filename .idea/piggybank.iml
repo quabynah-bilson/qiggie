@@ -9,8 +9,13 @@
       <sourceFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/android/src/test/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/example/android/app/src/androidTest/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/example/android/app/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/mobile/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/mobile/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/mobile/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>
