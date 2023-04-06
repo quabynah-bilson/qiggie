@@ -7,16 +7,20 @@
     <cargoProject FILE="$PROJECT_DIR$/rust-customer-server/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4e5b83a-3a23-48e8-8cc2-2382a786e836" name="Changes" comment="Added go server">
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/build.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust-customer-server/build.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/protos/bank.proto" beforeDir="false" afterPath="$PROJECT_DIR$/go-bank-server/protos/bank.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/protos/savings.proto" beforeDir="false" afterPath="$PROJECT_DIR$/ruby-savings-server/protos/savings.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust-customer-server/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/services/bank.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/services/customer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust-customer-server/src/services/customer.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/services/savings.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/services/transaction.rs" beforeDir="false" />
+    <list default="true" id="a4e5b83a-3a23-48e8-8cc2-2382a786e836" name="Changes" comment="Added mobile app">
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Flutter/Debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Flutter/Release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Flutter/Flutter-Debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Flutter/Flutter-Release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,34 +48,35 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;Android Studio default JDK&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/quabynah/src/projects/personal-studies/piggybank/ruby-savings-server/protos&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;language.rust.rustfmt&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "dev",
+    "go.import.settings.migrated": "true",
+    "jdk.selected.JAVA_MODULE": "Android Studio default JDK",
+    "last_opened_file_path": "/Users/quabynah/src/projects/personal-studies/piggybank/ruby-savings-server/protos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "ruby.rails.projectView.checked": "true",
+    "settings.editor.selected.configurable": "language.rust.rustfmt",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ruby-savings-server/protos" />
@@ -83,7 +88,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Makefile Target.gen-protos-bank">
+  <component name="RunManager" selected="Makefile Target.mobile-deps">
     <configuration name="customer-server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/backend" />
@@ -120,14 +125,22 @@
       </makefile>
       <method v="2" />
     </configuration>
+    <configuration name="mobile-deps" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="mobile-deps" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Cargo.customer-server" />
       <item itemvalue="Flutter.main.dart" />
       <item itemvalue="Go Build.bank-server" />
       <item itemvalue="Makefile Target.gen-protos-bank" />
+      <item itemvalue="Makefile Target.mobile-deps" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Makefile Target.mobile-deps" />
         <item itemvalue="Makefile Target.gen-protos-bank" />
         <item itemvalue="Go Build.bank-server" />
       </list>
@@ -150,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680777491858</updated>
       <workItem from="1680777493078" duration="2240000" />
-      <workItem from="1680779739368" duration="136000" />
+      <workItem from="1680779739368" duration="572000" />
     </task>
     <task id="LOCAL-00001" summary="Added go server">
       <created>1680778998033</created>
@@ -166,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680779007163</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added mobile app">
+      <created>1680779946493</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680779946493</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +194,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added go server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added go server" />
+    <MESSAGE value="Added mobile app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added mobile app" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
