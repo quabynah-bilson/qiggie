@@ -17,16 +17,14 @@ class _PiggyBankAppState extends State<PiggyBankApp> {
   final _router = PiggyBankRouter();
 
   @override
-  Widget build(BuildContext context) => MultiBlocProvider(
-        providers: [],
-        child: DismissKeyboard(
-          child: MaterialApp.router(
-            routerConfig: _router.config(),
-            debugShowCheckedModeBanner: !kReleaseMode,
-            title: kAppName,
-            theme: ThemeData(primarySwatch: Colors.amber),
-            themeMode: ThemeMode.light,
-          ),
-        ),
-      );
+  Widget build(BuildContext context) => DismissKeyboard(
+    child: MaterialApp.router(
+      routerConfig: _router.config(),
+      debugShowCheckedModeBanner: !kReleaseMode,
+      title: kAppName,
+      theme: kLightTheme(context: context),
+      darkTheme: kDarkTheme(context: context),
+      themeMode: ThemeMode.system,
+    ),
+  );
 }
