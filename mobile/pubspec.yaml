@@ -19,6 +19,9 @@ dependencies:
   get_it: ^7.2.0
   auto_route: ^6.0.5
   google_fonts: ^4.0.3
+  shared_utils:
+    git: https://github.com/quabynah-bilson/shared_utils.git
+  protobuf: ^2.1.0
 
 dev_dependencies:
   flutter_test:
