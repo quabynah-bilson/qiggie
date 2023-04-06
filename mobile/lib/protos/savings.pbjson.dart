@@ -19,6 +19,16 @@ const ListSavingsRequest$json = const {
 
 /// Descriptor for `ListSavingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listSavingsRequestDescriptor = $convert.base64Decode('ChJMaXN0U2F2aW5nc1JlcXVlc3QSHwoLY3VzdG9tZXJfaWQYASABKAlSCmN1c3RvbWVySWQSIQoMcGlnZ3liYW5rX2lkGAIgASgJUgtwaWdneWJhbmtJZA==');
+@$core.Deprecated('Use savingsResponseDescriptor instead')
+const SavingsResponse$json = const {
+  '1': 'SavingsResponse',
+  '2': const [
+    const {'1': 'savings', '3': 1, '4': 3, '5': 11, '6': '.savings.Savings', '10': 'savings'},
+  ],
+};
+
+/// Descriptor for `SavingsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List savingsResponseDescriptor = $convert.base64Decode('Cg9TYXZpbmdzUmVzcG9uc2USKgoHc2F2aW5ncxgBIAMoCzIQLnNhdmluZ3MuU2F2aW5nc1IHc2F2aW5ncw==');
 @$core.Deprecated('Use savingsDescriptor instead')
 const Savings$json = const {
   '1': 'Savings',

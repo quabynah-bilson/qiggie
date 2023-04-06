@@ -2,8 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile/core/di/injection.dart';
 import 'package:mobile/core/utils/constants.dart';
+import 'package:mobile/protos/bank.pbgrpc.dart';
 import 'package:mobile/protos/savings.pbgrpc.dart';
+import 'package:protobuf_google/protobuf_google.dart';
 import 'package:shared_utils/shared_utils.dart';
+
+import '../../../../protos/customer.pbgrpc.dart';
 
 /// welcome page for all users
 @RoutePage()
@@ -52,10 +56,20 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 
   void _testGrpc() async {
-    var client = getIt<SavingsServiceClient>();
-    client
+    var savingsClient = getIt<SavingsServiceClient>();
+    savingsClient
         .listSavings(ListSavingsRequest(customerId: 'hello', piggybankId: 'gi'))
         .listen((value) {
+      logger.d('savings accounts: $value');
+    });
+
+    var bankClient = getIt<PiggyBankServiceClient>();
+    bankClient.listPiggyBanks(Empty()).listen((value) {
+      logger.d('piggies: $value');
+    });
+
+    var customerClient = getIt<CustomerServiceClient>();
+    customerClient.getCurrentCustomer(Empty()).listen((value) {
       logger.d('current customer: $value');
     });
   }

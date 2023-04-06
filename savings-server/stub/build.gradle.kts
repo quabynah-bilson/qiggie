@@ -5,31 +5,31 @@ import com.google.protobuf.gradle.protobuf
 import com.google.protobuf.gradle.protoc
 
 plugins {
-    id ("org.jetbrains.kotlin.jvm") version "1.8.20" apply true
-    id("com.google.protobuf") version "0.8.15" apply true
+    kotlin("jvm")
+    id("com.google.protobuf")
 }
 
 dependencies {
     protobuf(project(":protos"))
-
-    api(kotlin("stdlib"))
-    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2")
-
-    api("io.grpc:grpc-protobuf:${rootProject.ext["grpcVersion"]}")
-    api("com.google.protobuf:protobuf-java-util:${rootProject.ext["protobufVersion"]}")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:${rootProject.ext["coroutinesVersion"]}")
+    api("io.grpc:grpc-stub:${rootProject.ext["grpcVersion"]}")
+    api("io.grpc:grpc-protobuf-lite:${rootProject.ext["grpcVersion"]}")
     api("io.grpc:grpc-kotlin-stub:${rootProject.ext["grpcKotlinVersion"]}")
+    api("com.google.protobuf:protobuf-kotlin-lite:${rootProject.ext["protobufVersion"]}")
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
 }
 
-sourceSets {
-    val main by getting { }
-    main.java.srcDirs("build/generated/source/proto/main/grpc")
-    main.java.srcDirs("build/generated/source/proto/main/grpckt")
-    main.java.srcDirs("build/generated/source/proto/main/java")
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().all {
+    kotlinOptions {
+        freeCompilerArgs = listOf("-opt-in=kotlin.RequiresOptIn")
+    }
 }
+
 
 protobuf {
     protoc {
@@ -40,14 +40,26 @@ protobuf {
             artifact = "io.grpc:protoc-gen-grpc-java:${rootProject.ext["grpcVersion"]}"
         }
         id("grpckt") {
-            artifact = "io.grpc:protoc-gen-grpc-kotlin:0.2.0:jdk7@jar"
+            artifact = "io.grpc:protoc-gen-grpc-kotlin:${rootProject.ext["grpcKotlinVersion"]}:jdk8@jar"
         }
     }
     generateProtoTasks {
         all().forEach {
+            it.builtins {
+                named("java") {
+                    option("lite")
+                }
+                id("kotlin") {
+                    option("lite")
+                }
+            }
             it.plugins {
-                id("grpc")
-                id("grpckt")
+                id("grpc") {
+                    option("lite")
+                }
+                id("grpckt") {
+                    option("lite")
+                }
             }
         }
     }

@@ -72,6 +72,47 @@ class ListSavingsRequest extends $pb.GeneratedMessage {
   void clearPiggybankId() => clearField(2);
 }
 
+class SavingsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SavingsResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'savings'), createEmptyInstance: create)
+    ..pc<Savings>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'savings', $pb.PbFieldType.PM, subBuilder: Savings.create)
+    ..hasRequiredFields = false
+  ;
+
+  SavingsResponse._() : super();
+  factory SavingsResponse({
+    $core.Iterable<Savings>? savings,
+  }) {
+    final _result = create();
+    if (savings != null) {
+      _result.savings.addAll(savings);
+    }
+    return _result;
+  }
+  factory SavingsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SavingsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SavingsResponse clone() => SavingsResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SavingsResponse copyWith(void Function(SavingsResponse) updates) => super.copyWith((message) => updates(message as SavingsResponse)) as SavingsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SavingsResponse create() => SavingsResponse._();
+  SavingsResponse createEmptyInstance() => create();
+  static $pb.PbList<SavingsResponse> createRepeated() => $pb.PbList<SavingsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SavingsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SavingsResponse>(create);
+  static SavingsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Savings> get savings => $_getList(0);
+}
+
 class Savings extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Savings', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'savings'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')

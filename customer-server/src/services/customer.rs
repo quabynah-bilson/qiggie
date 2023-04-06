@@ -1,10 +1,23 @@
+use async_stream::stream;
+use mongodb::{Client, Collection};
 use tokio_stream::wrappers::ReceiverStream;
 use tonic::{Request, Response, Status};
+
 use crate::customer::Customer;
 use crate::customer::customer_service_server::CustomerService;
 
-#[derive(Debug, Default)]
-pub struct CustomerServiceImpl {}
+#[derive(Debug, Clone)]
+pub struct CustomerServiceImpl {
+    collection: Collection<Customer>,
+}
+
+impl CustomerServiceImpl {
+    pub fn new(collection: &Collection<Customer>) -> Self {
+        CustomerServiceImpl {
+            collection: collection.clone()
+        }
+    }
+}
 
 #[tonic::async_trait]
 impl CustomerService for CustomerServiceImpl {
@@ -26,7 +39,12 @@ impl CustomerService for CustomerServiceImpl {
 
     type GetCurrentCustomerStream = ReceiverStream<Result<Customer, Status>>;
 
-    async fn get_current_customer(&self, _: Request<()>) -> Result<Response<Self::GetCurrentCustomerStream>, Status> {
-        todo!()
+    async fn get_current_customer(&self, request: Request<()>) -> Result<Response<Self::GetCurrentCustomerStream>, Status> {
+        let response = stream! {
+
+        };
+
+
+        Err(Status::invalid_argument("The user with this ID does not exist"))
     }
 }

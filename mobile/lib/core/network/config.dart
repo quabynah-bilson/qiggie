@@ -28,5 +28,5 @@ abstract class NetworkConfigModule {
 
   @injectable
   SavingsServiceClient get savingsServiceClient =>
-      SavingsServiceClient(_createChannel(1151), interceptors: [_logInterceptor]);
+      SavingsServiceClient(_createChannel(1148), interceptors: [_logInterceptor]);
 }

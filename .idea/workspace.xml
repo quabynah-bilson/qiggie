@@ -8,8 +8,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="kotlin server compiles">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-server/config/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-server/src/config/db.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-server/src/config/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank/DatabaseConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank/PiggyBankSavingServer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank/services/SavingsServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/services/bank.go" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/services/bank.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-server/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-server/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-server/src/services/customer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/src/services/customer.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen-dart-protos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gen-dart-protos.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/core/network/config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/network/config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/savings.pb.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/savings.pb.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/savings.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/savings.pbgrpc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/savings.pbjson.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/savings.pbjson.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savings-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/savings-server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savings-server/protos/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/protos/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savings-server/protos/src/main/java/io/qcodelabsllc/piggybank/protos/savings.proto" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/protos/src/main/proto/io/qcodelabsllc/piggybank/savings.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savings-server/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savings-server/stub/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/stub/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +64,36 @@
         <task path="$PROJECT_DIR$/savings-server">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/savings-server/stub">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/savings-server/server">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="savings-server" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="savings-server" type="f1a62948:ProjectNode" />
+                <item name="stub" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="savings-server" type="f1a62948:ProjectNode" />
+                <item name="stub" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="savings-server" type="f1a62948:ProjectNode" />
+                <item name="stub" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -54,6 +106,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="RBS Class" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
+        <option value="Go File" />
+        <option value="Rust File" />
       </list>
     </option>
   </component>
@@ -82,15 +139,18 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultGoTemplateProperty": "Go File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "dev",
     "go.import.settings.migrated": "true",
     "io.flutter.reload.alreadyRun": "true",
     "jdk.selected.JAVA_MODULE": "Android Studio default JDK",
+    "last_opened_file_path": "/Users/quabynah/src/projects/personal-studies/piggybank/bank-server",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,23 +162,39 @@
     "project.structure.side.proportion": "0.28750002",
     "ruby.rails.projectView.checked": "true",
     "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "preferences.language.Kotlin",
+    "settings.editor.selected.configurable": "reactor",
     "show.migrate.to.gradle.popup": "false",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
+    ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bank-server" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/savings-server/protos/src/main/java/io/qcodelabsllc/piggybank/protos" />
-      <recent name="$PROJECT_DIR$/savings-server/protos/src/main/java/io/qcodelabsllc/piggybank" />
-      <recent name="$PROJECT_DIR$/savings-server/lib" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/savings-server" />
+      <recent name="$PROJECT_DIR$/savings-server/server" />
+      <recent name="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank" />
+      <recent name="$PROJECT_DIR$/savings-server/protos/src/main/proto/io/qcodelabsllc/piggybank" />
+      <recent name="$PROJECT_DIR$/savings-server/protos/src/main/java/io/qcodelabsllc/piggybank/protos" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="io.qcodelabsllc.piggybank" />
+      <recent name="io.qcodelabsllc.piggybank.server" />
     </key>
   </component>
   <component name="RubyModuleManagerSettings">
     <option name="blackListedRootsPaths">
       <list>
+        <option value="$PROJECT_DIR$/mobile" />
         <option value="$PROJECT_DIR$/savings-server/src/test" />
         <option value="$PROJECT_DIR$/savings-server/protos/src/main" />
         <option value="$PROJECT_DIR$/savings-server/stub" />
@@ -127,11 +203,11 @@
         <option value="$PROJECT_DIR$/customer-server" />
         <option value="$PROJECT_DIR$/savings-server" />
         <option value="$PROJECT_DIR$/savings-server/protos" />
-        <option value="$PROJECT_DIR$/savings-server/stub/src/main" />
+        <option value="$PROJECT_DIR$/savings-server/server" />
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.savings-server [build]">
+  <component name="RunManager" selected="Cargo.customer-server">
     <configuration name="customer-server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package customer-piggybank --bin customer-piggybank" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/customer-server" />
@@ -153,10 +229,19 @@
       <option name="filePath" value="$PROJECT_DIR$/mobile/lib/main.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="savings-server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="bank-server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="bank-server" />
+      <working_directory value="$PROJECT_DIR$/bank-server" />
+      <kind value="PACKAGE" />
+      <package value="com.github/qcodelabsllc/piggybank" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/bank-server/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="savings-server:stub [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/savings-server" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/savings-server/stub" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -175,40 +260,10 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="savings-server:protos [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/savings-server/protos" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="Unnamed" type="IrbRunConfigurationType" factoryName="IRB console" nameIsGenerated="true">
-      <module name="savings-server" />
-      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
-      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$/savings-server" />
-      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
-      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="ruby -r debug server.rb" />
-      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <IRB_RUN_CONFIG NAME="CONSOLE_TYPE" VALUE="NOT_SET" />
+    <configuration name="savings-server" type="JetRunConfigurationType" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="io.qcodelabsllc.piggybank.PiggyBankSavingServerKt" />
+      <module name="savings-server.server.main" />
+      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,28 +274,21 @@
       </makefile>
       <method v="2" />
     </configuration>
-    <configuration name="gen-protos-savings" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="gen-protos-savings" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Cargo.customer-server" />
       <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Gradle.savings-server [build]" />
-      <item itemvalue="Gradle.savings-server:protos [build]" />
+      <item itemvalue="Go Build.bank-server" />
+      <item itemvalue="Gradle.savings-server:stub [build]" />
+      <item itemvalue="Kotlin.savings-server" />
       <item itemvalue="Makefile Target.gen-protos-mobile" />
-      <item itemvalue="Makefile Target.gen-protos-savings" />
-      <item itemvalue="Ruby Console.Unnamed" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.savings-server [build]" />
-        <item itemvalue="Gradle.savings-server:protos [build]" />
-        <item itemvalue="Makefile Target.gen-protos-savings" />
-        <item itemvalue="Flutter.main.dart" />
+        <item itemvalue="Kotlin.savings-server" />
+        <item itemvalue="Go Build.bank-server" />
         <item itemvalue="Makefile Target.gen-protos-mobile" />
+        <item itemvalue="Gradle.savings-server:stub [build]" />
+        <item itemvalue="Flutter.main.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +314,8 @@
       <updated>1680787540098</updated>
       <workItem from="1680787542814" duration="32000" />
       <workItem from="1680787729748" duration="6113000" />
-      <workItem from="1680793915046" duration="2277000" />
+      <workItem from="1680793915046" duration="3662000" />
+      <workItem from="1680801430030" duration="13006000" />
     </task>
     <task id="LOCAL-00001" summary="rust works">
       <created>1680788053657</created>
@@ -289,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680800001111</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="kotlin server compiles">
+      <created>1680800049559</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680800049559</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

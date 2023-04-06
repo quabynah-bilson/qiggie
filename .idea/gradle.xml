@@ -10,6 +10,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/savings-server" />
+            <option value="$PROJECT_DIR$/savings-server/protos" />
+            <option value="$PROJECT_DIR$/savings-server/server" />
+            <option value="$PROJECT_DIR$/savings-server/stub" />
           </set>
         </option>
       </GradleProjectSettings>
