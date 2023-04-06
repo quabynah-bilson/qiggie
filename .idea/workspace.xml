@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/rust-customer-server/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a4e5b83a-3a23-48e8-8cc2-2382a786e836" name="Changes" comment="Added go server">
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust-customer-server/build.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust-customer-server/build.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust-customer-server/protos/bank.proto" beforeDir="false" afterPath="$PROJECT_DIR$/go-bank-server/protos/bank.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust-customer-server/protos/savings.proto" beforeDir="false" afterPath="$PROJECT_DIR$/ruby-savings-server/protos/savings.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust-customer-server/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/services/bank.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/services/customer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust-customer-server/src/services/customer.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/services/savings.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/services/transaction.rs" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="be87c64e-623f-48b4-a288-ec2dfed43c24" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="0qt6lwoz" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.1.12/bin/php" />
+  <component name="ProjectId" id="2O37cdMnimpKiNr9TECOWsgrN9O" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;Android Studio default JDK&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/quabynah/src/projects/personal-studies/piggybank/ruby-savings-server/protos&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;language.rust.rustfmt&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ruby-savings-server/protos" />
+      <recent name="$PROJECT_DIR$/go-bank-server/protos" />
+      <recent name="$PROJECT_DIR$/backend/src/services" />
+      <recent name="$PROJECT_DIR$/backend/protos" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Makefile Target.gen-protos-bank">
+    <configuration name="customer-server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="run" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$/backend" />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/mobile/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bank-server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="piggybank" />
+      <working_directory value="$PROJECT_DIR$/go-bank-server" />
+      <kind value="PACKAGE" />
+      <package value="com.github/qcodelabsllc/piggybank" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/go-bank-server/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gen-protos-bank" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="gen-protos-bank" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Cargo.customer-server" />
+      <item itemvalue="Flutter.main.dart" />
+      <item itemvalue="Go Build.bank-server" />
+      <item itemvalue="Makefile Target.gen-protos-bank" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.gen-protos-bank" />
+        <item itemvalue="Go Build.bank-server" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="useOffline" value="true" />
+    <option name="version" value="2" />
+  </component>
+  <component name="RustfmtProjectSettings">
+    <option name="runRustfmtOnSave" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4e5b83a-3a23-48e8-8cc2-2382a786e836" name="Changes" comment="" />
+      <created>1680777491858</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680777491858</updated>
+      <workItem from="1680777493078" duration="2240000" />
+      <workItem from="1680779739368" duration="136000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added go server">
+      <created>1680778998033</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680778998033</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added go server">
+      <created>1680779007163</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680779007163</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added go server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added go server" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
