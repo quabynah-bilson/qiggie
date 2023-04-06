@@ -7,39 +7,10 @@
     <cargoProject FILE="$PROJECT_DIR$/customer-server/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gen-ruby-protos.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="rust works">
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/piggybank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/piggybank.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-bank-server/gen/bank.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-bank-server/gen/bank_grpc.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-bank-server/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-bank-server/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-bank-server/protos/bank.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/app.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/network/config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/network/config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruby-savings-server/protos/savings.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/Cargo.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/build.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/protos/customer.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/db_connection.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/main.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/services/customer.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-customer-server/src/services/mod.rs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +20,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -76,14 +48,18 @@
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "dev",
     "go.import.settings.migrated": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.13901947",
+    "project.structure.side.proportion": "0.28750002",
     "ruby.rails.projectView.checked": "true",
     "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
+    "settings.editor.selected.configurable": "go.sdk",
     "show.migrate.to.gradle.popup": "false",
     "vue.rearranger.settings.migration": "true"
   }
@@ -97,7 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.bank-server">
     <configuration name="customer-server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package customer-piggybank --bin customer-piggybank" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/customer-server" />
@@ -115,6 +91,20 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <configuration name="bank-server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="bank-server" />
+      <working_directory value="$PROJECT_DIR$/bank-server" />
+      <kind value="PACKAGE" />
+      <package value="com.github/qcodelabsllc/piggybank" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/bank-server/main.go" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.bank-server" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -129,15 +119,30 @@
       <option name="presentableId" value="Default" />
       <updated>1680787540098</updated>
       <workItem from="1680787542814" duration="32000" />
-      <workItem from="1680787729748" duration="265000" />
+      <workItem from="1680787729748" duration="603000" />
     </task>
+    <task id="LOCAL-00001" summary="rust works">
+      <created>1680788053657</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680788053657</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="rust works" />
+    <option name="LAST_COMMIT_MESSAGE" value="rust works" />
+  </component>
   <component name="VgoProject">
-    <integration-enabled>false</integration-enabled>
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

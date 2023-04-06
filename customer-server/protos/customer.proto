@@ -1,0 +1,26 @@
+syntax = "proto3";
+package customer;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+
+service CustomerService {
+  rpc CreateCustomer(Customer) returns (google.protobuf.StringValue);
+  rpc GetCustomer(google.protobuf.StringValue) returns (Customer);
+  rpc UpdateCustomer(Customer) returns (google.protobuf.Empty);
+  rpc DeleteCustomer(google.protobuf.StringValue) returns (google.protobuf.Empty);
+  rpc GetCurrentCustomer(google.protobuf.Empty) returns (stream Customer);
+}
+
+message Customer {
+  string id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string email = 4;
+  string phone = 5;
+  string address = 6;
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
+}

@@ -1,0 +1,30 @@
+syntax = "proto3";
+package bank;
+option go_package="com.github/qcodelabsllc/piggybank;ms";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+
+service PiggyBankService {
+  rpc CreatePiggyBank(PiggyBank) returns (google.protobuf.StringValue);
+  rpc GetPiggyBank(google.protobuf.StringValue) returns (PiggyBank);
+  rpc UpdatePiggyBank(PiggyBank) returns (google.protobuf.Empty);
+  rpc DeletePiggyBank(google.protobuf.StringValue) returns (google.protobuf.Empty);
+  rpc ListPiggyBanks(google.protobuf.Empty) returns (stream PiggyBankList);
+}
+
+message PiggyBankList {
+  repeated PiggyBank banks = 1;
+}
+
+message PiggyBank {
+  string id = 1;
+  string customer_id = 2;
+  double goal_amount = 3;
+  double current_amount = 4;
+  string description = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+}

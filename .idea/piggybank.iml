@@ -1,38 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="Go" enabled="true" />
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/customer-server/src" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/customer-server/target" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/build" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/path_provider_foundation/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/path_provider_foundation/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/path_provider_foundation/build" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/path_provider_foundation/example/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/path_provider_foundation/example/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/path_provider_foundation/example/build" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/build" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/example/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/example/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/example/build" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/build" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/example/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/example/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/example/build" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/build" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/mobile/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/build" />
+      <sourceFolder url="file://$MODULE_DIR$/mobile/android/app/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mobile/android/app/src/main/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/android/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/android/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/example/android/app/src/androidTest/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/example/android/app/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
