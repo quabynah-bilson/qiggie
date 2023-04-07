@@ -8,37 +8,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="rust server running &amp; connected to mongodb">
-      <change afterPath="$PROJECT_DIR$/bank-server/clients/customer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/core/theme.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/core/utils/extensions.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/generated/assets.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/piggybank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/piggybank.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank-server/services/bank.go" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/services/bank.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/build.rs" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/build.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/protos/customer.proto" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/protos/customer.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/config/db.rs" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/src/config/db.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/services/customer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/src/services/customer.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen-dart-protos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gen-dart-protos.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen-go-protos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gen-go-protos.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/app.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/network/log.interceptor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/network/log.interceptor.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/routing/router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/routing/router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/routing/router.gr.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/lib/core/utils/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/utils/constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/customer.pb.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/customer.pb.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/customer.pbjson.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/customer.pbjson.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/core/utils/extensions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/utils/extensions.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/generated/assets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/generated/assets.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savings-server/protos/src/main/proto/io/qcodelabsllc/piggybank/savings.proto" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/protos/src/main/proto/io/qcodelabsllc/piggybank/savings.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank/services/SavingsServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank/services/SavingsServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/web/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/web/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/web/icons/Icon-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/web/icons/Icon-192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/web/icons/Icon-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/web/icons/Icon-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/web/icons/Icon-maskable-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/web/icons/Icon-maskable-192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/web/icons/Icon-maskable-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/web/icons/Icon-maskable-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/web/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/windows/runner/resources/app_icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/windows/runner/resources/app_icon.ico" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +310,7 @@
       <workItem from="1680793915046" duration="3662000" />
       <workItem from="1680801430030" duration="17904000" />
       <workItem from="1680821792626" duration="14213000" />
-      <workItem from="1680884927452" duration="11463000" />
+      <workItem from="1680884927452" duration="12668000" />
     </task>
     <task id="LOCAL-00001" summary="rust works">
       <created>1680788053657</created>

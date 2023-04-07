@@ -4,7 +4,7 @@ class Assets {
 
   static const String animInvestMoney = 'assets/anim/invest_money.json';
   static const String animSaveMoney = 'assets/anim/save_money.json';
-  static const String assetsImgPiggybankRejectedDribbble = 'assets/img/piggybank_rejected_dribbble.webp';
-  static const String imgPiggybankRejectedDribbble = 'assets/img/piggybank_rejected_dribbble.png';
+  static const String imgAppLogo = 'assets/img/app_logo.png';
+  static const String imgPiggybankRejectedDribbble = 'assets/img/piggybank_rejected_dribbble.webp';
 
 }
