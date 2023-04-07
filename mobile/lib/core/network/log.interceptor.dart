@@ -17,7 +17,7 @@ class LogGrpcInterceptor implements ClientInterceptor {
       ),
     );
 
-    logger.i(
+    logger.d(
         'grpc streaming method: ${method.path} => metadata: ${newOpts.metadata}');
     // do nothing for now
     return invoker(method, requests, newOpts);
@@ -34,7 +34,7 @@ class LogGrpcInterceptor implements ClientInterceptor {
         },
       ),
     );
-    logger.i(
+    logger.d(
         'grpc unary method: ${method.path} => metadata: ${newOpts.metadata} => payload : $request');
     return invoker(method, request, newOpts)
       ..then((data) => logger.d('grpc unary response => $data'));

@@ -1,6 +1,7 @@
 package services
 
 import (
+	"com.github/qcodelabsllc/piggybank/clients"
 	"com.github/qcodelabsllc/piggybank/config"
 	pb "com.github/qcodelabsllc/piggybank/gen"
 	"context"
@@ -8,6 +9,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/protobuf/types/known/emptypb"
+	"google.golang.org/protobuf/types/known/timestamppb"
 	"google.golang.org/protobuf/types/known/wrapperspb"
 	"time"
 )
@@ -20,15 +22,27 @@ func (s *BankServiceServer) CreatePiggyBank(ctx context.Context, request *pb.Pig
 	ctx, cancel := context.WithTimeout(ctx, time.Second*15)
 	defer cancel()
 
-	if _, err := config.BankCol.InsertOne(ctx, &request); err != nil {
-		return nil, errors.New(codes.InvalidArgument.String())
+	// get client service
+	if server, err := clients.GetCustomerServer(); err != nil {
+		return nil, errors.New(codes.Internal.String())
 	} else {
-		message := "Piggybank created successfully"
-		return &wrapperspb.StringValue{
-			Value: message,
-		}, nil
+		// get customer information
+		if _, err := server.GetCustomer(ctx, &wrapperspb.StringValue{Value: request.GetCustomerId()}); err != nil {
+			return nil, err
+		}
+		request.CurrentAmount = 0
+		request.UpdatedAt = timestamppb.Now()
+		request.CreatedAt = timestamppb.Now()
+
+		if _, err := config.BankCol.InsertOne(ctx, &request); err != nil {
+			return nil, errors.New(codes.ResourceExhausted.String())
+		} else {
+			message := "Piggybank created successfully"
+			return &wrapperspb.StringValue{
+				Value: message,
+			}, nil
+		}
 	}
-	return nil, nil
 }
 func (s *BankServiceServer) GetPiggyBank(context.Context, *wrapperspb.StringValue) (*pb.PiggyBank, error) {
 	return nil, nil

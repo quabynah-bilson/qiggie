@@ -1,13 +1,20 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:mobile/core/routing/router.gr.dart';
+import 'package:flutter/material.dart';
+import 'package:mobile/features/shared/presentation/pages/welcome.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
-@AutoRouterConfig()
-class PiggyBankRouter extends $PiggyBankRouter {
-  @override
-  List<AutoRoute> get routes => [
-        /// shared
-        AutoRoute(page: WelcomeRoute.page, path: '/'),
+class AppRouterConfig {
+  static Route<dynamic>? setupRoutes(RouteSettings settings) {
+    switch (settings.name) {
+      case '/':
+        return MaterialWithModalsPageRoute(
+            builder: (_) => const WelcomePage(), settings: settings);
+      case '/dashboard':
+        return MaterialWithModalsPageRoute(
+            builder: (_) => const WelcomePage(), settings: settings);
+    }
 
-        /// onboarding
-      ];
+    return MaterialPageRoute(
+      builder: (context) => Scaffold(),
+    );
+  }
 }

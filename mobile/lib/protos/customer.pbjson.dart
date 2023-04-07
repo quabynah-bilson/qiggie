@@ -15,7 +15,7 @@ const Customer$json = const {
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
     const {'1': 'last_name', '3': 3, '4': 1, '5': 9, '10': 'lastName'},
-    const {'1': 'email', '3': 4, '4': 1, '5': 9, '10': 'email'},
+    const {'1': 'username', '3': 4, '4': 1, '5': 9, '10': 'username'},
     const {'1': 'phone', '3': 5, '4': 1, '5': 9, '10': 'phone'},
     const {'1': 'address', '3': 6, '4': 1, '5': 9, '10': 'address'},
     const {'1': 'created_at', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createdAt'},
@@ -24,4 +24,4 @@ const Customer$json = const {
 };
 
 /// Descriptor for `Customer`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List customerDescriptor = $convert.base64Decode('CghDdXN0b21lchIOCgJpZBgBIAEoCVICaWQSHQoKZmlyc3RfbmFtZRgCIAEoCVIJZmlyc3ROYW1lEhsKCWxhc3RfbmFtZRgDIAEoCVIIbGFzdE5hbWUSFAoFZW1haWwYBCABKAlSBWVtYWlsEhQKBXBob25lGAUgASgJUgVwaG9uZRIYCgdhZGRyZXNzGAYgASgJUgdhZGRyZXNzEjkKCmNyZWF0ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgljcmVhdGVkQXQSOQoKdXBkYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXVwZGF0ZWRBdA==');
+final $typed_data.Uint8List customerDescriptor = $convert.base64Decode('CghDdXN0b21lchIOCgJpZBgBIAEoCVICaWQSHQoKZmlyc3RfbmFtZRgCIAEoCVIJZmlyc3ROYW1lEhsKCWxhc3RfbmFtZRgDIAEoCVIIbGFzdE5hbWUSGgoIdXNlcm5hbWUYBCABKAlSCHVzZXJuYW1lEhQKBXBob25lGAUgASgJUgVwaG9uZRIYCgdhZGRyZXNzGAYgASgJUgdhZGRyZXNzEjkKCmNyZWF0ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgljcmVhdGVkQXQSOQoKdXBkYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXVwZGF0ZWRBdA==');

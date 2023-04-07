@@ -1,7 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.qcodelabsllc.piggybank.mobile">
+
+<!--    <uses-permission android:name="com.android.permissions.INTERNET"/>-->
+
    <application
-        android:label="mobile"
+        android:label="Qiggie"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

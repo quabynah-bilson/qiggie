@@ -16,7 +16,7 @@ class Customer extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'firstName')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lastName')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'email')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'username')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'phone')
     ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address')
     ..aOM<$3.Timestamp>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createdAt', subBuilder: $3.Timestamp.create)
@@ -29,7 +29,7 @@ class Customer extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? firstName,
     $core.String? lastName,
-    $core.String? email,
+    $core.String? username,
     $core.String? phone,
     $core.String? address,
     $3.Timestamp? createdAt,
@@ -45,8 +45,8 @@ class Customer extends $pb.GeneratedMessage {
     if (lastName != null) {
       _result.lastName = lastName;
     }
-    if (email != null) {
-      _result.email = email;
+    if (username != null) {
+      _result.username = username;
     }
     if (phone != null) {
       _result.phone = phone;
@@ -111,13 +111,13 @@ class Customer extends $pb.GeneratedMessage {
   void clearLastName() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get email => $_getSZ(3);
+  $core.String get username => $_getSZ(3);
   @$pb.TagNumber(4)
-  set email($core.String v) { $_setString(3, v); }
+  set username($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasEmail() => $_has(3);
+  $core.bool hasUsername() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEmail() => clearField(4);
+  void clearUsername() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.String get phone => $_getSZ(4);

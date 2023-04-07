@@ -16,7 +16,8 @@ class SavingsServiceImpl : SavingsServiceGrpcKt.SavingsServiceCoroutineImplBase(
 
         requests.collect { savings ->
             value = "You're saving this much: \$${savings.amount}"
-//            DatabaseConfig.savingsCollection.insertOne()
+
+//            DatabaseConfig.savingsCollection.insertOne(null)
         }
     }
 

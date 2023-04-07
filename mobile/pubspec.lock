@@ -297,6 +297,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
+  flex_color_scheme:
+    dependency: "direct main"
+    description:
+      name: flex_color_scheme
+      sha256: ba6b2e19aa6bcfebed8f74486b4359e1399e5f285a9b697107e14e27f2963415
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.1"
+  flex_seed_scheme:
+    dependency: transitive
+    description:
+      name: flex_seed_scheme
+      sha256: "7058288ef97d348657ac95cea25d65a9aac181ca08387ede891fd7230ad7600f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.3"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -535,10 +551,10 @@ packages:
     dependency: "direct main"
     description:
       name: lottie
-      sha256: "14b489bf93af84727a07c87c73580a9413f9cbffa4ea2342f3f71447a674a3fb"
+      sha256: "23522951540d20a57a60202ed7022e6376bed206a4eee1c347a91f58bd57eb9f"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.1"
+    version: "2.3.2"
   matcher:
     dependency: transitive
     description:
@@ -571,6 +587,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
+  modal_bottom_sheet:
+    dependency: "direct main"
+    description:
+      name: modal_bottom_sheet
+      sha256: "3bba63c62d35c931bce7f8ae23a47f9a05836d8cb3c11122ada64e0b2f3d718f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0-pre"
   nested:
     dependency: transitive
     description:
@@ -776,10 +800,10 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "5d4a75ed49652c87b57f40c1f91a93d33cb08758"
+      resolved-ref: "693ea7591b9117eff1e7d8377c052fc6bf71338c"
       url: "https://github.com/quabynah-bilson/shared_utils.git"
     source: git
-    version: "0.0.39-dev.39"
+    version: "0.0.42-dev.42"
   shelf:
     dependency: transitive
     description:
@@ -1011,4 +1035,4 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=2.19.6 <3.0.0"
-  flutter: ">=3.7.0-0"
+  flutter: ">=3.7.0"

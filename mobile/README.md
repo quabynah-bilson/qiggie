@@ -2,15 +2,16 @@
 
 A piggybank mobile application
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Account setup: Users will need to create an account and set up their personal details, such as their name, email address, and password.
 
-A few resources to get you started if this is your first Flutter project:
+ - Savings goals: Users can set savings goals for different purposes, such as a vacation, a new gadget, or a down payment for a house. The app can track their progress towards these goals and provide regular updates.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+ - Automated savings: The app can help users save automatically by rounding up their purchases to the nearest dollar or transferring a set amount of money from their checking account to their savings account on a regular basis.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ - Budgeting tools: The app can help users track their spending and create a budget based on their income and expenses.
+
+ - Rewards and incentives: The app can provide users with rewards and incentives for reaching their savings goals, such as cash back, discounts, or gift cards.
+
+ - Social sharing: Users can share their savings goals and progress on social media, which can help them stay motivated and accountable.

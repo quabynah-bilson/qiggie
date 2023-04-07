@@ -1,7 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile/core/routing/router.dart';
+import 'package:mobile/core/theme.dart';
 import 'package:mobile/core/utils/constants.dart';
 import 'package:shared_utils/shared_utils.dart';
 
@@ -14,17 +13,15 @@ class PiggyBankApp extends StatefulWidget {
 }
 
 class _PiggyBankAppState extends State<PiggyBankApp> {
-  final _router = PiggyBankRouter();
-
   @override
   Widget build(BuildContext context) => DismissKeyboard(
-    child: MaterialApp.router(
-      routerConfig: _router.config(),
-      debugShowCheckedModeBanner: !kReleaseMode,
-      title: kAppName,
-      theme: kLightTheme(context: context),
-      darkTheme: kDarkTheme(context: context),
-      themeMode: ThemeMode.system,
-    ),
-  );
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: kAppName,
+          theme: context.useLightTheme,
+          darkTheme: context.useDarkTheme,
+          themeMode: ThemeMode.system,
+          onGenerateRoute: AppRouterConfig.setupRoutes,
+        ),
+      );
 }

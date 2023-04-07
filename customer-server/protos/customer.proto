@@ -1,5 +1,6 @@
 syntax = "proto3";
 package customer;
+option go_package = "com.github/qcodelabsllc/piggybank;ms";
 
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
@@ -18,7 +19,7 @@ message Customer {
   string id = 1;
   string first_name = 2;
   string last_name = 3;
-  string email = 4;
+  string username = 4;
   string phone = 5;
   string address = 6;
   google.protobuf.Timestamp created_at = 7;

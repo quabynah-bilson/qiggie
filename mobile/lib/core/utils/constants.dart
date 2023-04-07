@@ -1,2 +1,5 @@
-const kAppName = 'Quabynah\'s PiggyBank';
-const kAppDesc = 'A convenient record keeper for your personal financial projects';
+const kAppName = 'Qiggie';
+const kAppNameLong = 'A Piggybank by QCodelabsLLC';
+const kAppDesc =
+    'With our app you can easily track your income and expenses, set financial goals and make informed decisions about your money';
+// const kAppDesc = 'A convenient record keeper for your personal financial projects';

@@ -1,17 +1,9 @@
 extern crate dotenv;
 
-use std::ptr::null;
-
 use console::Style;
 use dotenv::dotenv;
-use futures::future::err;
-use mongodb::{Client, IndexModel};
-use mongodb::bson::doc;
-use mongodb::options::{ClientOptions, CreateCollectionOptions, IndexOptions};
-use tonic::Status;
 use tonic::transport::Server;
 
-use crate::customer::Customer;
 use crate::customer::customer_service_server::CustomerServiceServer;
 use crate::services::customer::CustomerServiceImpl;
 
@@ -21,6 +13,8 @@ pub(crate) mod services;
 pub mod customer {
     tonic::include_proto!("customer");
 }
+
+pub const CUSTOMER_DESCRIPTOR_SET: &[u8] = tonic::include_file_descriptor_set!("customer_descriptor");
 
 // reference -> https://github.com/hyperium/tonic/blob/master/examples/routeguide-tutorial.md
 #[tokio::main]
@@ -37,7 +31,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     );
 
     // initialize database configuration
-    let mut collection = config::db::create_database().await?;
+    let collection = config::db::create_database().await?;
 
     // register services
     let customer_service = CustomerServiceImpl::new(&collection);
@@ -45,8 +39,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // reflection service
     let server_reflection = tonic_reflection::server::Builder::configure()
-        .build()
-        .unwrap();
+        .register_encoded_file_descriptor_set(CUSTOMER_DESCRIPTOR_SET)
+        .build()?;
 
     // start grpc server
     Server::builder()

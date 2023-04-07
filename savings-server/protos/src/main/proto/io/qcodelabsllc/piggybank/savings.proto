@@ -1,5 +1,6 @@
 syntax = "proto3";
 package savings;
+option go_package = "com.github/qcodelabsllc/piggybank;ms";
 option java_multiple_files = true;
 option java_package = "io.qcodelabsllc.piggybank";
 option java_outer_classname = "PiggyBankSavingsService";
