@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile/core/routing/router.dart';
 import 'package:mobile/core/theme.dart';
 import 'package:mobile/core/utils/constants.dart';
+import 'package:mobile/features/piggies/presentation/manager/bank_bloc.dart';
 import 'package:shared_utils/shared_utils.dart';
 
 /// root widget for application
@@ -15,13 +17,18 @@ class PiggyBankApp extends StatefulWidget {
 class _PiggyBankAppState extends State<PiggyBankApp> {
   @override
   Widget build(BuildContext context) => DismissKeyboard(
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: kAppName,
-          theme: context.useLightTheme,
-          darkTheme: context.useDarkTheme,
-          themeMode: ThemeMode.system,
-          onGenerateRoute: AppRouterConfig.setupRoutes,
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider(create: (context) => BankBloc()),
+          ],
+          child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: kAppName,
+            theme: context.useLightTheme,
+            darkTheme: context.useDarkTheme,
+            themeMode: ThemeMode.system,
+            onGenerateRoute: AppRouterConfig.setupRoutes,
+          ),
         ),
       );
 }

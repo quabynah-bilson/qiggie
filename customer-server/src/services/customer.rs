@@ -27,14 +27,14 @@ impl CustomerService for CustomerServiceImpl {
         &self,
         request: Request<Customer>,
     ) -> Result<Response<String>, Status> {
-        let mut user = request.into_inner().clone();
-        if let Some(document) = self.collection.find_one(doc! {"username" : user.username}, None).await.unwrap() {
-            println!("found account -> {}", document);
-            return Err(Status::already_exists("User already exists"));
-        }
+        // let mut user = request.into_inner().clone();
+        // if let Some(document) = self.collection.find_one(doc! {"username" : user.username}, None).await.unwrap() {
+        //     println!("found account -> {}", document);
+        //     return Err(Status::already_exists("User already exists"));
+        // }
 
         // save user data
-        let result = insert_customer_data(&self.collection, &mut user).await;
+        let result = insert_customer_data(&self.collection, &mut request.into_inner()).await;
 
         // Replace the inserted document with its Object ID
         let filter = doc! {

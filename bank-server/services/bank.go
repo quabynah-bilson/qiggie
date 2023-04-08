@@ -6,11 +6,14 @@ import (
 	pb "com.github/qcodelabsllc/piggybank/gen"
 	"context"
 	"errors"
+	"fmt"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/protobuf/types/known/emptypb"
 	"google.golang.org/protobuf/types/known/timestamppb"
 	"google.golang.org/protobuf/types/known/wrapperspb"
+	"log"
 	"time"
 )
 
@@ -30,13 +33,23 @@ func (s *BankServiceServer) CreatePiggyBank(ctx context.Context, request *pb.Pig
 		if _, err := server.GetCustomer(ctx, &wrapperspb.StringValue{Value: request.GetCustomerId()}); err != nil {
 			return nil, err
 		}
-		request.CurrentAmount = 0
 		request.UpdatedAt = timestamppb.Now()
 		request.CreatedAt = timestamppb.Now()
 
-		if _, err := config.BankCol.InsertOne(ctx, &request); err != nil {
+		if insertResult, err := config.BankCol.InsertOne(ctx, &request); err != nil {
 			return nil, errors.New(codes.ResourceExhausted.String())
 		} else {
+
+			// run update in the background
+			objectId := insertResult.InsertedID.(primitive.ObjectID).Hex()
+			fmt.Println(objectId)
+			go func(id string, req *pb.PiggyBank) {
+				req.Id = id
+				if _, err := config.BankCol.ReplaceOne(context.Background(), bson.M{"id": req.GetId()}, &req); err != nil {
+					log.Printf("failed to update bank details%+v\n", err)
+				}
+			}(objectId, request)
+
 			message := "Piggybank created successfully"
 			return &wrapperspb.StringValue{
 				Value: message,
@@ -57,16 +70,60 @@ func (s *BankServiceServer) ListPiggyBanks(_ *emptypb.Empty, srv pb.PiggyBankSer
 	response := &pb.PiggyBankList{}
 	ctx := srv.Context()
 
-	// TODO: get all banks for user
 	if cursor, err := config.BankCol.Find(ctx, bson.D{}); err == nil {
 		var banks []*pb.PiggyBank
 		_ = cursor.All(ctx, &banks)
 		response.Banks = banks
+		_ = srv.Send(response)
 
-		// TODO: start streaming data
-		//config.BankCol.Watch(ctx, )
+		// TODO: stream all banks for user
+		/*pipeline, changeStreamOptions := utils.GetDefaultPipelineAndStreamOptions()
+		if changeStream, err := config.BankCol.Watch(ctx, pipeline, changeStreamOptions); err != nil {
+			return errors.New(codes.Unavailable.String())
+		} else {
+			ctx, cancel := context.WithDeadline(ctx, time.Now().Add(time.Minute*5))
+			defer cancel()
+			defer func(changeStream *mongo.ChangeStream, ctx context.Context) {
+				_ = changeStream.Close(ctx)
+			}(changeStream, ctx)
+
+			filteredResults := response.GetBanks()
+			for changeStream.Next(ctx) {
+				var doc utils.MongoDocToProto[*pb.PiggyBank]
+				_ = changeStream.Decode(&doc)
+
+				switch doc.OperationType {
+				case "replace":
+					for i, bank := range response.GetBanks() {
+						if bank.GetId() == doc.FullDocument.GetId() {
+							filteredResults[i] = doc.FullDocument
+						}
+					}
+					break
+				case "update":
+					for i, bank := range response.GetBanks() {
+						if bank.GetId() == doc.FullDocument.GetId() {
+							filteredResults[i] = doc.FullDocument
+						}
+					}
+					break
+				case "delete":
+					for i, bank := range response.GetBanks() {
+						if bank.GetId() == doc.FullDocument.GetId() {
+							filteredResults = utils.RemoveIndex(filteredResults, i)
+						}
+					}
+					break
+				default:
+					filteredResults = append(filteredResults, doc.FullDocument)
+					break
+				}
+
+				response.Banks = filteredResults
+				_ = srv.Send(response)
+			}
+
+		}*/
 	}
-
-	_ = srv.Send(response)
 	return nil
 }

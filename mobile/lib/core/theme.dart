@@ -20,10 +20,10 @@ extension ThemeBuilderX on BuildContext {
 ColorScheme useColorScheme([ThemeMode mode = ThemeMode.light]) =>
     mode == ThemeMode.light
         ? const ColorScheme.light(
-            background: Color(0xffFFE7AB),
+            background: Color(0xffF7F6F0),
             onBackground: Colors.black,
             primary: Color(0xff171C51),
-            onPrimary: Colors.white,
+            onPrimary: Color(0xffFFE7AB),
             secondary: Color(0xff2B2921),
             onSecondary: Color(0xffFFE7AB),
             surface: Color(0xffFFFFFF),

@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:mobile/core/routing/router.dart';
 import 'package:mobile/core/utils/constants.dart';
 import 'package:mobile/core/utils/extensions.dart';
 import 'package:mobile/generated/assets.dart';
@@ -57,19 +58,20 @@ class _WelcomePageState extends State<WelcomePage>
                       kAppDesc.bodyText2(context).top(8).bottom(40),
                     ],
                   ).horizontal(24),
+                  // TODO: check login status and show auth sheet / home page
+                  AppRoundedButton(
+                    text: 'Let\'s get start',
+                    icon: TablerIcons.coin_pound,
+                    onTap: context.showLoginSheet,
+                  ),
                   SafeArea(
                     top: false,
-                    child: AnimatedRow(
-                      animateType: AnimateType.slideLeft,
-                      children: [
-                        AppRoundedButton(
-                          text: 'Let\'s start',
-                          icon: TablerIcons.coin_pound,
-                          // TODO: check login status and show auth sheet / home page
-                          onTap: context.shoLoginSheet,
-                        ).align(Alignment.centerRight),
-                      ],
-                    ),
+                    child: TextButton(
+                      onPressed: () => context.navigator
+                          .pushNamedAndRemoveUntil(
+                              AppRouter.dashboardRoute, (_) => false),
+                      child: 'Skip for now'.button(context),
+                    ).top(8),
                   ),
                 ],
               ),

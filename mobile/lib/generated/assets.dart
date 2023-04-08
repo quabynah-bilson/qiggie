@@ -2,9 +2,14 @@
 class Assets {
   Assets._();
 
+  static const String animError = 'assets/anim/error.json';
   static const String animInvestMoney = 'assets/anim/invest_money.json';
   static const String animSaveMoney = 'assets/anim/save_money.json';
+  static const String animSuccess = 'assets/anim/success.json';
+  static const String animWelcomeNewUser = 'assets/anim/welcome_new_user.json';
+  static const String animWorkInProgress = 'assets/anim/work_in_progress.json';
   static const String imgAppLogo = 'assets/img/app_logo.png';
   static const String imgPiggybankRejectedDribbble = 'assets/img/piggybank_rejected_dribbble.webp';
+  static const String imgUserWallet = 'assets/img/user_wallet.webp';
 
 }
