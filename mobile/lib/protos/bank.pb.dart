@@ -11,15 +11,15 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'package:protobuf_google/protobuf_google.dart' as $3;
 
-class PiggyBankList extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PiggyBankList', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'bank'), createEmptyInstance: create)
-    ..pc<PiggyBank>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'banks', $pb.PbFieldType.PM, subBuilder: PiggyBank.create)
+class QiggyBankList extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'QiggyBankList', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'bank'), createEmptyInstance: create)
+    ..pc<QiggyBank>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'banks', $pb.PbFieldType.PM, subBuilder: QiggyBank.create)
     ..hasRequiredFields = false
   ;
 
-  PiggyBankList._() : super();
-  factory PiggyBankList({
-    $core.Iterable<PiggyBank>? banks,
+  QiggyBankList._() : super();
+  factory QiggyBankList({
+    $core.Iterable<QiggyBank>? banks,
   }) {
     final _result = create();
     if (banks != null) {
@@ -27,33 +27,33 @@ class PiggyBankList extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory PiggyBankList.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PiggyBankList.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory QiggyBankList.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory QiggyBankList.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  PiggyBankList clone() => PiggyBankList()..mergeFromMessage(this);
+  QiggyBankList clone() => QiggyBankList()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  PiggyBankList copyWith(void Function(PiggyBankList) updates) => super.copyWith((message) => updates(message as PiggyBankList)) as PiggyBankList; // ignore: deprecated_member_use
+  QiggyBankList copyWith(void Function(QiggyBankList) updates) => super.copyWith((message) => updates(message as QiggyBankList)) as QiggyBankList; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static PiggyBankList create() => PiggyBankList._();
-  PiggyBankList createEmptyInstance() => create();
-  static $pb.PbList<PiggyBankList> createRepeated() => $pb.PbList<PiggyBankList>();
+  static QiggyBankList create() => QiggyBankList._();
+  QiggyBankList createEmptyInstance() => create();
+  static $pb.PbList<QiggyBankList> createRepeated() => $pb.PbList<QiggyBankList>();
   @$core.pragma('dart2js:noInline')
-  static PiggyBankList getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PiggyBankList>(create);
-  static PiggyBankList? _defaultInstance;
+  static QiggyBankList getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QiggyBankList>(create);
+  static QiggyBankList? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<PiggyBank> get banks => $_getList(0);
+  $core.List<QiggyBank> get banks => $_getList(0);
 }
 
-class PiggyBank extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PiggyBank', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'bank'), createEmptyInstance: create)
+class QiggyBank extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'QiggyBank', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'bank'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'customerId')
     ..a<$core.double>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'goalAmount', $pb.PbFieldType.OD)
@@ -64,8 +64,8 @@ class PiggyBank extends $pb.GeneratedMessage {
     ..hasRequiredFields = false
   ;
 
-  PiggyBank._() : super();
-  factory PiggyBank({
+  QiggyBank._() : super();
+  factory QiggyBank({
     $core.String? id,
     $core.String? customerId,
     $core.double? goalAmount,
@@ -98,26 +98,26 @@ class PiggyBank extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory PiggyBank.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PiggyBank.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory QiggyBank.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory QiggyBank.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  PiggyBank clone() => PiggyBank()..mergeFromMessage(this);
+  QiggyBank clone() => QiggyBank()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  PiggyBank copyWith(void Function(PiggyBank) updates) => super.copyWith((message) => updates(message as PiggyBank)) as PiggyBank; // ignore: deprecated_member_use
+  QiggyBank copyWith(void Function(QiggyBank) updates) => super.copyWith((message) => updates(message as QiggyBank)) as QiggyBank; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static PiggyBank create() => PiggyBank._();
-  PiggyBank createEmptyInstance() => create();
-  static $pb.PbList<PiggyBank> createRepeated() => $pb.PbList<PiggyBank>();
+  static QiggyBank create() => QiggyBank._();
+  QiggyBank createEmptyInstance() => create();
+  static $pb.PbList<QiggyBank> createRepeated() => $pb.PbList<QiggyBank>();
   @$core.pragma('dart2js:noInline')
-  static PiggyBank getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PiggyBank>(create);
-  static PiggyBank? _defaultInstance;
+  static QiggyBank getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QiggyBank>(create);
+  static QiggyBank? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);

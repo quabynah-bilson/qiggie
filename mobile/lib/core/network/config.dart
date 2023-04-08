@@ -23,8 +23,8 @@ abstract class NetworkConfigModule {
       CustomerServiceClient(_createChannel(1149), interceptors: [_logInterceptor]);
 
   @injectable
-  PiggyBankServiceClient get bankServiceClient =>
-      PiggyBankServiceClient(_createChannel(1150), interceptors: [_logInterceptor]);
+  QiggyBankServiceClient get bankServiceClient =>
+      QiggyBankServiceClient(_createChannel(1150), interceptors: [_logInterceptor]);
 
   @injectable
   SavingsServiceClient get savingsServiceClient =>

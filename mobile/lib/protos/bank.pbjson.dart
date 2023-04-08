@@ -8,19 +8,19 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
-@$core.Deprecated('Use piggyBankListDescriptor instead')
-const PiggyBankList$json = const {
-  '1': 'PiggyBankList',
+@$core.Deprecated('Use qiggyBankListDescriptor instead')
+const QiggyBankList$json = const {
+  '1': 'QiggyBankList',
   '2': const [
-    const {'1': 'banks', '3': 1, '4': 3, '5': 11, '6': '.bank.PiggyBank', '10': 'banks'},
+    const {'1': 'banks', '3': 1, '4': 3, '5': 11, '6': '.bank.QiggyBank', '10': 'banks'},
   ],
 };
 
-/// Descriptor for `PiggyBankList`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List piggyBankListDescriptor = $convert.base64Decode('Cg1QaWdneUJhbmtMaXN0EiUKBWJhbmtzGAEgAygLMg8uYmFuay5QaWdneUJhbmtSBWJhbmtz');
-@$core.Deprecated('Use piggyBankDescriptor instead')
-const PiggyBank$json = const {
-  '1': 'PiggyBank',
+/// Descriptor for `QiggyBankList`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List qiggyBankListDescriptor = $convert.base64Decode('Cg1RaWdneUJhbmtMaXN0EiUKBWJhbmtzGAEgAygLMg8uYmFuay5RaWdneUJhbmtSBWJhbmtz');
+@$core.Deprecated('Use qiggyBankDescriptor instead')
+const QiggyBank$json = const {
+  '1': 'QiggyBank',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'customer_id', '3': 2, '4': 1, '5': 9, '10': 'customerId'},
@@ -32,5 +32,5 @@ const PiggyBank$json = const {
   ],
 };
 
-/// Descriptor for `PiggyBank`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List piggyBankDescriptor = $convert.base64Decode('CglQaWdneUJhbmsSDgoCaWQYASABKAlSAmlkEh8KC2N1c3RvbWVyX2lkGAIgASgJUgpjdXN0b21lcklkEh8KC2dvYWxfYW1vdW50GAMgASgBUgpnb2FsQW1vdW50EiUKDmN1cnJlbnRfYW1vdW50GAQgASgBUg1jdXJyZW50QW1vdW50EiAKC2Rlc2NyaXB0aW9uGAUgASgJUgtkZXNjcmlwdGlvbhI5CgpjcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJY3JlYXRlZEF0EjkKCnVwZGF0ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgl1cGRhdGVkQXQ=');
+/// Descriptor for `QiggyBank`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List qiggyBankDescriptor = $convert.base64Decode('CglRaWdneUJhbmsSDgoCaWQYASABKAlSAmlkEh8KC2N1c3RvbWVyX2lkGAIgASgJUgpjdXN0b21lcklkEh8KC2dvYWxfYW1vdW50GAMgASgBUgpnb2FsQW1vdW50EiUKDmN1cnJlbnRfYW1vdW50GAQgASgBUg1jdXJyZW50QW1vdW50EiAKC2Rlc2NyaXB0aW9uGAUgASgJUgtkZXNjcmlwdGlvbhI5CgpjcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJY3JlYXRlZEF0EjkKCnVwZGF0ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgl1cGRhdGVkQXQ=');

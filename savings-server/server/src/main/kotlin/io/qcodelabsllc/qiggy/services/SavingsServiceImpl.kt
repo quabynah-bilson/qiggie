@@ -1,9 +1,9 @@
-package io.qcodelabsllc.piggybank.services
+package io.qcodelabsllc.qiggy.services
 
 import com.google.protobuf.StringValue
 import com.google.protobuf.stringValue
 import com.google.protobuf.timestamp
-import io.qcodelabsllc.piggybank.*
+import io.qcodelabsllc.qiggy.*
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.channelFlow

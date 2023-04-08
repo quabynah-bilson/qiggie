@@ -174,8 +174,8 @@ class _DashboardPageState extends State<DashboardPage> {
                     ).top(24);
                   }
 
-                  if (state is SuccessState<Stream<List<PiggyBank>>>) {
-                    return StreamBuilder<List<PiggyBank>>(
+                  if (state is SuccessState<Stream<List<QiggyBank>>>) {
+                    return StreamBuilder<List<QiggyBank>>(
                       stream: state.data,
                       initialData: const [],
                       // todo: render piggies

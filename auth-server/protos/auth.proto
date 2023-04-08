@@ -1,0 +1,41 @@
+syntax = "proto3";
+package savings;
+option go_package = "com.github/qcodelabsllc/qiggy;ms";
+option java_multiple_files = true;
+option java_package = "io.qcodelabsllc.qiggy";
+option java_outer_classname = "QiggyAuthService";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+service AuthService {
+  rpc login(LoginRequest) returns (Account);
+  rpc create_account(CreateAccountRequest) returns (Account);
+  rpc reset_password(google.protobuf.StringValue) returns (google.protobuf.StringValue);
+  rpc send_otp(google.protobuf.StringValue) returns (google.protobuf.StringValue);
+  rpc verify_otp(google.protobuf.Int32Value) returns (google.protobuf.StringValue);
+  rpc update_password(google.protobuf.StringValue) returns (google.protobuf.StringValue);
+  rpc logout(google.protobuf.StringValue) returns (google.protobuf.Empty);
+}
+
+message LoginRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message CreateAccountRequest {
+  string username = 1;
+  string password = 2;
+  string display_name = 3;
+  string phone_number = 4;
+}
+
+message Account {
+  string access_token = 1;
+  string refresh_token = 2;
+  google.protobuf.Timestamp access_token_expiry = 3;
+  google.protobuf.Timestamp refresh_token_expiry = 4;
+  string session_id = 5;
+  google.protobuf.Timestamp created_at = 6 [lazy = true];
+}

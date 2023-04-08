@@ -1,8 +1,8 @@
-package io.qcodelabsllc.piggybank
+package io.qcodelabsllc.qiggy
 
 import io.grpc.Server
 import io.grpc.ServerBuilder
-import io.qcodelabsllc.piggybank.services.SavingsServiceImpl
+import io.qcodelabsllc.qiggy.services.SavingsServiceImpl
 
 class PiggyBankSavingServer(private val port: Int) {
 

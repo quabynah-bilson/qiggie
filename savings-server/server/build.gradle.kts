@@ -9,7 +9,7 @@ java {
     }
 }
 
-group = "io.qcodelabsllc.piggybank"
+group = "io.qcodelabsllc.qiggy"
 version = "0.0.0-alpha"
 
 dependencies {

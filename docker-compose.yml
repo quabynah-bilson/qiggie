@@ -1,0 +1,68 @@
+version: "3.8"
+services:
+  mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root-password
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data_container:/data/db
+
+  auth-server:
+    build: ./auth-server
+    depends_on:
+      - mongodb_container
+    volumes:
+      - .:/app
+    ports:
+      - "1140:1140"
+    environment:
+      - DATABASE_URI=mongodb://localhost:27017
+      - DATABASE_NAME=piggy_bank_test
+      - ACCOUNT_COLLECTION=qiggy-accounts
+      - SESSION_COLLECTION=qiggy-auth-sessions
+
+  bank-server:
+    build: ./bank-server
+    depends_on:
+      - auth-server
+    volumes:
+      - .:/app
+    ports:
+      - "1150:1150"
+    environment:
+      - DATABASE_URI=mongodb://localhost:27017
+      - DATABASE_NAME=piggy_bank_test
+      - BANK_COLLECTION=qiggy-banks
+
+  customer-server:
+    build: ./customer-server
+    depends_on:
+      - auth-server
+    volumes:
+      - .:/app
+    ports:
+      - "1149:1149"
+    environment:
+      - DATABASE_URI=mongodb://localhost:27017
+      - DATABASE_NAME=piggy_bank_test
+      - CUSTOMER_COLLECTION=qiggy-customers
+
+  savings-server:
+    build: ./savings-server
+    depends_on:
+      - auth-server
+    volumes:
+      - $HOME/.gradle:/root/.gradle
+      - .:/app
+    ports:
+      - "1148:1148"
+    environment:
+      - DATABASE_URI=mongodb://localhost:27017
+      - DATABASE_NAME=piggy_bank_test
+      - SAVINGS_COLLECTION=qiggy-savings
+
+volumes:
+  mongodb_data_container:

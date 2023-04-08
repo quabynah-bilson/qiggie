@@ -7,14 +7,14 @@ import 'package:protobuf_google/protobuf_google.dart';
 
 @Singleton(as: BaseBankRepository)
 class QiggyBankRepository extends BaseBankRepository {
-  final PiggyBankServiceClient _client;
+  final QiggyBankServiceClient _client;
 
   QiggyBankRepository(this._client);
 
   @override
   Future<Either<String, String>> deleteQiggyBank(String id) async {
     try {
-      await _client.deletePiggyBank(StringValue(value: id));
+      await _client.deleteQiggyBank(StringValue(value: id));
       return left('Qiggy deleted successfully');
     } on GrpcError catch (err) {
       return right(err.message ?? err.codeName);
@@ -22,9 +22,9 @@ class QiggyBankRepository extends BaseBankRepository {
   }
 
   @override
-  Future<Either<Stream<List<PiggyBank>>, String>> getQiggies() async {
+  Future<Either<Stream<List<QiggyBank>>, String>> getQiggies() async {
     try {
-      var banks = _client.listPiggyBanks(Empty()).map((event) => event.banks);
+      var banks = _client.listQiggyBanks(Empty()).map((event) => event.banks);
       return left(banks);
     } on GrpcError catch (err) {
       return right(err.message ?? err.codeName);
@@ -38,14 +38,14 @@ class QiggyBankRepository extends BaseBankRepository {
     required double initialAmount,
   }) async {
     try {
-      var request = PiggyBank(
+      var request = QiggyBank(
         // todo -> replace with user's id
         customerId: 'random01234',
         currentAmount: initialAmount,
         goalAmount: goalAmount,
         description: name,
       );
-      var response = await _client.createPiggyBank(request);
+      var response = await _client.createQiggyBank(request);
       return left(response.value);
     } on GrpcError catch (err) {
       return right(err.message ?? err.codeName);

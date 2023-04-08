@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.qcodelabsllc.piggybank.mobile">
+    package="qiggy.mobile">
 
 <!--    <uses-permission android:name="com.android.permissions.INTERNET"/>-->
 

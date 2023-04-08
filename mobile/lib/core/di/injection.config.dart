@@ -38,12 +38,12 @@ extension GetItInjectableX on _i1.GetIt {
     gh.factory<_i3.BaseAuthRepository>(() => _i4.QiggyAuthRepository());
     gh.factory<_i5.CustomerServiceClient>(
         () => networkConfigModule.customerServiceClient);
-    gh.factory<_i6.PiggyBankServiceClient>(
+    gh.factory<_i6.QiggyBankServiceClient>(
         () => networkConfigModule.bankServiceClient);
     gh.factory<_i7.SavingsServiceClient>(
         () => networkConfigModule.savingsServiceClient);
     gh.singleton<_i8.BaseBankRepository>(
-        _i9.QiggyBankRepository(gh<_i6.PiggyBankServiceClient>()));
+        _i9.QiggyBankRepository(gh<_i6.QiggyBankServiceClient>()));
     gh.factory<_i10.BaseCustomerRepository>(
         () => _i11.QiggyCustomerRepository(gh<_i5.CustomerServiceClient>()));
     return this;

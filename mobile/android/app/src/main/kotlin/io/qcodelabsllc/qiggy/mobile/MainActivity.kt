@@ -1,4 +1,4 @@
-package io.qcodelabsllc.piggybank.mobile
+package io.qcodelabsllc.qiggy.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 

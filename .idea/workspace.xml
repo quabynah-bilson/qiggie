@@ -7,34 +7,42 @@
     <cargoProject FILE="$PROJECT_DIR$/customer-server/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="Updated app icon and splash">
-      <change afterPath="$PROJECT_DIR$/auth-server/auth-server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-server/utils/generics.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/assets/img/user_wallet.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/data/repositories/bank.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/domain/repositories/bank.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/manager/bank_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/manager/bank_event.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/pages/dashboard.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/shared/data/repositories/auth.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/shared/data/repositories/customer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/shared/domain/repositories/auth.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/shared/domain/repositories/customer.dart" afterDir="false" />
+    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="Updated microservices">
+      <change afterPath="$PROJECT_DIR$/auth-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server/protos/auth.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server/test_main.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/savings-server/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank-server/services/bank.go" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/services/bank.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/services/customer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/src/services/customer.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/app.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/protos/bank.proto" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/protos/bank.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-server/src/customer.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen-dart-protos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gen-dart-protos.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/android/app/src/main/kotlin/io/qcodelabsllc/piggybank/mobile/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/android/app/src/main/kotlin/io/qcodelabsllc/qiggy/mobile/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/lib/core/di/injection.config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/di/injection.config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/routing/router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/routing/router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/theme.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/utils/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/utils/constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/utils/extensions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/utils/extensions.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/generated/assets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/generated/assets.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/core/network/config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/network/config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/features/piggies/data/repositories/bank.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/data/repositories/bank.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/features/piggies/domain/repositories/bank.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/domain/repositories/bank.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/manager/bank_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/manager/bank_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/pages/dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/pages/dashboard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/bank.pb.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/bank.pb.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/bank.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/bank.pbgrpc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/bank.pbjson.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/bank.pbjson.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/linux/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/linux/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner/Configs/AppInfo.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner/Configs/AppInfo.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/windows/runner/Runner.rc" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/windows/runner/Runner.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savings-server/protos/src/main/proto/io/qcodelabsllc/piggybank/savings.proto" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/protos/src/main/proto/io/qcodelabsllc/qiggy/savings.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savings-server/server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/server/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank/DatabaseConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/qiggy/DatabaseConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank/PiggyBankSavingServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/qiggy/PiggyBankSavingServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank/services/SavingsServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/qiggy/services/SavingsServiceImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,24 +82,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="savings-server" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="savings-server" type="f1a62948:ProjectNode" />
-                <item name="stub" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="savings-server" type="f1a62948:ProjectNode" />
-                <item name="stub" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="savings-server" type="f1a62948:ProjectNode" />
-                <item name="stub" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -109,6 +99,8 @@
         <option value="Rust File" />
         <option value="Go File" />
         <option value="Dart File" />
+        <option value="FastAPI main" />
+        <option value="FastAPI test_main" />
       </list>
     </option>
   </component>
@@ -122,8 +114,14 @@
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
   </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="minikube" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="cdzo6gdn" />
+  </component>
+  <component name="Make.Settings">
+    <option name="showHiddenInToolWindow" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -148,7 +146,7 @@
     "go.import.settings.migrated": "true",
     "io.flutter.reload.alreadyRun": "true",
     "jdk.selected.JAVA_MODULE": "Android Studio default JDK",
-    "last_opened_file_path": "/Users/quabynah/src/projects/personal-studies/piggybank/bank-server",
+    "last_opened_file_path": "/Users/quabynah/src/projects/personal-studies/piggybank/auth-server",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -175,6 +173,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/auth-server" />
       <recent name="$PROJECT_DIR$/bank-server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -205,7 +204,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.savings-server">
+  <component name="RunManager" selected="Docker.docker-compose.yml.auth-server: Compose Deployment">
     <configuration name="customer-server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package customer-piggybank --bin customer-piggybank" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/customer-server" />
@@ -223,29 +222,8 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mobile" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
-      <option name="filePath" value="$PROJECT_DIR$/mobile/lib/main.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="bank-server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
-      <module name="bank-server" />
-      <working_directory value="$PROJECT_DIR$/bank-server" />
-      <kind value="PACKAGE" />
-      <package value="com.github/qcodelabsllc/piggybank" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/bank-server/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="savings-server" type="JetRunConfigurationType" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="io.qcodelabsllc.piggybank.PiggyBankSavingServerKt" />
-      <module name="savings-server.server.main" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="gen-protos-bank" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="gen-protos-bank" workingDirectory="" arguments="">
+    <configuration name="build-savings-docker" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="build-savings-docker" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
@@ -256,21 +234,72 @@
       </makefile>
       <method v="2" />
     </configuration>
+    <configuration name="mobile-deps" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="mobile-deps" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="auth-server" type="Python.FastAPI">
+      <option name="file" value="$PROJECT_DIR$/auth-server/main.py" />
+      <module name="auth-server" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.auth-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="auth-server" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.mongodb_container: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mongodb_container" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Cargo.customer-server" />
-      <item itemvalue="Flutter.mobile" />
-      <item itemvalue="Go Build.bank-server" />
-      <item itemvalue="Kotlin.savings-server" />
-      <item itemvalue="Makefile Target.gen-protos-bank" />
+      <item itemvalue="Docker.docker-compose.yml.auth-server: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.mongodb_container: Compose Deployment" />
+      <item itemvalue="FastAPI.auth-server" />
+      <item itemvalue="Makefile Target.build-savings-docker" />
+      <item itemvalue="Makefile Target.mobile-deps" />
       <item itemvalue="Makefile Target.gen-protos-mobile" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.savings-server" />
-        <item itemvalue="Flutter.mobile" />
-        <item itemvalue="Go Build.bank-server" />
-        <item itemvalue="Makefile Target.gen-protos-bank" />
+        <item itemvalue="Docker.docker-compose.yml.auth-server: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.mongodb_container: Compose Deployment" />
         <item itemvalue="Makefile Target.gen-protos-mobile" />
+        <item itemvalue="Makefile Target.mobile-deps" />
+        <item itemvalue="Makefile Target.build-savings-docker" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +328,7 @@
       <workItem from="1680793915046" duration="3662000" />
       <workItem from="1680801430030" duration="17904000" />
       <workItem from="1680821792626" duration="14213000" />
-      <workItem from="1680884927452" duration="32073000" />
+      <workItem from="1680884927452" duration="36542000" />
     </task>
     <task id="LOCAL-00001" summary="rust works">
       <created>1680788053657</created>
@@ -350,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680899351337</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated microservices">
+      <created>1680955567927</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680955567927</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +398,8 @@
     <MESSAGE value="kotlin server compiles" />
     <MESSAGE value="rust server running &amp; connected to mongodb" />
     <MESSAGE value="Updated app icon and splash" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated app icon and splash" />
+    <MESSAGE value="Updated microservices" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated microservices" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
@@ -370,5 +407,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/piggybank$auth_server.coverage" NAME="auth-server Coverage Results" MODIFIED="1680955714726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

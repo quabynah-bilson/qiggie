@@ -1,9 +1,9 @@
 syntax = "proto3";
 package savings;
-option go_package = "com.github/qcodelabsllc/piggybank;ms";
+option go_package = "com.github/qcodelabsllc/qiggy;ms";
 option java_multiple_files = true;
-option java_package = "io.qcodelabsllc.piggybank";
-option java_outer_classname = "PiggyBankSavingsService";
+option java_package = "io.qcodelabsllc.qiggy";
+option java_outer_classname = "QiggySavingsService";
 
 import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";

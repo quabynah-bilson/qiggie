@@ -1,4 +1,4 @@
-package io.qcodelabsllc.piggybank
+package io.qcodelabsllc.qiggy
 
 import com.mongodb.ConnectionString
 import com.mongodb.MongoClientSettings

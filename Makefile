@@ -1,9 +1,6 @@
 gen-protos-bank:
 	./gen-go-protos.sh
 
-gen-protos-savings:
-	./gen-ruby-protos.sh
-
 gen-protos-mobile:
 	./gen-dart-protos.sh
 
@@ -13,19 +10,6 @@ mobile-deps:
 	flutter pub add --dev build_runner auto_route_generator injectable_generator && \
 	flutter pub upgrade --major-versions
 
-#server = GRPC::RpcServer.new
- #server.add_http2_port('0.0.0.0:1151', :this_port_is_insecure)
- #server.handle(SavingsServer.new)
- #server.run_till_terminated
-
-# def add_savings(savings, _call)
-  #    # Implement your logic here
-  #  end
-  #
-  #  def get_savings(savings_id, _call)
-  #    # Implement your logic here
-  #  end
-  #
-  #  def list_savings(list_savings_request, _call)
-  #    # Implement your logic here
-  #  end
+build-savings-docker:
+	cd savings-server && \
+	docker build -t savings-server .

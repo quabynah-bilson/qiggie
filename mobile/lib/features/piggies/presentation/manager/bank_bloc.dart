@@ -15,7 +15,7 @@ class BankBloc extends Bloc<BankEvent, BlocState> {
       emit(BlocState.loadingState());
       var either = await _repo.getQiggies();
       either.fold(
-        (l) => emit(BlocState<Stream<List<PiggyBank>>>.successState(data: l)),
+        (l) => emit(BlocState<Stream<List<QiggyBank>>>.successState(data: l)),
         (r) => emit(BlocState<String>.errorState(failure: r)),
       );
     });
