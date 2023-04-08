@@ -121,11 +121,11 @@ pub mod customer_service_client {
                 })?;
             let codec = tonic::codec::ProstCodec::default();
             let path = http::uri::PathAndQuery::from_static(
-                "/customer.CustomerService/CreateCustomer",
+                "/customer.CustomerService/create_customer",
             );
             let mut req = request.into_request();
             req.extensions_mut()
-                .insert(GrpcMethod::new("customer.CustomerService", "CreateCustomer"));
+                .insert(GrpcMethod::new("customer.CustomerService", "create_customer"));
             self.inner.unary(req, path, codec).await
         }
         pub async fn get_customer(
@@ -143,11 +143,11 @@ pub mod customer_service_client {
                 })?;
             let codec = tonic::codec::ProstCodec::default();
             let path = http::uri::PathAndQuery::from_static(
-                "/customer.CustomerService/GetCustomer",
+                "/customer.CustomerService/get_customer",
             );
             let mut req = request.into_request();
             req.extensions_mut()
-                .insert(GrpcMethod::new("customer.CustomerService", "GetCustomer"));
+                .insert(GrpcMethod::new("customer.CustomerService", "get_customer"));
             self.inner.unary(req, path, codec).await
         }
         pub async fn update_customer(
@@ -165,11 +165,11 @@ pub mod customer_service_client {
                 })?;
             let codec = tonic::codec::ProstCodec::default();
             let path = http::uri::PathAndQuery::from_static(
-                "/customer.CustomerService/UpdateCustomer",
+                "/customer.CustomerService/update_customer",
             );
             let mut req = request.into_request();
             req.extensions_mut()
-                .insert(GrpcMethod::new("customer.CustomerService", "UpdateCustomer"));
+                .insert(GrpcMethod::new("customer.CustomerService", "update_customer"));
             self.inner.unary(req, path, codec).await
         }
         pub async fn delete_customer(
@@ -187,11 +187,11 @@ pub mod customer_service_client {
                 })?;
             let codec = tonic::codec::ProstCodec::default();
             let path = http::uri::PathAndQuery::from_static(
-                "/customer.CustomerService/DeleteCustomer",
+                "/customer.CustomerService/delete_customer",
             );
             let mut req = request.into_request();
             req.extensions_mut()
-                .insert(GrpcMethod::new("customer.CustomerService", "DeleteCustomer"));
+                .insert(GrpcMethod::new("customer.CustomerService", "delete_customer"));
             self.inner.unary(req, path, codec).await
         }
         pub async fn get_current_customer(
@@ -212,12 +212,12 @@ pub mod customer_service_client {
                 })?;
             let codec = tonic::codec::ProstCodec::default();
             let path = http::uri::PathAndQuery::from_static(
-                "/customer.CustomerService/GetCurrentCustomer",
+                "/customer.CustomerService/get_current_customer",
             );
             let mut req = request.into_request();
             req.extensions_mut()
                 .insert(
-                    GrpcMethod::new("customer.CustomerService", "GetCurrentCustomer"),
+                    GrpcMethod::new("customer.CustomerService", "get_current_customer"),
                 );
             self.inner.server_streaming(req, path, codec).await
         }
@@ -249,8 +249,8 @@ pub mod customer_service_server {
             &self,
             request: tonic::Request<::prost::alloc::string::String>,
         ) -> std::result::Result<tonic::Response<()>, tonic::Status>;
-        /// Server streaming response type for the GetCurrentCustomer method.
-        type GetCurrentCustomerStream: futures_core::Stream<
+        /// Server streaming response type for the get_current_customer method.
+        type get_current_customerStream: futures_core::Stream<
                 Item = std::result::Result<super::Customer, tonic::Status>,
             >
             + Send
@@ -259,7 +259,7 @@ pub mod customer_service_server {
             &self,
             request: tonic::Request<()>,
         ) -> std::result::Result<
-            tonic::Response<Self::GetCurrentCustomerStream>,
+            tonic::Response<Self::get_current_customerStream>,
             tonic::Status,
         >;
     }
@@ -342,11 +342,11 @@ pub mod customer_service_server {
         fn call(&mut self, req: http::Request<B>) -> Self::Future {
             let inner = self.inner.clone();
             match req.uri().path() {
-                "/customer.CustomerService/CreateCustomer" => {
+                "/customer.CustomerService/create_customer" => {
                     #[allow(non_camel_case_types)]
-                    struct CreateCustomerSvc<T: CustomerService>(pub Arc<T>);
+                    struct create_customerSvc<T: CustomerService>(pub Arc<T>);
                     impl<T: CustomerService> tonic::server::UnaryService<super::Customer>
-                    for CreateCustomerSvc<T> {
+                    for create_customerSvc<T> {
                         type Response = ::prost::alloc::string::String;
                         type Future = BoxFuture<
                             tonic::Response<Self::Response>,
@@ -370,7 +370,7 @@ pub mod customer_service_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let inner = inner.0;
-                        let method = CreateCustomerSvc(inner);
+                        let method = create_customerSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
@@ -386,13 +386,13 @@ pub mod customer_service_server {
                     };
                     Box::pin(fut)
                 }
-                "/customer.CustomerService/GetCustomer" => {
+                "/customer.CustomerService/get_customer" => {
                     #[allow(non_camel_case_types)]
-                    struct GetCustomerSvc<T: CustomerService>(pub Arc<T>);
+                    struct get_customerSvc<T: CustomerService>(pub Arc<T>);
                     impl<
                         T: CustomerService,
                     > tonic::server::UnaryService<::prost::alloc::string::String>
-                    for GetCustomerSvc<T> {
+                    for get_customerSvc<T> {
                         type Response = super::Customer;
                         type Future = BoxFuture<
                             tonic::Response<Self::Response>,
@@ -416,7 +416,7 @@ pub mod customer_service_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let inner = inner.0;
-                        let method = GetCustomerSvc(inner);
+                        let method = get_customerSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
@@ -432,11 +432,11 @@ pub mod customer_service_server {
                     };
                     Box::pin(fut)
                 }
-                "/customer.CustomerService/UpdateCustomer" => {
+                "/customer.CustomerService/update_customer" => {
                     #[allow(non_camel_case_types)]
-                    struct UpdateCustomerSvc<T: CustomerService>(pub Arc<T>);
+                    struct update_customerSvc<T: CustomerService>(pub Arc<T>);
                     impl<T: CustomerService> tonic::server::UnaryService<super::Customer>
-                    for UpdateCustomerSvc<T> {
+                    for update_customerSvc<T> {
                         type Response = ();
                         type Future = BoxFuture<
                             tonic::Response<Self::Response>,
@@ -460,7 +460,7 @@ pub mod customer_service_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let inner = inner.0;
-                        let method = UpdateCustomerSvc(inner);
+                        let method = update_customerSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
@@ -476,13 +476,13 @@ pub mod customer_service_server {
                     };
                     Box::pin(fut)
                 }
-                "/customer.CustomerService/DeleteCustomer" => {
+                "/customer.CustomerService/delete_customer" => {
                     #[allow(non_camel_case_types)]
-                    struct DeleteCustomerSvc<T: CustomerService>(pub Arc<T>);
+                    struct delete_customerSvc<T: CustomerService>(pub Arc<T>);
                     impl<
                         T: CustomerService,
                     > tonic::server::UnaryService<::prost::alloc::string::String>
-                    for DeleteCustomerSvc<T> {
+                    for delete_customerSvc<T> {
                         type Response = ();
                         type Future = BoxFuture<
                             tonic::Response<Self::Response>,
@@ -506,7 +506,7 @@ pub mod customer_service_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let inner = inner.0;
-                        let method = DeleteCustomerSvc(inner);
+                        let method = delete_customerSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
@@ -522,13 +522,13 @@ pub mod customer_service_server {
                     };
                     Box::pin(fut)
                 }
-                "/customer.CustomerService/GetCurrentCustomer" => {
+                "/customer.CustomerService/get_current_customer" => {
                     #[allow(non_camel_case_types)]
-                    struct GetCurrentCustomerSvc<T: CustomerService>(pub Arc<T>);
+                    struct get_current_customerSvc<T: CustomerService>(pub Arc<T>);
                     impl<T: CustomerService> tonic::server::ServerStreamingService<()>
-                    for GetCurrentCustomerSvc<T> {
+                    for get_current_customerSvc<T> {
                         type Response = super::Customer;
-                        type ResponseStream = T::GetCurrentCustomerStream;
+                        type ResponseStream = T::get_current_customerStream;
                         type Future = BoxFuture<
                             tonic::Response<Self::ResponseStream>,
                             tonic::Status,
@@ -548,7 +548,7 @@ pub mod customer_service_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let inner = inner.0;
-                        let method = GetCurrentCustomerSvc(inner);
+                        let method = get_current_customerSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
