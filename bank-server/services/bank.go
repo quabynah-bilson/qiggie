@@ -1,9 +1,9 @@
 package services
 
 import (
-	"com.github/qcodelabsllc/piggybank/clients"
-	"com.github/qcodelabsllc/piggybank/config"
-	pb "com.github/qcodelabsllc/piggybank/gen"
+	"com.github/qcodelabsllc/qiggy/clients"
+	"com.github/qcodelabsllc/qiggy/config"
+	pb "com.github/qcodelabsllc/qiggy/gen"
 	"context"
 	"errors"
 	"fmt"
@@ -18,10 +18,10 @@ import (
 )
 
 type BankServiceServer struct {
-	pb.UnimplementedPiggyBankServiceServer
+	pb.UnimplementedQiggyBankServiceServer
 }
 
-func (s *BankServiceServer) CreatePiggyBank(ctx context.Context, request *pb.PiggyBank) (*wrapperspb.StringValue, error) {
+func (s *BankServiceServer) CreateQiggyBank(ctx context.Context, request *pb.QiggyBank) (*wrapperspb.StringValue, error) {
 	ctx, cancel := context.WithTimeout(ctx, time.Second*15)
 	defer cancel()
 
@@ -43,7 +43,7 @@ func (s *BankServiceServer) CreatePiggyBank(ctx context.Context, request *pb.Pig
 			// run update in the background
 			objectId := insertResult.InsertedID.(primitive.ObjectID).Hex()
 			fmt.Println(objectId)
-			go func(id string, req *pb.PiggyBank) {
+			go func(id string, req *pb.QiggyBank) {
 				req.Id = id
 				if _, err := config.BankCol.ReplaceOne(context.Background(), bson.M{"id": req.GetId()}, &req); err != nil {
 					log.Printf("failed to update bank details%+v\n", err)
@@ -57,21 +57,21 @@ func (s *BankServiceServer) CreatePiggyBank(ctx context.Context, request *pb.Pig
 		}
 	}
 }
-func (s *BankServiceServer) GetPiggyBank(context.Context, *wrapperspb.StringValue) (*pb.PiggyBank, error) {
+func (s *BankServiceServer) GetQiggyBank(context.Context, *wrapperspb.StringValue) (*pb.QiggyBank, error) {
 	return nil, nil
 }
-func (s *BankServiceServer) UpdatePiggyBank(context.Context, *pb.PiggyBank) (*emptypb.Empty, error) {
+func (s *BankServiceServer) UpdateQiggyBank(context.Context, *pb.QiggyBank) (*emptypb.Empty, error) {
 	return nil, nil
 }
-func (s *BankServiceServer) DeletePiggyBank(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error) {
+func (s *BankServiceServer) DeleteQiggyBank(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error) {
 	return nil, nil
 }
-func (s *BankServiceServer) ListPiggyBanks(_ *emptypb.Empty, srv pb.PiggyBankService_ListPiggyBanksServer) error {
-	response := &pb.PiggyBankList{}
+func (s *BankServiceServer) ListQiggyBanks(_ *emptypb.Empty, srv pb.QiggyBankService_ListQiggyBanksServer) error {
+	response := &pb.QiggyBankList{}
 	ctx := srv.Context()
 
 	if cursor, err := config.BankCol.Find(ctx, bson.D{}); err == nil {
-		var banks []*pb.PiggyBank
+		var banks []*pb.QiggyBank
 		_ = cursor.All(ctx, &banks)
 		response.Banks = banks
 		_ = srv.Send(response)
@@ -89,7 +89,7 @@ func (s *BankServiceServer) ListPiggyBanks(_ *emptypb.Empty, srv pb.PiggyBankSer
 
 			filteredResults := response.GetBanks()
 			for changeStream.Next(ctx) {
-				var doc utils.MongoDocToProto[*pb.PiggyBank]
+				var doc utils.MongoDocToProto[*pb.QiggyBank]
 				_ = changeStream.Decode(&doc)
 
 				switch doc.OperationType {

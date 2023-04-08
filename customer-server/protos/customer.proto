@@ -8,11 +8,11 @@ import "google/protobuf/timestamp.proto";
 
 
 service CustomerService {
-  rpc CreateCustomer(Customer) returns (google.protobuf.StringValue);
-  rpc GetCustomer(google.protobuf.StringValue) returns (Customer);
-  rpc UpdateCustomer(Customer) returns (google.protobuf.Empty);
-  rpc DeleteCustomer(google.protobuf.StringValue) returns (google.protobuf.Empty);
-  rpc GetCurrentCustomer(google.protobuf.Empty) returns (stream Customer);
+  rpc create_customer(Customer) returns (google.protobuf.StringValue);
+  rpc get_customer(google.protobuf.StringValue) returns (Customer);
+  rpc update_customer(Customer) returns (google.protobuf.Empty);
+  rpc delete_customer(google.protobuf.StringValue) returns (google.protobuf.Empty);
+  rpc get_current_customer(google.protobuf.Empty) returns (stream Customer);
 }
 
 message Customer {

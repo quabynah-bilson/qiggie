@@ -47,46 +47,56 @@ class AuthServiceClient extends $grpc.Client {
       '/savings.AuthService/logout',
       ($1.StringValue value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$verify_token =
+      $grpc.ClientMethod<$1.StringValue, $1.BoolValue>(
+          '/savings.AuthService/verify_token',
+          ($1.StringValue value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.BoolValue.fromBuffer(value));
 
   AuthServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options, interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.Account> login($0.LoginRequest request,
+  $grpc.ResponseFuture<$0.Account> login($0.LoginRequest self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$login, request, options: options);
+    return $createUnaryCall(_$login, self, options: options);
   }
 
   $grpc.ResponseFuture<$0.Account> create_account(
-      $0.CreateAccountRequest request,
+      $0.CreateAccountRequest self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$create_account, request, options: options);
+    return $createUnaryCall(_$create_account, self, options: options);
   }
 
-  $grpc.ResponseFuture<$1.StringValue> reset_password($1.StringValue request,
+  $grpc.ResponseFuture<$1.StringValue> reset_password($1.StringValue self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$reset_password, request, options: options);
+    return $createUnaryCall(_$reset_password, self, options: options);
   }
 
-  $grpc.ResponseFuture<$1.StringValue> send_otp($1.StringValue request,
+  $grpc.ResponseFuture<$1.StringValue> send_otp($1.StringValue self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$send_otp, request, options: options);
+    return $createUnaryCall(_$send_otp, self, options: options);
   }
 
-  $grpc.ResponseFuture<$1.StringValue> verify_otp($1.Int32Value request,
+  $grpc.ResponseFuture<$1.StringValue> verify_otp($1.Int32Value self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$verify_otp, request, options: options);
+    return $createUnaryCall(_$verify_otp, self, options: options);
   }
 
-  $grpc.ResponseFuture<$1.StringValue> update_password($1.StringValue request,
+  $grpc.ResponseFuture<$1.StringValue> update_password($1.StringValue self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$update_password, request, options: options);
+    return $createUnaryCall(_$update_password, self, options: options);
   }
 
-  $grpc.ResponseFuture<$2.Empty> logout($1.StringValue request,
+  $grpc.ResponseFuture<$2.Empty> logout($1.StringValue self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$logout, request, options: options);
+    return $createUnaryCall(_$logout, self, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.BoolValue> verify_token($1.StringValue self,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$verify_token, self, options: options);
   }
 }
 
@@ -144,55 +154,69 @@ abstract class AuthServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.StringValue.fromBuffer(value),
         ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.StringValue, $1.BoolValue>(
+        'verify_token',
+        verify_token_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.StringValue.fromBuffer(value),
+        ($1.BoolValue value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.Account> login_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.LoginRequest> request) async {
-    return login(call, await request);
+      $grpc.ServiceCall call, $async.Future<$0.LoginRequest> self) async {
+    return login(call, await self);
   }
 
   $async.Future<$0.Account> create_account_Pre($grpc.ServiceCall call,
-      $async.Future<$0.CreateAccountRequest> request) async {
-    return create_account(call, await request);
+      $async.Future<$0.CreateAccountRequest> self) async {
+    return create_account(call, await self);
   }
 
   $async.Future<$1.StringValue> reset_password_Pre(
-      $grpc.ServiceCall call, $async.Future<$1.StringValue> request) async {
-    return reset_password(call, await request);
+      $grpc.ServiceCall call, $async.Future<$1.StringValue> self) async {
+    return reset_password(call, await self);
   }
 
   $async.Future<$1.StringValue> send_otp_Pre(
-      $grpc.ServiceCall call, $async.Future<$1.StringValue> request) async {
-    return send_otp(call, await request);
+      $grpc.ServiceCall call, $async.Future<$1.StringValue> self) async {
+    return send_otp(call, await self);
   }
 
   $async.Future<$1.StringValue> verify_otp_Pre(
-      $grpc.ServiceCall call, $async.Future<$1.Int32Value> request) async {
-    return verify_otp(call, await request);
+      $grpc.ServiceCall call, $async.Future<$1.Int32Value> self) async {
+    return verify_otp(call, await self);
   }
 
   $async.Future<$1.StringValue> update_password_Pre(
-      $grpc.ServiceCall call, $async.Future<$1.StringValue> request) async {
-    return update_password(call, await request);
+      $grpc.ServiceCall call, $async.Future<$1.StringValue> self) async {
+    return update_password(call, await self);
   }
 
   $async.Future<$2.Empty> logout_Pre(
-      $grpc.ServiceCall call, $async.Future<$1.StringValue> request) async {
-    return logout(call, await request);
+      $grpc.ServiceCall call, $async.Future<$1.StringValue> self) async {
+    return logout(call, await self);
+  }
+
+  $async.Future<$1.BoolValue> verify_token_Pre(
+      $grpc.ServiceCall call, $async.Future<$1.StringValue> self) async {
+    return verify_token(call, await self);
   }
 
   $async.Future<$0.Account> login(
-      $grpc.ServiceCall call, $0.LoginRequest request);
+      $grpc.ServiceCall call, $0.LoginRequest self);
   $async.Future<$0.Account> create_account(
-      $grpc.ServiceCall call, $0.CreateAccountRequest request);
+      $grpc.ServiceCall call, $0.CreateAccountRequest self);
   $async.Future<$1.StringValue> reset_password(
-      $grpc.ServiceCall call, $1.StringValue request);
+      $grpc.ServiceCall call, $1.StringValue self);
   $async.Future<$1.StringValue> send_otp(
-      $grpc.ServiceCall call, $1.StringValue request);
+      $grpc.ServiceCall call, $1.StringValue self);
   $async.Future<$1.StringValue> verify_otp(
-      $grpc.ServiceCall call, $1.Int32Value request);
+      $grpc.ServiceCall call, $1.Int32Value self);
   $async.Future<$1.StringValue> update_password(
-      $grpc.ServiceCall call, $1.StringValue request);
+      $grpc.ServiceCall call, $1.StringValue self);
   $async.Future<$2.Empty> logout(
-      $grpc.ServiceCall call, $1.StringValue request);
+      $grpc.ServiceCall call, $1.StringValue self);
+  $async.Future<$1.BoolValue> verify_token(
+      $grpc.ServiceCall call, $1.StringValue self);
 }

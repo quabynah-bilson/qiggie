@@ -7,42 +7,35 @@
     <cargoProject FILE="$PROJECT_DIR$/customer-server/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="Updated microservices">
-      <change afterPath="$PROJECT_DIR$/auth-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-server/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-server/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-server/protos/auth.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-server/test_main.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savings-server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="Updated protos">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server/clients/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server/db/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server/services/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server/tokenizer/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/piggybank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/piggybank.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank-server/protos/bank.proto" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/protos/bank.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/customer.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen-dart-protos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gen-dart-protos.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/android/app/src/main/kotlin/io/qcodelabsllc/piggybank/mobile/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/android/app/src/main/kotlin/io/qcodelabsllc/qiggy/mobile/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/di/injection.config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/di/injection.config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/network/config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/network/config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server/protos/auth.proto" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server/protos/auth.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server/test_main.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/clients/customer.go" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/clients/customer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/gen/bank.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/gen/bank.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/gen/bank_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/gen/bank_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/services/bank.go" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/services/bank.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-server/protos/customer.proto" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/protos/customer.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-server/src/services/customer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/src/services/customer.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen-go-protos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gen-go-protos.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/core/network/log.interceptor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/network/log.interceptor.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/lib/features/piggies/data/repositories/bank.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/data/repositories/bank.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/piggies/domain/repositories/bank.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/domain/repositories/bank.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/manager/bank_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/manager/bank_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/pages/dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/pages/dashboard.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/bank.pb.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/bank.pb.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/auth.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/auth.pbgrpc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/lib/protos/bank.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/bank.pbgrpc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/bank.pbjson.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/bank.pbjson.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/linux/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/linux/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/macos/Runner/Configs/AppInfo.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Runner/Configs/AppInfo.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/windows/runner/Runner.rc" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/windows/runner/Runner.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savings-server/protos/src/main/proto/io/qcodelabsllc/piggybank/savings.proto" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/protos/src/main/proto/io/qcodelabsllc/qiggy/savings.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savings-server/server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/server/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank/DatabaseConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/qiggy/DatabaseConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank/PiggyBankSavingServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/qiggy/PiggyBankSavingServer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank/services/SavingsServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/qiggy/services/SavingsServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/customer.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/customer.pbgrpc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/savings.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/savings.pbgrpc.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +94,7 @@
         <option value="Dart File" />
         <option value="FastAPI main" />
         <option value="FastAPI test_main" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -131,43 +125,43 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "dev",
-    "go.import.settings.migrated": "true",
-    "io.flutter.reload.alreadyRun": "true",
-    "jdk.selected.JAVA_MODULE": "Android Studio default JDK",
-    "last_opened_file_path": "/Users/quabynah/src/projects/personal-studies/piggybank/auth-server",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.13901947",
-    "project.structure.side.proportion": "0.28750002",
-    "ruby.rails.projectView.checked": "true",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "reactor",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;Android Studio default JDK&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/quabynah/src/projects/personal-studies/piggybank/auth-server&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.13901947&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.28750002&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -204,7 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.auth-server: Compose Deployment">
+  <component name="RunManager" selected="Cargo.customer-server">
     <configuration name="customer-server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package customer-piggybank --bin customer-piggybank" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/customer-server" />
@@ -222,8 +216,23 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration name="build-savings-docker" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="build-savings-docker" workingDirectory="" arguments="">
+    <configuration name="bank-server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="bank-server" />
+      <working_directory value="$PROJECT_DIR$/bank-server" />
+      <kind value="PACKAGE" />
+      <package value="com.github/qcodelabsllc/qiggy" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/bank-server/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gen-protos-auth" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="gen-protos-auth" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="gen-protos-bank" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="gen-protos-bank" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
@@ -234,72 +243,50 @@
       </makefile>
       <method v="2" />
     </configuration>
-    <configuration name="mobile-deps" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="mobile-deps" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
-    <configuration name="auth-server" type="Python.FastAPI">
-      <option name="file" value="$PROJECT_DIR$/auth-server/main.py" />
+    <configuration name="auth-server" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="auth-server" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/auth-server/venv/bin/python" />
+      <option name="SDK_NAME" value="Python 3.10 (auth-server)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/auth-server" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/auth-server/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.auth-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="auth-server" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.mongodb_container: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="mongodb_container" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
+        <settings />
       </deployment>
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Cargo.customer-server" />
-      <item itemvalue="Docker.docker-compose.yml.auth-server: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.mongodb_container: Compose Deployment" />
-      <item itemvalue="FastAPI.auth-server" />
-      <item itemvalue="Makefile Target.build-savings-docker" />
-      <item itemvalue="Makefile Target.mobile-deps" />
+      <item itemvalue="Go Build.bank-server" />
+      <item itemvalue="Makefile Target.gen-protos-auth" />
+      <item itemvalue="Makefile Target.gen-protos-bank" />
       <item itemvalue="Makefile Target.gen-protos-mobile" />
+      <item itemvalue="Python.auth-server" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.auth-server: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.mongodb_container: Compose Deployment" />
+        <item itemvalue="Makefile Target.gen-protos-auth" />
+        <item itemvalue="Python.auth-server" />
+        <item itemvalue="Go Build.bank-server" />
         <item itemvalue="Makefile Target.gen-protos-mobile" />
-        <item itemvalue="Makefile Target.mobile-deps" />
-        <item itemvalue="Makefile Target.build-savings-docker" />
+        <item itemvalue="Makefile Target.gen-protos-bank" />
       </list>
     </recent_temporary>
   </component>
@@ -328,7 +315,9 @@
       <workItem from="1680793915046" duration="3662000" />
       <workItem from="1680801430030" duration="17904000" />
       <workItem from="1680821792626" duration="14213000" />
-      <workItem from="1680884927452" duration="36542000" />
+      <workItem from="1680884927452" duration="37521000" />
+      <workItem from="1680960797607" duration="90000" />
+      <workItem from="1680960896245" duration="14684000" />
     </task>
     <task id="LOCAL-00001" summary="rust works">
       <created>1680788053657</created>
@@ -386,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680955567927</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated protos">
+      <created>1680959774697</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680959774697</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +395,8 @@
     <MESSAGE value="rust server running &amp; connected to mongodb" />
     <MESSAGE value="Updated app icon and splash" />
     <MESSAGE value="Updated microservices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated microservices" />
+    <MESSAGE value="Updated protos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated protos" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
@@ -409,6 +406,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/piggybank$auth_server.coverage" NAME="auth-server Coverage Results" MODIFIED="1680955714726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/piggybank$main.coverage" NAME="auth-server Coverage Results" MODIFIED="1680989035323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auth-server" />
+    <SUITE FILE_PATH="coverage/piggybank$auth_server.coverage" NAME="auth-server Coverage Results" MODIFIED="1680961819536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

@@ -45,30 +45,30 @@ class QiggyBankServiceClient extends $grpc.Client {
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options, interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.StringValue> createQiggyBank($0.QiggyBank request,
+  $grpc.ResponseFuture<$1.StringValue> createQiggyBank($0.QiggyBank self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$createQiggyBank, request, options: options);
+    return $createUnaryCall(_$createQiggyBank, self, options: options);
   }
 
-  $grpc.ResponseFuture<$0.QiggyBank> getQiggyBank($1.StringValue request,
+  $grpc.ResponseFuture<$0.QiggyBank> getQiggyBank($1.StringValue self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getQiggyBank, request, options: options);
+    return $createUnaryCall(_$getQiggyBank, self, options: options);
   }
 
-  $grpc.ResponseFuture<$2.Empty> updateQiggyBank($0.QiggyBank request,
+  $grpc.ResponseFuture<$2.Empty> updateQiggyBank($0.QiggyBank self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$updateQiggyBank, request, options: options);
+    return $createUnaryCall(_$updateQiggyBank, self, options: options);
   }
 
-  $grpc.ResponseFuture<$2.Empty> deleteQiggyBank($1.StringValue request,
+  $grpc.ResponseFuture<$2.Empty> deleteQiggyBank($1.StringValue self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$deleteQiggyBank, request, options: options);
+    return $createUnaryCall(_$deleteQiggyBank, self, options: options);
   }
 
-  $grpc.ResponseStream<$0.QiggyBankList> listQiggyBanks($2.Empty request,
+  $grpc.ResponseStream<$0.QiggyBankList> listQiggyBanks($2.Empty self,
       {$grpc.CallOptions? options}) {
     return $createStreamingCall(
-        _$listQiggyBanks, $async.Stream.fromIterable([request]),
+        _$listQiggyBanks, $async.Stream.fromIterable([self]),
         options: options);
   }
 }
@@ -115,38 +115,38 @@ abstract class QiggyBankServiceBase extends $grpc.Service {
   }
 
   $async.Future<$1.StringValue> createQiggyBank_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.QiggyBank> request) async {
-    return createQiggyBank(call, await request);
+      $grpc.ServiceCall call, $async.Future<$0.QiggyBank> self) async {
+    return createQiggyBank(call, await self);
   }
 
   $async.Future<$0.QiggyBank> getQiggyBank_Pre(
-      $grpc.ServiceCall call, $async.Future<$1.StringValue> request) async {
-    return getQiggyBank(call, await request);
+      $grpc.ServiceCall call, $async.Future<$1.StringValue> self) async {
+    return getQiggyBank(call, await self);
   }
 
   $async.Future<$2.Empty> updateQiggyBank_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.QiggyBank> request) async {
-    return updateQiggyBank(call, await request);
+      $grpc.ServiceCall call, $async.Future<$0.QiggyBank> self) async {
+    return updateQiggyBank(call, await self);
   }
 
   $async.Future<$2.Empty> deleteQiggyBank_Pre(
-      $grpc.ServiceCall call, $async.Future<$1.StringValue> request) async {
-    return deleteQiggyBank(call, await request);
+      $grpc.ServiceCall call, $async.Future<$1.StringValue> self) async {
+    return deleteQiggyBank(call, await self);
   }
 
   $async.Stream<$0.QiggyBankList> listQiggyBanks_Pre(
-      $grpc.ServiceCall call, $async.Future<$2.Empty> request) async* {
-    yield* listQiggyBanks(call, await request);
+      $grpc.ServiceCall call, $async.Future<$2.Empty> self) async* {
+    yield* listQiggyBanks(call, await self);
   }
 
   $async.Future<$1.StringValue> createQiggyBank(
-      $grpc.ServiceCall call, $0.QiggyBank request);
+      $grpc.ServiceCall call, $0.QiggyBank self);
   $async.Future<$0.QiggyBank> getQiggyBank(
-      $grpc.ServiceCall call, $1.StringValue request);
+      $grpc.ServiceCall call, $1.StringValue self);
   $async.Future<$2.Empty> updateQiggyBank(
-      $grpc.ServiceCall call, $0.QiggyBank request);
+      $grpc.ServiceCall call, $0.QiggyBank self);
   $async.Future<$2.Empty> deleteQiggyBank(
-      $grpc.ServiceCall call, $1.StringValue request);
+      $grpc.ServiceCall call, $1.StringValue self);
   $async.Stream<$0.QiggyBankList> listQiggyBanks(
-      $grpc.ServiceCall call, $2.Empty request);
+      $grpc.ServiceCall call, $2.Empty self);
 }

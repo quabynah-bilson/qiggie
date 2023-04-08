@@ -43,30 +43,30 @@ class CustomerServiceClient extends $grpc.Client {
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options, interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.StringValue> createCustomer($0.Customer request,
+  $grpc.ResponseFuture<$1.StringValue> createCustomer($0.Customer self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$createCustomer, request, options: options);
+    return $createUnaryCall(_$createCustomer, self, options: options);
   }
 
-  $grpc.ResponseFuture<$0.Customer> getCustomer($1.StringValue request,
+  $grpc.ResponseFuture<$0.Customer> getCustomer($1.StringValue self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getCustomer, request, options: options);
+    return $createUnaryCall(_$getCustomer, self, options: options);
   }
 
-  $grpc.ResponseFuture<$2.Empty> updateCustomer($0.Customer request,
+  $grpc.ResponseFuture<$2.Empty> updateCustomer($0.Customer self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$updateCustomer, request, options: options);
+    return $createUnaryCall(_$updateCustomer, self, options: options);
   }
 
-  $grpc.ResponseFuture<$2.Empty> deleteCustomer($1.StringValue request,
+  $grpc.ResponseFuture<$2.Empty> deleteCustomer($1.StringValue self,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$deleteCustomer, request, options: options);
+    return $createUnaryCall(_$deleteCustomer, self, options: options);
   }
 
-  $grpc.ResponseStream<$0.Customer> getCurrentCustomer($2.Empty request,
+  $grpc.ResponseStream<$0.Customer> getCurrentCustomer($2.Empty self,
       {$grpc.CallOptions? options}) {
     return $createStreamingCall(
-        _$getCurrentCustomer, $async.Stream.fromIterable([request]),
+        _$getCurrentCustomer, $async.Stream.fromIterable([self]),
         options: options);
   }
 }
@@ -113,38 +113,38 @@ abstract class CustomerServiceBase extends $grpc.Service {
   }
 
   $async.Future<$1.StringValue> createCustomer_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.Customer> request) async {
-    return createCustomer(call, await request);
+      $grpc.ServiceCall call, $async.Future<$0.Customer> self) async {
+    return createCustomer(call, await self);
   }
 
   $async.Future<$0.Customer> getCustomer_Pre(
-      $grpc.ServiceCall call, $async.Future<$1.StringValue> request) async {
-    return getCustomer(call, await request);
+      $grpc.ServiceCall call, $async.Future<$1.StringValue> self) async {
+    return getCustomer(call, await self);
   }
 
   $async.Future<$2.Empty> updateCustomer_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.Customer> request) async {
-    return updateCustomer(call, await request);
+      $grpc.ServiceCall call, $async.Future<$0.Customer> self) async {
+    return updateCustomer(call, await self);
   }
 
   $async.Future<$2.Empty> deleteCustomer_Pre(
-      $grpc.ServiceCall call, $async.Future<$1.StringValue> request) async {
-    return deleteCustomer(call, await request);
+      $grpc.ServiceCall call, $async.Future<$1.StringValue> self) async {
+    return deleteCustomer(call, await self);
   }
 
   $async.Stream<$0.Customer> getCurrentCustomer_Pre(
-      $grpc.ServiceCall call, $async.Future<$2.Empty> request) async* {
-    yield* getCurrentCustomer(call, await request);
+      $grpc.ServiceCall call, $async.Future<$2.Empty> self) async* {
+    yield* getCurrentCustomer(call, await self);
   }
 
   $async.Future<$1.StringValue> createCustomer(
-      $grpc.ServiceCall call, $0.Customer request);
+      $grpc.ServiceCall call, $0.Customer self);
   $async.Future<$0.Customer> getCustomer(
-      $grpc.ServiceCall call, $1.StringValue request);
+      $grpc.ServiceCall call, $1.StringValue self);
   $async.Future<$2.Empty> updateCustomer(
-      $grpc.ServiceCall call, $0.Customer request);
+      $grpc.ServiceCall call, $0.Customer self);
   $async.Future<$2.Empty> deleteCustomer(
-      $grpc.ServiceCall call, $1.StringValue request);
+      $grpc.ServiceCall call, $1.StringValue self);
   $async.Stream<$0.Customer> getCurrentCustomer(
-      $grpc.ServiceCall call, $2.Empty request);
+      $grpc.ServiceCall call, $2.Empty self);
 }

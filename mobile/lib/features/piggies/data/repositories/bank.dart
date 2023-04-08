@@ -38,14 +38,14 @@ class QiggyBankRepository extends BaseBankRepository {
     required double initialAmount,
   }) async {
     try {
-      var request = QiggyBank(
+      var self = QiggyBank(
         // todo -> replace with user's id
         customerId: 'random01234',
         currentAmount: initialAmount,
         goalAmount: goalAmount,
         description: name,
       );
-      var response = await _client.createQiggyBank(request);
+      var response = await _client.createQiggyBank(self);
       return left(response.value);
     } on GrpcError catch (err) {
       return right(err.message ?? err.codeName);

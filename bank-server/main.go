@@ -1,9 +1,9 @@
 package main
 
 import (
-	"com.github/qcodelabsllc/piggybank/config"
-	pb "com.github/qcodelabsllc/piggybank/gen"
-	svc "com.github/qcodelabsllc/piggybank/services"
+	"com.github/qcodelabsllc/qiggy/config"
+	pb "com.github/qcodelabsllc/qiggy/gen"
+	svc "com.github/qcodelabsllc/qiggy/services"
 	"github.com/joho/godotenv"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
@@ -20,7 +20,7 @@ func main() {
 
 	// setup grpc server
 	s := grpc.NewServer()
-	pb.RegisterPiggyBankServiceServer(s, &svc.BankServiceServer{})
+	pb.RegisterQiggyBankServiceServer(s, &svc.BankServiceServer{})
 	reflection.Register(s)
 
 	// run server

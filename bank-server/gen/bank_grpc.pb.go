@@ -20,67 +20,67 @@ import (
 // Requires gRPC-Go v1.32.0 or later.
 const _ = grpc.SupportPackageIsVersion7
 
-// PiggyBankServiceClient is the client API for PiggyBankService service.
+// QiggyBankServiceClient is the client API for QiggyBankService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type PiggyBankServiceClient interface {
-	CreatePiggyBank(ctx context.Context, in *PiggyBank, opts ...grpc.CallOption) (*wrapperspb.StringValue, error)
-	GetPiggyBank(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*PiggyBank, error)
-	UpdatePiggyBank(ctx context.Context, in *PiggyBank, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	DeletePiggyBank(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	ListPiggyBanks(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (PiggyBankService_ListPiggyBanksClient, error)
+type QiggyBankServiceClient interface {
+	CreateQiggyBank(ctx context.Context, in *QiggyBank, opts ...grpc.CallOption) (*wrapperspb.StringValue, error)
+	GetQiggyBank(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*QiggyBank, error)
+	UpdateQiggyBank(ctx context.Context, in *QiggyBank, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	DeleteQiggyBank(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	ListQiggyBanks(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (QiggyBankService_ListQiggyBanksClient, error)
 }
 
-type piggyBankServiceClient struct {
+type qiggyBankServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewPiggyBankServiceClient(cc grpc.ClientConnInterface) PiggyBankServiceClient {
-	return &piggyBankServiceClient{cc}
+func NewQiggyBankServiceClient(cc grpc.ClientConnInterface) QiggyBankServiceClient {
+	return &qiggyBankServiceClient{cc}
 }
 
-func (c *piggyBankServiceClient) CreatePiggyBank(ctx context.Context, in *PiggyBank, opts ...grpc.CallOption) (*wrapperspb.StringValue, error) {
+func (c *qiggyBankServiceClient) CreateQiggyBank(ctx context.Context, in *QiggyBank, opts ...grpc.CallOption) (*wrapperspb.StringValue, error) {
 	out := new(wrapperspb.StringValue)
-	err := c.cc.Invoke(ctx, "/bank.PiggyBankService/CreatePiggyBank", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/bank.QiggyBankService/CreateQiggyBank", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *piggyBankServiceClient) GetPiggyBank(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*PiggyBank, error) {
-	out := new(PiggyBank)
-	err := c.cc.Invoke(ctx, "/bank.PiggyBankService/GetPiggyBank", in, out, opts...)
+func (c *qiggyBankServiceClient) GetQiggyBank(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*QiggyBank, error) {
+	out := new(QiggyBank)
+	err := c.cc.Invoke(ctx, "/bank.QiggyBankService/GetQiggyBank", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *piggyBankServiceClient) UpdatePiggyBank(ctx context.Context, in *PiggyBank, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (c *qiggyBankServiceClient) UpdateQiggyBank(ctx context.Context, in *QiggyBank, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, "/bank.PiggyBankService/UpdatePiggyBank", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/bank.QiggyBankService/UpdateQiggyBank", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *piggyBankServiceClient) DeletePiggyBank(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (c *qiggyBankServiceClient) DeleteQiggyBank(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, "/bank.PiggyBankService/DeletePiggyBank", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/bank.QiggyBankService/DeleteQiggyBank", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *piggyBankServiceClient) ListPiggyBanks(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (PiggyBankService_ListPiggyBanksClient, error) {
-	stream, err := c.cc.NewStream(ctx, &PiggyBankService_ServiceDesc.Streams[0], "/bank.PiggyBankService/ListPiggyBanks", opts...)
+func (c *qiggyBankServiceClient) ListQiggyBanks(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (QiggyBankService_ListQiggyBanksClient, error) {
+	stream, err := c.cc.NewStream(ctx, &QiggyBankService_ServiceDesc.Streams[0], "/bank.QiggyBankService/ListQiggyBanks", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &piggyBankServiceListPiggyBanksClient{stream}
+	x := &qiggyBankServiceListQiggyBanksClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -90,188 +90,188 @@ func (c *piggyBankServiceClient) ListPiggyBanks(ctx context.Context, in *emptypb
 	return x, nil
 }
 
-type PiggyBankService_ListPiggyBanksClient interface {
-	Recv() (*PiggyBankList, error)
+type QiggyBankService_ListQiggyBanksClient interface {
+	Recv() (*QiggyBankList, error)
 	grpc.ClientStream
 }
 
-type piggyBankServiceListPiggyBanksClient struct {
+type qiggyBankServiceListQiggyBanksClient struct {
 	grpc.ClientStream
 }
 
-func (x *piggyBankServiceListPiggyBanksClient) Recv() (*PiggyBankList, error) {
-	m := new(PiggyBankList)
+func (x *qiggyBankServiceListQiggyBanksClient) Recv() (*QiggyBankList, error) {
+	m := new(QiggyBankList)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
 	return m, nil
 }
 
-// PiggyBankServiceServer is the server API for PiggyBankService service.
-// All implementations must embed UnimplementedPiggyBankServiceServer
+// QiggyBankServiceServer is the server API for QiggyBankService service.
+// All implementations must embed UnimplementedQiggyBankServiceServer
 // for forward compatibility
-type PiggyBankServiceServer interface {
-	CreatePiggyBank(context.Context, *PiggyBank) (*wrapperspb.StringValue, error)
-	GetPiggyBank(context.Context, *wrapperspb.StringValue) (*PiggyBank, error)
-	UpdatePiggyBank(context.Context, *PiggyBank) (*emptypb.Empty, error)
-	DeletePiggyBank(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error)
-	ListPiggyBanks(*emptypb.Empty, PiggyBankService_ListPiggyBanksServer) error
-	mustEmbedUnimplementedPiggyBankServiceServer()
+type QiggyBankServiceServer interface {
+	CreateQiggyBank(context.Context, *QiggyBank) (*wrapperspb.StringValue, error)
+	GetQiggyBank(context.Context, *wrapperspb.StringValue) (*QiggyBank, error)
+	UpdateQiggyBank(context.Context, *QiggyBank) (*emptypb.Empty, error)
+	DeleteQiggyBank(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error)
+	ListQiggyBanks(*emptypb.Empty, QiggyBankService_ListQiggyBanksServer) error
+	mustEmbedUnimplementedQiggyBankServiceServer()
 }
 
-// UnimplementedPiggyBankServiceServer must be embedded to have forward compatible implementations.
-type UnimplementedPiggyBankServiceServer struct {
+// UnimplementedQiggyBankServiceServer must be embedded to have forward compatible implementations.
+type UnimplementedQiggyBankServiceServer struct {
 }
 
-func (UnimplementedPiggyBankServiceServer) CreatePiggyBank(context.Context, *PiggyBank) (*wrapperspb.StringValue, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CreatePiggyBank not implemented")
+func (UnimplementedQiggyBankServiceServer) CreateQiggyBank(context.Context, *QiggyBank) (*wrapperspb.StringValue, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateQiggyBank not implemented")
 }
-func (UnimplementedPiggyBankServiceServer) GetPiggyBank(context.Context, *wrapperspb.StringValue) (*PiggyBank, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetPiggyBank not implemented")
+func (UnimplementedQiggyBankServiceServer) GetQiggyBank(context.Context, *wrapperspb.StringValue) (*QiggyBank, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetQiggyBank not implemented")
 }
-func (UnimplementedPiggyBankServiceServer) UpdatePiggyBank(context.Context, *PiggyBank) (*emptypb.Empty, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdatePiggyBank not implemented")
+func (UnimplementedQiggyBankServiceServer) UpdateQiggyBank(context.Context, *QiggyBank) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateQiggyBank not implemented")
 }
-func (UnimplementedPiggyBankServiceServer) DeletePiggyBank(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method DeletePiggyBank not implemented")
+func (UnimplementedQiggyBankServiceServer) DeleteQiggyBank(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteQiggyBank not implemented")
 }
-func (UnimplementedPiggyBankServiceServer) ListPiggyBanks(*emptypb.Empty, PiggyBankService_ListPiggyBanksServer) error {
-	return status.Errorf(codes.Unimplemented, "method ListPiggyBanks not implemented")
+func (UnimplementedQiggyBankServiceServer) ListQiggyBanks(*emptypb.Empty, QiggyBankService_ListQiggyBanksServer) error {
+	return status.Errorf(codes.Unimplemented, "method ListQiggyBanks not implemented")
 }
-func (UnimplementedPiggyBankServiceServer) mustEmbedUnimplementedPiggyBankServiceServer() {}
+func (UnimplementedQiggyBankServiceServer) mustEmbedUnimplementedQiggyBankServiceServer() {}
 
-// UnsafePiggyBankServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to PiggyBankServiceServer will
+// UnsafeQiggyBankServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to QiggyBankServiceServer will
 // result in compilation errors.
-type UnsafePiggyBankServiceServer interface {
-	mustEmbedUnimplementedPiggyBankServiceServer()
+type UnsafeQiggyBankServiceServer interface {
+	mustEmbedUnimplementedQiggyBankServiceServer()
 }
 
-func RegisterPiggyBankServiceServer(s grpc.ServiceRegistrar, srv PiggyBankServiceServer) {
-	s.RegisterService(&PiggyBankService_ServiceDesc, srv)
+func RegisterQiggyBankServiceServer(s grpc.ServiceRegistrar, srv QiggyBankServiceServer) {
+	s.RegisterService(&QiggyBankService_ServiceDesc, srv)
 }
 
-func _PiggyBankService_CreatePiggyBank_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PiggyBank)
+func _QiggyBankService_CreateQiggyBank_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(QiggyBank)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PiggyBankServiceServer).CreatePiggyBank(ctx, in)
+		return srv.(QiggyBankServiceServer).CreateQiggyBank(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/bank.PiggyBankService/CreatePiggyBank",
+		FullMethod: "/bank.QiggyBankService/CreateQiggyBank",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PiggyBankServiceServer).CreatePiggyBank(ctx, req.(*PiggyBank))
+		return srv.(QiggyBankServiceServer).CreateQiggyBank(ctx, req.(*QiggyBank))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PiggyBankService_GetPiggyBank_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _QiggyBankService_GetQiggyBank_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(wrapperspb.StringValue)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PiggyBankServiceServer).GetPiggyBank(ctx, in)
+		return srv.(QiggyBankServiceServer).GetQiggyBank(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/bank.PiggyBankService/GetPiggyBank",
+		FullMethod: "/bank.QiggyBankService/GetQiggyBank",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PiggyBankServiceServer).GetPiggyBank(ctx, req.(*wrapperspb.StringValue))
+		return srv.(QiggyBankServiceServer).GetQiggyBank(ctx, req.(*wrapperspb.StringValue))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PiggyBankService_UpdatePiggyBank_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PiggyBank)
+func _QiggyBankService_UpdateQiggyBank_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(QiggyBank)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PiggyBankServiceServer).UpdatePiggyBank(ctx, in)
+		return srv.(QiggyBankServiceServer).UpdateQiggyBank(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/bank.PiggyBankService/UpdatePiggyBank",
+		FullMethod: "/bank.QiggyBankService/UpdateQiggyBank",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PiggyBankServiceServer).UpdatePiggyBank(ctx, req.(*PiggyBank))
+		return srv.(QiggyBankServiceServer).UpdateQiggyBank(ctx, req.(*QiggyBank))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PiggyBankService_DeletePiggyBank_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _QiggyBankService_DeleteQiggyBank_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(wrapperspb.StringValue)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PiggyBankServiceServer).DeletePiggyBank(ctx, in)
+		return srv.(QiggyBankServiceServer).DeleteQiggyBank(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/bank.PiggyBankService/DeletePiggyBank",
+		FullMethod: "/bank.QiggyBankService/DeleteQiggyBank",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PiggyBankServiceServer).DeletePiggyBank(ctx, req.(*wrapperspb.StringValue))
+		return srv.(QiggyBankServiceServer).DeleteQiggyBank(ctx, req.(*wrapperspb.StringValue))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PiggyBankService_ListPiggyBanks_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _QiggyBankService_ListQiggyBanks_Handler(srv interface{}, stream grpc.ServerStream) error {
 	m := new(emptypb.Empty)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(PiggyBankServiceServer).ListPiggyBanks(m, &piggyBankServiceListPiggyBanksServer{stream})
+	return srv.(QiggyBankServiceServer).ListQiggyBanks(m, &qiggyBankServiceListQiggyBanksServer{stream})
 }
 
-type PiggyBankService_ListPiggyBanksServer interface {
-	Send(*PiggyBankList) error
+type QiggyBankService_ListQiggyBanksServer interface {
+	Send(*QiggyBankList) error
 	grpc.ServerStream
 }
 
-type piggyBankServiceListPiggyBanksServer struct {
+type qiggyBankServiceListQiggyBanksServer struct {
 	grpc.ServerStream
 }
 
-func (x *piggyBankServiceListPiggyBanksServer) Send(m *PiggyBankList) error {
+func (x *qiggyBankServiceListQiggyBanksServer) Send(m *QiggyBankList) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-// PiggyBankService_ServiceDesc is the grpc.ServiceDesc for PiggyBankService service.
+// QiggyBankService_ServiceDesc is the grpc.ServiceDesc for QiggyBankService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var PiggyBankService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "bank.PiggyBankService",
-	HandlerType: (*PiggyBankServiceServer)(nil),
+var QiggyBankService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "bank.QiggyBankService",
+	HandlerType: (*QiggyBankServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "CreatePiggyBank",
-			Handler:    _PiggyBankService_CreatePiggyBank_Handler,
+			MethodName: "CreateQiggyBank",
+			Handler:    _QiggyBankService_CreateQiggyBank_Handler,
 		},
 		{
-			MethodName: "GetPiggyBank",
-			Handler:    _PiggyBankService_GetPiggyBank_Handler,
+			MethodName: "GetQiggyBank",
+			Handler:    _QiggyBankService_GetQiggyBank_Handler,
 		},
 		{
-			MethodName: "UpdatePiggyBank",
-			Handler:    _PiggyBankService_UpdatePiggyBank_Handler,
+			MethodName: "UpdateQiggyBank",
+			Handler:    _QiggyBankService_UpdateQiggyBank_Handler,
 		},
 		{
-			MethodName: "DeletePiggyBank",
-			Handler:    _PiggyBankService_DeletePiggyBank_Handler,
+			MethodName: "DeleteQiggyBank",
+			Handler:    _QiggyBankService_DeleteQiggyBank_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
 		{
-			StreamName:    "ListPiggyBanks",
-			Handler:       _PiggyBankService_ListPiggyBanks_Handler,
+			StreamName:    "ListQiggyBanks",
+			Handler:       _QiggyBankService_ListQiggyBanks_Handler,
 			ServerStreams: true,
 		},
 	},

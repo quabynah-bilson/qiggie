@@ -1,4 +1,4 @@
-module com.github/qcodelabsllc/piggybank
+module com.github/qcodelabsllc/qiggy
 
 go 1.20
 

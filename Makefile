@@ -4,6 +4,9 @@ gen-protos-bank:
 gen-protos-mobile:
 	./gen-dart-protos.sh
 
+gen-protos-auth:
+	./gen-python-protos.sh
+
 mobile-deps:
 	cd mobile && \
 	flutter pub add grpc protobuf_google protobuf bloc flutter_bloc injectable get_it auto_route google_fonts lottie && \

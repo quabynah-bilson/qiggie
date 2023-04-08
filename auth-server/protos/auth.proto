@@ -1,5 +1,5 @@
 syntax = "proto3";
-package savings;
+package auth;
 option go_package = "com.github/qcodelabsllc/qiggy;ms";
 option java_multiple_files = true;
 option java_package = "io.qcodelabsllc.qiggy";
@@ -17,6 +17,8 @@ service AuthService {
   rpc verify_otp(google.protobuf.Int32Value) returns (google.protobuf.StringValue);
   rpc update_password(google.protobuf.StringValue) returns (google.protobuf.StringValue);
   rpc logout(google.protobuf.StringValue) returns (google.protobuf.Empty);
+
+  rpc verify_token(google.protobuf.StringValue) returns (google.protobuf.BoolValue);
 }
 
 message LoginRequest {

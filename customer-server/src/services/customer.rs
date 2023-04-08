@@ -98,12 +98,12 @@ impl CustomerService for CustomerServiceImpl {
         todo!()
     }
 
-    type GetCurrentCustomerStream = ReceiverStream<Result<Customer, Status>>;
+    type get_current_customerStream = ReceiverStream<Result<Customer, Status>>;
 
     async fn get_current_customer(
         &self,
         _: Request<()>,
-    ) -> Result<Response<Self::GetCurrentCustomerStream>, Status> {
+    ) -> Result<Response<Self::get_current_customerStream>, Status> {
         Err(Status::invalid_argument(
             "The user with this ID does not exist",
         ))

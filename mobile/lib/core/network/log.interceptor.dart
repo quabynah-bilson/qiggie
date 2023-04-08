@@ -24,7 +24,7 @@ class LogGrpcInterceptor implements ClientInterceptor {
   }
 
   @override
-  ResponseFuture<R> interceptUnary<Q, R>(ClientMethod<Q, R> method, Q request,
+  ResponseFuture<R> interceptUnary<Q, R>(ClientMethod<Q, R> method, Q self,
       CallOptions options, ClientUnaryInvoker<Q, R> invoker) {
     var newOpts = options.mergedWith(
       CallOptions(
@@ -35,8 +35,8 @@ class LogGrpcInterceptor implements ClientInterceptor {
       ),
     );
     logger.d(
-        'grpc unary method: ${method.path} => metadata: ${newOpts.metadata} => payload : $request');
-    return invoker(method, request, newOpts)
+        'grpc unary method: ${method.path} => metadata: ${newOpts.metadata} => payload : $self');
+    return invoker(method, self, newOpts)
       ..then((data) => logger.d('grpc unary response => $data'));
   }
 }

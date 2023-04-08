@@ -99,7 +99,7 @@ class _WelcomePageState extends State<WelcomePage>
     // customerClient.getCurrentCustomer(Empty()).listen((value) {
     //   logger.d('current customer: $value');
     // });
-    // var request = Customer(
+    // var self = Customer(
     //   firstName: 'Jane',
     //   lastName: 'Doe',
     //   address: 'Accra',
@@ -107,6 +107,6 @@ class _WelcomePageState extends State<WelcomePage>
     //   phone: '+233554022344',
     //   id: 'hello1234',
     // );
-    // await customerClient.createCustomer(request);
+    // await customerClient.createCustomer(self);
   }
 }
