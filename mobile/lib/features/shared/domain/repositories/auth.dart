@@ -18,7 +18,8 @@ abstract class BaseAuthRepository {
 
   Future<Either<String, String>> logout();
 
-  Future<Either<AuthCodeResponse, String>> sendVerificationCode(String phoneNumber);
+  Future<Either<AuthCodeResponse, String>> sendVerificationCode(
+      String phoneNumber);
 
   Future<Either<String, String>> updatePassword(String newPassword);
 
@@ -28,4 +29,7 @@ abstract class BaseAuthRepository {
   });
 
   Future<Either<Account, String>> updateAccount(Account account);
+
+  Future<Either<Stream<AuthCodeResponse>, String>> verifyPhoneNumber(
+      Stream<AuthCodeRequest> request);
 }

@@ -7,39 +7,26 @@
     <cargoProject FILE="$PROJECT_DIR$/customer-server/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="Added auth implementation">
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/onboarding/presentation/pages/phone.verification.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/customer/customer_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/customer/customer_event.dart" afterDir="false" />
+    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="Added sample authentication UI for new customers">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server/auth_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server/auth_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server/auth_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server/auth_pb2_grpc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-server/protos/auth.proto" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server/protos/auth.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server/services/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server/services/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/services/customer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/src/services/customer.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen-dart-protos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gen-dart-protos.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/app.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/routing/router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/routing/router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/theme.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/utils/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/utils/constants.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/lib/core/utils/extensions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/utils/extensions.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/pages/dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/piggies/presentation/pages/dashboard.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/data/repositories/auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/data/repositories/auth.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/data/repositories/customer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/data/repositories/customer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/data/repositories/local.storage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/data/repositories/local.storage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/domain/repositories/auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/domain/repositories/auth.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/domain/repositories/customer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/domain/repositories/customer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/domain/repositories/local.storage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/domain/repositories/local.storage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/auth_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/auth/auth_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/auth_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/auth/auth_event.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/generated/assets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/generated/assets.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/auth/auth_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/auth/auth_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/auth/auth_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/auth/auth_event.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/lib/protos/auth.pb.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/auth.pb.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/protos/auth.pbenum.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/auth.pbenum.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/lib/protos/auth.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/auth.pbgrpc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/lib/protos/auth.pbjson.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/protos/auth.pbjson.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/linux/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,9 +104,6 @@
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="cdzo6gdn" />
-  </component>
-  <component name="Make.Settings">
-    <option name="showHiddenInToolWindow" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -204,7 +188,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Makefile Target.gen-mobile-avatars">
+  <component name="RunManager" selected="Makefile Target.gen-protos-mobile">
     <configuration name="customer-server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package customer-piggybank --bin customer-piggybank" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/customer-server" />
@@ -226,6 +210,12 @@
       <option name="filePath" value="$PROJECT_DIR$/mobile/lib/main.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="format-avatar-names" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="format-avatar-names" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
     <configuration name="gen-auth-private-key" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/Makefile" target="gen-auth-private-key" workingDirectory="" arguments="">
         <envs />
@@ -234,12 +224,6 @@
     </configuration>
     <configuration name="gen-mobile-avatars" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/Makefile" target="gen-mobile-avatars" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
-    <configuration name="gen-protos-auth" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="gen-protos-auth" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
@@ -282,19 +266,19 @@
     <list>
       <item itemvalue="Cargo.customer-server" />
       <item itemvalue="Flutter.mobile" />
+      <item itemvalue="Makefile Target.format-avatar-names" />
       <item itemvalue="Makefile Target.gen-mobile-avatars" />
-      <item itemvalue="Makefile Target.gen-protos-auth" />
       <item itemvalue="Makefile Target.gen-auth-private-key" />
       <item itemvalue="Makefile Target.gen-protos-mobile" />
       <item itemvalue="Python.auth-server" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Makefile Target.gen-mobile-avatars" />
-        <item itemvalue="Python.auth-server" />
         <item itemvalue="Makefile Target.gen-protos-mobile" />
-        <item itemvalue="Makefile Target.gen-protos-auth" />
-        <item itemvalue="Makefile Target.gen-auth-private-key" />
+        <item itemvalue="Makefile Target.format-avatar-names" />
+        <item itemvalue="Makefile Target.gen-mobile-avatars" />
+        <item itemvalue="Makefile Target.gen-mobile-avatars" />
+        <item itemvalue="Makefile Target.gen-mobile-avatars" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +309,7 @@
       <workItem from="1680821792626" duration="14213000" />
       <workItem from="1680884927452" duration="37521000" />
       <workItem from="1680960797607" duration="90000" />
-      <workItem from="1680960896245" duration="58271000" />
+      <workItem from="1680960896245" duration="60599000" />
     </task>
     <task id="LOCAL-00001" summary="rust works">
       <created>1680788053657</created>
@@ -411,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681033841822</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added sample authentication UI for new customers">
+      <created>1681056359597</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681056359597</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +417,8 @@
     <MESSAGE value="Updated microservices" />
     <MESSAGE value="Updated protos" />
     <MESSAGE value="Added auth implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added auth implementation" />
+    <MESSAGE value="Added sample authentication UI for new customers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sample authentication UI for new customers" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

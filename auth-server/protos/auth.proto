@@ -20,6 +20,9 @@ service AuthService {
   rpc logout(google.protobuf.StringValue) returns (google.protobuf.Empty);
   rpc refresh_token(google.protobuf.StringValue) returns (Session);
   rpc verify_token(google.protobuf.StringValue) returns (google.protobuf.BoolValue);
+
+  // experimental rpc
+  rpc verify_phone_number(stream AuthCodeRequest) returns (stream AuthCodeResponse);
 }
 
 enum PhoneVerificationStatus {
@@ -30,6 +33,11 @@ enum PhoneVerificationStatus {
 }
 
 message VerifyAuthCode {
+  int32 code = 1;
+  string phone_number = 2;
+}
+
+message AuthCodeRequest {
   int32 code = 1;
   string phone_number = 2;
 }

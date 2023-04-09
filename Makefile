@@ -25,5 +25,8 @@ gen-auth-private-key:
 gen-mobile-avatars:
 	cd mobile/assets/img && \
 	mkdir -p avatars && cd avatars && \
-	dicebear loreleiNeutral . --format png --count 10 && \
+	dicebear loreleiNeutral . --format png --count 10
+
+format-avatar-names:
+	cd mobile/assets/img/avatars && ls -la && \
 	for file in *; do mv "$file" "$(echo "$file" | sed 's/-/_/g')"; done

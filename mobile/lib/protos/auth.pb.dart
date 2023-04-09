@@ -76,6 +76,67 @@ class VerifyAuthCode extends $pb.GeneratedMessage {
   void clearPhoneNumber() => clearField(2);
 }
 
+class AuthCodeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AuthCodeRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'auth'), createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'code', $pb.PbFieldType.O3)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'phoneNumber')
+    ..hasRequiredFields = false
+  ;
+
+  AuthCodeRequest._() : super();
+  factory AuthCodeRequest({
+    $core.int? code,
+    $core.String? phoneNumber,
+  }) {
+    final _result = create();
+    if (code != null) {
+      _result.code = code;
+    }
+    if (phoneNumber != null) {
+      _result.phoneNumber = phoneNumber;
+    }
+    return _result;
+  }
+  factory AuthCodeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AuthCodeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  AuthCodeRequest clone() => AuthCodeRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AuthCodeRequest copyWith(void Function(AuthCodeRequest) updates) => super.copyWith((message) => updates(message as AuthCodeRequest)) as AuthCodeRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AuthCodeRequest create() => AuthCodeRequest._();
+  AuthCodeRequest createEmptyInstance() => create();
+  static $pb.PbList<AuthCodeRequest> createRepeated() => $pb.PbList<AuthCodeRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AuthCodeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AuthCodeRequest>(create);
+  static AuthCodeRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get code => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set code($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCode() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCode() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get phoneNumber => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set phoneNumber($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasPhoneNumber() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPhoneNumber() => clearField(2);
+}
+
 class AuthCodeResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AuthCodeResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'auth'), createEmptyInstance: create)
     ..e<PhoneVerificationStatus>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: PhoneVerificationStatus.none, valueOf: PhoneVerificationStatus.valueOf, enumValues: PhoneVerificationStatus.values)

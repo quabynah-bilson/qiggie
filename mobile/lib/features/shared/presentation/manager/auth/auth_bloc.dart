@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:bloc/bloc.dart';
 import 'package:mobile/core/di/injection.dart';
 import 'package:mobile/features/shared/domain/repositories/auth.dart';
@@ -8,6 +10,8 @@ part 'auth_event.dart';
 
 class AuthBloc extends Bloc<AuthEvent, BlocState> {
   final _repo = getIt<BaseAuthRepository>();
+  final _verifyPhoneNumberController =
+      StreamController<AuthCodeRequest>.broadcast(sync: true);
 
   AuthBloc() : super(BlocState.initialState()) {
     on<UpdateAccountAuthEvent>((event, emit) async {
@@ -61,21 +65,15 @@ class AuthBloc extends Bloc<AuthEvent, BlocState> {
       );
     });
 
-    on<SendVerificationCodeAuthEvent>((event, emit) async {
+    on<VerifyPhoneNumberAuthEvent>((event, emit) async {
       emit(BlocState.loadingState());
-      var either = await _repo.sendVerificationCode(event.phoneNumber);
+      var request =
+          AuthCodeRequest(code: event.code, phoneNumber: event.phoneNumber);
+      _verifyPhoneNumberController.add(request);
+      var either =
+          await _repo.verifyPhoneNumber(_verifyPhoneNumberController.stream);
       either.fold(
-        (l) => emit(BlocState<AuthCodeResponse>.successState(data: l)),
-        (r) => emit(BlocState<String>.errorState(failure: r)),
-      );
-    });
-
-    on<VerifyCodeAuthEvent>((event, emit) async {
-      emit(BlocState.loadingState());
-      var either = await _repo.verifyCode(
-          phoneNumber: event.phoneNumber, code: event.code);
-      either.fold(
-        (l) => emit(BlocState<AuthCodeResponse>.successState(data: l)),
+        (l) => BlocState<Stream<AuthCodeResponse>>.successState(data: l),
         (r) => emit(BlocState<String>.errorState(failure: r)),
       );
     });
@@ -88,5 +86,30 @@ class AuthBloc extends Bloc<AuthEvent, BlocState> {
         (r) => emit(BlocState<String>.errorState(failure: r)),
       );
     });
+
+    on<SendVerificationCodeAuthEvent>((event, emit) async {
+      emit(BlocState.loadingState());
+      var either = await _repo.sendVerificationCode(event.phoneNumber);
+      either.fold(
+            (l) => emit(BlocState<AuthCodeResponse>.successState(data: l)),
+            (r) => emit(BlocState<String>.errorState(failure: r)),
+      );
+    });
+
+    on<VerifyCodeAuthEvent>((event, emit) async {
+      emit(BlocState.loadingState());
+      var either = await _repo.verifyCode(
+          phoneNumber: event.phoneNumber, code: event.code);
+      either.fold(
+            (l) => emit(BlocState<AuthCodeResponse>.successState(data: l)),
+            (r) => emit(BlocState<String>.errorState(failure: r)),
+      );
+    });
+  }
+
+  @override
+  Future<void> close() {
+    _verifyPhoneNumberController.close();
+    return super.close();
   }
 }

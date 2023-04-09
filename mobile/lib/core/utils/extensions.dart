@@ -17,6 +17,32 @@ import 'validator.dart';
 extension BuildContextX on BuildContext {
   NavigatorState get navigator => Navigator.of(this);
 
+  void showFeatureUnderDevSheet() async {
+    showCupertinoModalBottomSheet(
+      context: this,
+      backgroundColor: colorScheme.surface,
+      useRootNavigator: true,
+      bounce: true,
+      builder: (context) => AnimatedColumn(
+        animateType: AnimateType.slideDown,
+        children: [
+          Lottie.asset(Assets.animWorkInProgress,
+              frameRate: FrameRate(90),
+              height: height * 0.25,
+              width: width * 0.7)
+              .bottom(24),
+          const EmptyContentPlaceholder(
+              title: kFeatureUnderDev, subtitle: kFeatureUnderDevSubhead),
+          SafeArea(
+            top: false,
+            child: AppRoundedButton(text: 'Thanks, got it!', onTap: context.navigator.pop)
+                .top(40),
+          ),
+        ],
+      ),
+    );
+  }
+
   void showWelcomeDialog() async {
     await Future.delayed(const Duration(milliseconds: 850));
     showCupertinoModalBottomSheet(
@@ -226,6 +252,10 @@ extension BuildContextX on BuildContext {
 
                       showAsError: false, title: 'You\'re all setup now!'));
                 }
+
+                if(state is ErrorState<String>) {
+                  showMessageDialog(state.failure);
+                }
               },
               builder: (context, state) => LoadingIndicator(
                 lottieAnimResource: kQiggieLoadingAnimUrl,
@@ -333,14 +363,16 @@ extension BuildContextX on BuildContext {
                       backgroundColor: colorScheme.onSurface,
                       textColor: colorScheme.surface,
                       layoutSize: LayoutSize.wrapContent,
-                      onTap: () {},
+                      // TODO apple authentication
+                      onTap: showFeatureUnderDevSheet,
                     ).horizontal(20).top(24),
                     AppRoundedButton(
                       text: 'Continue with Google',
                       icon: TablerIcons.brand_google,
                       backgroundColor: colorScheme.error,
                       textColor: colorScheme.onError,
-                      onTap: () {},
+                      // TODO google authentication
+                      onTap: showFeatureUnderDevSheet,
                     ).horizontal(20).top(16),
                   ],
                 ).horizontal(24).vertical(20),

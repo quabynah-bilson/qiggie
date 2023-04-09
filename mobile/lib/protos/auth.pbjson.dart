@@ -32,6 +32,17 @@ const VerifyAuthCode$json = const {
 
 /// Descriptor for `VerifyAuthCode`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List verifyAuthCodeDescriptor = $convert.base64Decode('Cg5WZXJpZnlBdXRoQ29kZRISCgRjb2RlGAEgASgFUgRjb2RlEiEKDHBob25lX251bWJlchgCIAEoCVILcGhvbmVOdW1iZXI=');
+@$core.Deprecated('Use authCodeRequestDescriptor instead')
+const AuthCodeRequest$json = const {
+  '1': 'AuthCodeRequest',
+  '2': const [
+    const {'1': 'code', '3': 1, '4': 1, '5': 5, '10': 'code'},
+    const {'1': 'phone_number', '3': 2, '4': 1, '5': 9, '10': 'phoneNumber'},
+  ],
+};
+
+/// Descriptor for `AuthCodeRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List authCodeRequestDescriptor = $convert.base64Decode('Cg9BdXRoQ29kZVJlcXVlc3QSEgoEY29kZRgBIAEoBVIEY29kZRIhCgxwaG9uZV9udW1iZXIYAiABKAlSC3Bob25lTnVtYmVy');
 @$core.Deprecated('Use authCodeResponseDescriptor instead')
 const AuthCodeResponse$json = const {
   '1': 'AuthCodeResponse',

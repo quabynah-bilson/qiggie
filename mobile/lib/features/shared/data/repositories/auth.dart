@@ -74,39 +74,11 @@ class QiggyAuthRepository extends BaseAuthRepository {
   }
 
   @override
-  Future<Either<AuthCodeResponse, String>> sendVerificationCode(
-      String phoneNumber) async {
-    try {
-      var response =
-          await client.send_auth_code(StringValue(value: phoneNumber));
-      return left(response);
-    } on GrpcError catch (e) {
-      logger.e(e);
-      return right(e.message ?? e.codeName);
-    }
-  }
-
-  @override
   Future<Either<String, String>> updatePassword(String newPassword) async {
     try {
       var response =
           await client.update_password(StringValue(value: newPassword));
       return left(response.value);
-    } on GrpcError catch (e) {
-      logger.e(e);
-      return right(e.message ?? e.codeName);
-    }
-  }
-
-  @override
-  Future<Either<AuthCodeResponse, String>> verifyCode({
-    required String phoneNumber,
-    required int code,
-  }) async {
-    try {
-      var response = await client.verify_auth_code(
-          VerifyAuthCode(code: code, phoneNumber: phoneNumber));
-      return left(response);
     } on GrpcError catch (e) {
       logger.e(e);
       return right(e.message ?? e.codeName);
@@ -135,6 +107,46 @@ class QiggyAuthRepository extends BaseAuthRepository {
       var updatableAccount = await client.update_account(account);
       await storage.saveAccount(updatableAccount);
       return left(updatableAccount);
+    } on GrpcError catch (e) {
+      logger.e(e);
+      return right(e.message ?? e.codeName);
+    }
+  }
+
+  @override
+  Future<Either<AuthCodeResponse, String>> verifyCode({
+    required String phoneNumber,
+    required int code,
+  }) async {
+    try {
+      var response = await client.verify_auth_code(
+          VerifyAuthCode(code: code, phoneNumber: phoneNumber));
+      return left(response);
+    } on GrpcError catch (e) {
+      logger.e(e);
+      return right(e.message ?? e.codeName);
+    }
+  }
+
+  @override
+  Future<Either<AuthCodeResponse, String>> sendVerificationCode(
+      String phoneNumber) async {
+    try {
+      var response =
+          await client.send_auth_code(StringValue(value: phoneNumber));
+      return left(response);
+    } on GrpcError catch (e) {
+      logger.e(e);
+      return right(e.message ?? e.codeName);
+    }
+  }
+
+  @override
+  Future<Either<Stream<AuthCodeResponse>, String>> verifyPhoneNumber(
+      Stream<AuthCodeRequest> request) async {
+    try {
+      var response = client.verify_phone_number(request);
+      return left(response);
     } on GrpcError catch (e) {
       logger.e(e);
       return right(e.message ?? e.codeName);

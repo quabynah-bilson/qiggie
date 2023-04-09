@@ -37,11 +37,11 @@ class SendVerificationCodeAuthEvent extends AuthEvent {
   const SendVerificationCodeAuthEvent(this.phoneNumber);
 }
 
-class VerifyCodeAuthEvent extends AuthEvent {
-  final String phoneNumber;
-  final int code;
+class VerifyPhoneNumberAuthEvent extends AuthEvent {
+  final String? phoneNumber;
+  final int? code;
 
-  const VerifyCodeAuthEvent({required this.phoneNumber, required this.code});
+  const VerifyPhoneNumberAuthEvent({this.phoneNumber, this.code});
 }
 
 class UpdatePasswordAuthEvent extends AuthEvent {
@@ -53,3 +53,10 @@ class UpdatePasswordAuthEvent extends AuthEvent {
 class GetAccountAuthEvent extends AuthEvent {}
 
 class LogoutAuthEvent extends AuthEvent {}
+
+class VerifyCodeAuthEvent extends AuthEvent {
+  final String phoneNumber;
+  final int code;
+
+  const VerifyCodeAuthEvent({required this.phoneNumber, required this.code});
+}

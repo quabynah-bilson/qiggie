@@ -64,6 +64,12 @@ class AuthServiceClient extends $grpc.Client {
           '/auth.AuthService/verify_token',
           ($1.StringValue value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.BoolValue.fromBuffer(value));
+  static final _$verify_phone_number =
+      $grpc.ClientMethod<$0.AuthCodeRequest, $0.AuthCodeResponse>(
+          '/auth.AuthService/verify_phone_number',
+          ($0.AuthCodeRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.AuthCodeResponse.fromBuffer(value));
 
   AuthServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -121,6 +127,13 @@ class AuthServiceClient extends $grpc.Client {
   $grpc.ResponseFuture<$1.BoolValue> verify_token($1.StringValue request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$verify_token, request, options: options);
+  }
+
+  $grpc.ResponseStream<$0.AuthCodeResponse> verify_phone_number(
+      $async.Stream<$0.AuthCodeRequest> request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(_$verify_phone_number, request,
+        options: options);
   }
 }
 
@@ -199,6 +212,13 @@ abstract class AuthServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.StringValue.fromBuffer(value),
         ($1.BoolValue value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AuthCodeRequest, $0.AuthCodeResponse>(
+        'verify_phone_number',
+        verify_phone_number,
+        true,
+        true,
+        ($core.List<$core.int> value) => $0.AuthCodeRequest.fromBuffer(value),
+        ($0.AuthCodeResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.AuthResponse> login_Pre(
@@ -271,4 +291,6 @@ abstract class AuthServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $1.StringValue request);
   $async.Future<$1.BoolValue> verify_token(
       $grpc.ServiceCall call, $1.StringValue request);
+  $async.Stream<$0.AuthCodeResponse> verify_phone_number(
+      $grpc.ServiceCall call, $async.Stream<$0.AuthCodeRequest> request);
 }
