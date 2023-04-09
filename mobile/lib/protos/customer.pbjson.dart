@@ -13,15 +13,18 @@ const Customer$json = const {
   '1': 'Customer',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
-    const {'1': 'last_name', '3': 3, '4': 1, '5': 9, '10': 'lastName'},
-    const {'1': 'username', '3': 4, '4': 1, '5': 9, '10': 'username'},
-    const {'1': 'phone', '3': 5, '4': 1, '5': 9, '10': 'phone'},
-    const {'1': 'address', '3': 6, '4': 1, '5': 9, '10': 'address'},
+    const {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
+    const {'1': 'username', '3': 3, '4': 1, '5': 9, '10': 'username'},
+    const {'1': 'phone', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'phone', '17': true},
+    const {'1': 'avatar', '3': 5, '4': 1, '5': 9, '9': 1, '10': 'avatar', '17': true},
     const {'1': 'created_at', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createdAt'},
     const {'1': 'updated_at', '3': 8, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'updatedAt'},
+  ],
+  '8': const [
+    const {'1': '_phone'},
+    const {'1': '_avatar'},
   ],
 };
 
 /// Descriptor for `Customer`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List customerDescriptor = $convert.base64Decode('CghDdXN0b21lchIOCgJpZBgBIAEoCVICaWQSHQoKZmlyc3RfbmFtZRgCIAEoCVIJZmlyc3ROYW1lEhsKCWxhc3RfbmFtZRgDIAEoCVIIbGFzdE5hbWUSGgoIdXNlcm5hbWUYBCABKAlSCHVzZXJuYW1lEhQKBXBob25lGAUgASgJUgVwaG9uZRIYCgdhZGRyZXNzGAYgASgJUgdhZGRyZXNzEjkKCmNyZWF0ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgljcmVhdGVkQXQSOQoKdXBkYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXVwZGF0ZWRBdA==');
+final $typed_data.Uint8List customerDescriptor = $convert.base64Decode('CghDdXN0b21lchIOCgJpZBgBIAEoCVICaWQSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRIaCgh1c2VybmFtZRgDIAEoCVIIdXNlcm5hbWUSGQoFcGhvbmUYBCABKAlIAFIFcGhvbmWIAQESGwoGYXZhdGFyGAUgASgJSAFSBmF2YXRhcogBARI5CgpjcmVhdGVkX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJY3JlYXRlZEF0EjkKCnVwZGF0ZWRfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgl1cGRhdGVkQXRCCAoGX3Bob25lQgkKB19hdmF0YXI=');

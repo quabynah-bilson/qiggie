@@ -19,12 +19,12 @@ class AuthServiceStub(object):
         self.login = channel.unary_unary(
                 '/auth.AuthService/login',
                 request_serializer=auth__pb2.LoginRequest.SerializeToString,
-                response_deserializer=auth__pb2.Account.FromString,
+                response_deserializer=auth__pb2.AuthResponse.FromString,
                 )
         self.create_account = channel.unary_unary(
                 '/auth.AuthService/create_account',
                 request_serializer=auth__pb2.CreateAccountRequest.SerializeToString,
-                response_deserializer=auth__pb2.Account.FromString,
+                response_deserializer=auth__pb2.AuthResponse.FromString,
                 )
         self.reset_password = channel.unary_unary(
                 '/auth.AuthService/reset_password',
@@ -50,6 +50,11 @@ class AuthServiceStub(object):
                 '/auth.AuthService/logout',
                 request_serializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
+        self.refresh_token = channel.unary_unary(
+                '/auth.AuthService/refresh_token',
+                request_serializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
+                response_deserializer=auth__pb2.Session.FromString,
                 )
         self.verify_token = channel.unary_unary(
                 '/auth.AuthService/verify_token',
@@ -103,6 +108,12 @@ class AuthServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def refresh_token(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def verify_token(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -115,12 +126,12 @@ def add_AuthServiceServicer_to_server(servicer, server):
             'login': grpc.unary_unary_rpc_method_handler(
                     servicer.login,
                     request_deserializer=auth__pb2.LoginRequest.FromString,
-                    response_serializer=auth__pb2.Account.SerializeToString,
+                    response_serializer=auth__pb2.AuthResponse.SerializeToString,
             ),
             'create_account': grpc.unary_unary_rpc_method_handler(
                     servicer.create_account,
                     request_deserializer=auth__pb2.CreateAccountRequest.FromString,
-                    response_serializer=auth__pb2.Account.SerializeToString,
+                    response_serializer=auth__pb2.AuthResponse.SerializeToString,
             ),
             'reset_password': grpc.unary_unary_rpc_method_handler(
                     servicer.reset_password,
@@ -146,6 +157,11 @@ def add_AuthServiceServicer_to_server(servicer, server):
                     servicer.logout,
                     request_deserializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'refresh_token': grpc.unary_unary_rpc_method_handler(
+                    servicer.refresh_token,
+                    request_deserializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
+                    response_serializer=auth__pb2.Session.SerializeToString,
             ),
             'verify_token': grpc.unary_unary_rpc_method_handler(
                     servicer.verify_token,
@@ -175,7 +191,7 @@ class AuthService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/auth.AuthService/login',
             auth__pb2.LoginRequest.SerializeToString,
-            auth__pb2.Account.FromString,
+            auth__pb2.AuthResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -192,7 +208,7 @@ class AuthService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/auth.AuthService/create_account',
             auth__pb2.CreateAccountRequest.SerializeToString,
-            auth__pb2.Account.FromString,
+            auth__pb2.AuthResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -278,6 +294,23 @@ class AuthService(object):
         return grpc.experimental.unary_unary(request, target, '/auth.AuthService/logout',
             google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def refresh_token(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/auth.AuthService/refresh_token',
+            google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
+            auth__pb2.Session.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

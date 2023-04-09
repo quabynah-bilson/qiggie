@@ -7,12 +7,11 @@ from grpc_reflection.v1alpha import reflection
 
 import auth_pb2 as pb
 import auth_pb2_grpc as pb_grpc
-import db
 from services import auth
 
 
 async def serve() -> None:
-    print("creating grpc auth server...on 1140")
+    print("connecting to python auth grpc server using 0.0.0.0:1140")
     server = grpc.aio.server(futures.ThreadPoolExecutor(max_workers=10))
 
     # register services

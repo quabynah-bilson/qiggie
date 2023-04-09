@@ -1,5 +1,5 @@
 const kAppName = 'Qiggie';
-const kAppNameLong = 'A Piggybank by QCodelabsLLC';
+const kAppNameLong = 'A Piggybank by qcodelabsllc';
 const kAppDesc =
     'With our app you can easily track your income and expenses, set financial goals and make informed decisions about your money';
 // const kAppDesc = 'A convenient record keeper for your personal financial projects';

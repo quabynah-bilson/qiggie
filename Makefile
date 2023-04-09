@@ -16,3 +16,8 @@ mobile-deps:
 build-savings-docker:
 	cd savings-server && \
 	docker build -t savings-server .
+
+gen-auth-private-key:
+	cd auth-server && \
+	mkdir -p certs && \
+	openssl genrsa -out certs/private.pem 4096

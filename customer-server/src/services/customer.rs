@@ -4,6 +4,9 @@ use mongodb::Collection;
 use mongodb::options::{FindOneOptions, InsertOneOptions, ReplaceOptions};
 use tokio_stream::wrappers::ReceiverStream;
 use tonic::{Request, Response, Status};
+use prost_types::Timestamp;
+use chrono::{DateTime, Utc};
+
 
 use crate::customer::Customer;
 use crate::customer::customer_service_server::CustomerService;
@@ -73,13 +76,45 @@ impl CustomerService for CustomerServiceImpl {
         if let Some(document) = self.collection.find_one(filter, options).await.unwrap() {
             println!("{:?}", document);
             // create customer from document
+            let now: DateTime<Utc> = Utc::now();
+            let timestamp: Timestamp = Timestamp {
+                seconds: now.timestamp(),
+                nanos: now.timestamp_subsec_nanos() as i32,
+            };
             let customer = Customer {
                 id: document.get_str("id").unwrap().to_string(),
-                first_name: document.get_str("first_name").unwrap().to_string(),
-                last_name: document.get_str("last_name").unwrap().to_string(),
+                display_name: document.get_str("display_name").unwrap().to_string(),
                 username: document.get_str("username").unwrap().to_string(),
-                phone: document.get_str("phone").unwrap().to_string(),
-                address: document.get_str("address").unwrap().to_string(),
+                phone: Some(document.get_str("phone").unwrap().to_string()),
+                avatar: None,
+                created_at: Some(timestamp),
+                updated_at: None,
+            };
+
+            return Ok(Response::new(customer));
+        }
+
+        Err(Status::not_found("User not found"))
+    }
+
+    async fn get_customer_by_username(&self, request: Request<String>) -> Result<Response<Customer>, Status> {
+        // get id from request
+        let username = request.into_inner().clone();
+
+        // filter for document
+        let filter = doc! {"username" : username};
+        let options = FindOneOptions::builder().build();
+
+        // find all documents with matching id
+        if let Some(doc_data) = self.collection.find_one(filter, options).await.unwrap() {
+            println!("{:?}", doc_data);
+            // create customer from document
+            let customer = Customer {
+                id: doc_data.get_str("id").unwrap().to_string(),
+                display_name: doc_data.get_str("display_name").unwrap().to_string(),
+                username: doc_data.get_str("username").unwrap().to_string(),
+                phone: Some(doc_data.get_str("phone").unwrap().to_string()),
+                avatar: Some(doc_data.get_str("avatar").unwrap().to_string()),
                 created_at: None,
                 updated_at: None,
             };
@@ -116,13 +151,19 @@ async fn insert_customer_data(
     customer_to_be_inserted: &Customer,
 ) -> (Document, ObjectId) {
     let updatable_customer = customer_to_be_inserted.clone();
+    let now: DateTime<Utc> = Utc::now();
+    let timestamp: Timestamp = Timestamp {
+        seconds: now.timestamp(),
+        nanos: now.timestamp_subsec_nanos() as i32,
+    };
     let new_customer_doc = doc! {
         "_id": ObjectId::new(),
         "phone" : updatable_customer.phone,
         "username" : updatable_customer.username,
-        "first_name" : updatable_customer.first_name,
-        "last_name" : updatable_customer.last_name,
-        "address" : updatable_customer.address,
+        "display_name" : updatable_customer.display_name,
+        "avatar" : "https://images.unsplash.com/photo-1619169412695-de792ce344e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80".to_string(),
+        // "created_at" : None,
+        // "updated_at" : None,
     };
     let options = InsertOneOptions::builder().build();
     let result = collection

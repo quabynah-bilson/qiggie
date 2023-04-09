@@ -10,15 +10,20 @@ import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
 
 service AuthService {
-  rpc login(LoginRequest) returns (Account);
-  rpc create_account(CreateAccountRequest) returns (Account);
+  rpc login(LoginRequest) returns (AuthResponse);
+  rpc create_account(CreateAccountRequest) returns (AuthResponse);
   rpc reset_password(google.protobuf.StringValue) returns (google.protobuf.StringValue);
   rpc send_otp(google.protobuf.StringValue) returns (google.protobuf.StringValue);
   rpc verify_otp(google.protobuf.Int32Value) returns (google.protobuf.StringValue);
   rpc update_password(google.protobuf.StringValue) returns (google.protobuf.StringValue);
   rpc logout(google.protobuf.StringValue) returns (google.protobuf.Empty);
-
+  rpc refresh_token(google.protobuf.StringValue) returns (Session);
   rpc verify_token(google.protobuf.StringValue) returns (google.protobuf.BoolValue);
+}
+
+message AuthResponse {
+  Account account = 1;
+  Session session = 2;
 }
 
 message LoginRequest {
@@ -34,6 +39,13 @@ message CreateAccountRequest {
 }
 
 message Account {
+  string username = 1;
+  string password = 2;
+  string display_name = 3;
+  string phone_number = 4;
+}
+
+message Session {
   string access_token = 1;
   string refresh_token = 2;
   google.protobuf.Timestamp access_token_expiry = 3;

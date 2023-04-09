@@ -10,6 +10,7 @@ import "google/protobuf/timestamp.proto";
 service CustomerService {
   rpc create_customer(Customer) returns (google.protobuf.StringValue);
   rpc get_customer(google.protobuf.StringValue) returns (Customer);
+  rpc get_customer_by_username(google.protobuf.StringValue) returns (Customer);
   rpc update_customer(Customer) returns (google.protobuf.Empty);
   rpc delete_customer(google.protobuf.StringValue) returns (google.protobuf.Empty);
   rpc get_current_customer(google.protobuf.Empty) returns (stream Customer);
@@ -17,11 +18,10 @@ service CustomerService {
 
 message Customer {
   string id = 1;
-  string first_name = 2;
-  string last_name = 3;
-  string username = 4;
-  string phone = 5;
-  string address = 6;
+  string display_name = 2;
+  string username = 3;
+  optional string phone = 4;
+  optional string avatar = 5;
   google.protobuf.Timestamp created_at = 7;
   google.protobuf.Timestamp updated_at = 8;
 }

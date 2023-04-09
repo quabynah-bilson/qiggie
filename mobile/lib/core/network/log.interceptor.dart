@@ -8,35 +8,22 @@ class LogGrpcInterceptor implements ClientInterceptor {
       Stream<Q> requests,
       CallOptions options,
       ClientStreamingInvoker<Q, R> invoker) {
-    var newOpts = options.mergedWith(
-      CallOptions(
-        metadata: {
-          // TODO: add authorization token
-          'Authorization': 'Bearer <PUT-TOKEN-HERE>'
-        },
-      ),
-    );
-
     logger.d(
-        'grpc streaming method: ${method.path} => metadata: ${newOpts.metadata}');
+        'grpc streaming method: ${method.path} => metadata: ${options.metadata}');
     // do nothing for now
-    return invoker(method, requests, newOpts);
+    return invoker(method, requests, options)
+      ..map((data) {
+        logger.d('grpc unary response => $data');
+        return data;
+      });
   }
 
   @override
   ResponseFuture<R> interceptUnary<Q, R>(ClientMethod<Q, R> method, Q self,
       CallOptions options, ClientUnaryInvoker<Q, R> invoker) {
-    var newOpts = options.mergedWith(
-      CallOptions(
-        metadata: {
-          // TODO: add authorization token
-          'Authorization': 'Bearer <PUT-TOKEN-HERE>'
-        },
-      ),
-    );
     logger.d(
-        'grpc unary method: ${method.path} => metadata: ${newOpts.metadata} => payload : $self');
-    return invoker(method, self, newOpts)
+        'grpc unary method: ${method.path} => metadata: ${options.metadata} => payload : $self');
+    return invoker(method, self, options)
       ..then((data) => logger.d('grpc unary response => $data'));
   }
 }

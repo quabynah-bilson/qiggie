@@ -14,11 +14,10 @@ import 'package:protobuf_google/protobuf_google.dart' as $3;
 class Customer extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Customer', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'customer'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'firstName')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lastName')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'username')
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'phone')
-    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'displayName')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'username')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'phone')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'avatar')
     ..aOM<$3.Timestamp>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createdAt', subBuilder: $3.Timestamp.create)
     ..aOM<$3.Timestamp>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'updatedAt', subBuilder: $3.Timestamp.create)
     ..hasRequiredFields = false
@@ -27,11 +26,10 @@ class Customer extends $pb.GeneratedMessage {
   Customer._() : super();
   factory Customer({
     $core.String? id,
-    $core.String? firstName,
-    $core.String? lastName,
+    $core.String? displayName,
     $core.String? username,
     $core.String? phone,
-    $core.String? address,
+    $core.String? avatar,
     $3.Timestamp? createdAt,
     $3.Timestamp? updatedAt,
   }) {
@@ -39,11 +37,8 @@ class Customer extends $pb.GeneratedMessage {
     if (id != null) {
       _result.id = id;
     }
-    if (firstName != null) {
-      _result.firstName = firstName;
-    }
-    if (lastName != null) {
-      _result.lastName = lastName;
+    if (displayName != null) {
+      _result.displayName = displayName;
     }
     if (username != null) {
       _result.username = username;
@@ -51,8 +46,8 @@ class Customer extends $pb.GeneratedMessage {
     if (phone != null) {
       _result.phone = phone;
     }
-    if (address != null) {
-      _result.address = address;
+    if (avatar != null) {
+      _result.avatar = avatar;
     }
     if (createdAt != null) {
       _result.createdAt = createdAt;
@@ -93,70 +88,61 @@ class Customer extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get firstName => $_getSZ(1);
+  $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set firstName($core.String v) { $_setString(1, v); }
+  set displayName($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasFirstName() => $_has(1);
+  $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFirstName() => clearField(2);
+  void clearDisplayName() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get lastName => $_getSZ(2);
+  $core.String get username => $_getSZ(2);
   @$pb.TagNumber(3)
-  set lastName($core.String v) { $_setString(2, v); }
+  set username($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasLastName() => $_has(2);
+  $core.bool hasUsername() => $_has(2);
   @$pb.TagNumber(3)
-  void clearLastName() => clearField(3);
+  void clearUsername() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get username => $_getSZ(3);
+  $core.String get phone => $_getSZ(3);
   @$pb.TagNumber(4)
-  set username($core.String v) { $_setString(3, v); }
+  set phone($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasUsername() => $_has(3);
+  $core.bool hasPhone() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUsername() => clearField(4);
+  void clearPhone() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get phone => $_getSZ(4);
+  $core.String get avatar => $_getSZ(4);
   @$pb.TagNumber(5)
-  set phone($core.String v) { $_setString(4, v); }
+  set avatar($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasPhone() => $_has(4);
+  $core.bool hasAvatar() => $_has(4);
   @$pb.TagNumber(5)
-  void clearPhone() => clearField(5);
-
-  @$pb.TagNumber(6)
-  $core.String get address => $_getSZ(5);
-  @$pb.TagNumber(6)
-  set address($core.String v) { $_setString(5, v); }
-  @$pb.TagNumber(6)
-  $core.bool hasAddress() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearAddress() => clearField(6);
+  void clearAvatar() => clearField(5);
 
   @$pb.TagNumber(7)
-  $3.Timestamp get createdAt => $_getN(6);
+  $3.Timestamp get createdAt => $_getN(5);
   @$pb.TagNumber(7)
   set createdAt($3.Timestamp v) { setField(7, v); }
   @$pb.TagNumber(7)
-  $core.bool hasCreatedAt() => $_has(6);
+  $core.bool hasCreatedAt() => $_has(5);
   @$pb.TagNumber(7)
   void clearCreatedAt() => clearField(7);
   @$pb.TagNumber(7)
-  $3.Timestamp ensureCreatedAt() => $_ensure(6);
+  $3.Timestamp ensureCreatedAt() => $_ensure(5);
 
   @$pb.TagNumber(8)
-  $3.Timestamp get updatedAt => $_getN(7);
+  $3.Timestamp get updatedAt => $_getN(6);
   @$pb.TagNumber(8)
   set updatedAt($3.Timestamp v) { setField(8, v); }
   @$pb.TagNumber(8)
-  $core.bool hasUpdatedAt() => $_has(7);
+  $core.bool hasUpdatedAt() => $_has(6);
   @$pb.TagNumber(8)
   void clearUpdatedAt() => clearField(8);
   @$pb.TagNumber(8)
-  $3.Timestamp ensureUpdatedAt() => $_ensure(7);
+  $3.Timestamp ensureUpdatedAt() => $_ensure(6);
 }
 

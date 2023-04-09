@@ -11,6 +11,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .out_dir(out_dir)
         .file_descriptor_set_path(original_out_dir.join("customer_descriptor.bin"))
         .compile(&["protos/customer.proto"], &["proto"])?;
-    tonic_build::compile_protos("protos/customer.proto")?;
+    // tonic_build::compile_protos("protos/customer.proto")?;
     Ok(())
 }

@@ -1,0 +1,11 @@
+import 'package:dartz/dartz.dart';
+import 'package:mobile/protos/auth.pb.dart';
+
+/// handles local storage of session data
+abstract class BaseLocalStorageRepository {
+  Future<Either<Session, String>> getCurrentSession();
+
+  Future<void> saveSession(Session session);
+
+  Future<void> clearSession();
+}
