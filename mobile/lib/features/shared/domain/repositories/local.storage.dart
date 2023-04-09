@@ -5,7 +5,11 @@ import 'package:mobile/protos/auth.pb.dart';
 abstract class BaseLocalStorageRepository {
   Future<Either<Session, String>> getCurrentSession();
 
+  Future<Either<Account, String>> getCurrentAccount();
+
   Future<void> saveSession(Session session);
 
-  Future<void> clearSession();
+  Future<void> saveAccount(Account account);
+
+  Future<void> clearSessionAndAccount();
 }

@@ -4,6 +4,12 @@ abstract class AuthEvent {
   const AuthEvent();
 }
 
+class UpdateAccountAuthEvent extends AuthEvent {
+  final Account account;
+
+  const UpdateAccountAuthEvent(this.account);
+}
+
 class LoginAuthEvent extends AuthEvent {
   final String username;
   final String password;
@@ -44,4 +50,6 @@ class UpdatePasswordAuthEvent extends AuthEvent {
   const UpdatePasswordAuthEvent(this.newPassword);
 }
 
-class LogoutEvent extends AuthEvent {}
+class GetAccountAuthEvent extends AuthEvent {}
+
+class LogoutAuthEvent extends AuthEvent {}

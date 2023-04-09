@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/features/onboarding/presentation/pages/phone.verification.dart';
 import 'package:mobile/features/piggies/presentation/pages/dashboard.dart';
 import 'package:mobile/features/shared/presentation/pages/welcome.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
@@ -13,6 +14,10 @@ class AppRouterConfig {
       case AppRouter.dashboardRoute:
         return MaterialWithModalsPageRoute(
             builder: (_) => const DashboardPage(), settings: settings);
+      case AppRouter.phoneVerificationRoute:
+        return MaterialWithModalsPageRoute(
+            builder: (_) => const PhoneNumberVerificationPage(),
+            settings: settings);
     }
 
     return MaterialPageRoute(
@@ -33,6 +38,7 @@ class AppRouterConfig {
 class AppRouter {
   static const welcomeRoute = '/';
   static const dashboardRoute = '/dashboard';
+  static const phoneVerificationRoute = '/phone-verification';
   static const savingsRoute = '/savings'; // todo
   static const savingsDetailsRoute = '/savings-info'; // todo
   static const piggiesRoute = '/my-piggies'; // todo

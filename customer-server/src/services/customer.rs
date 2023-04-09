@@ -139,6 +139,8 @@ impl CustomerService for CustomerServiceImpl {
         &self,
         _: Request<()>,
     ) -> Result<Response<Self::get_current_customerStream>, Status> {
+        let response = ;
+        Response::new(response);
         Err(Status::invalid_argument(
             "The user with this ID does not exist",
         ))
@@ -152,10 +154,10 @@ async fn insert_customer_data(
 ) -> (Document, ObjectId) {
     let updatable_customer = customer_to_be_inserted.clone();
     let now: DateTime<Utc> = Utc::now();
-    let timestamp: Timestamp = Timestamp {
-        seconds: now.timestamp(),
-        nanos: now.timestamp_subsec_nanos() as i32,
-    };
+    // let timestamp: Timestamp = Timestamp {
+    //     seconds: now.timestamp(),
+    //     nanos: now.timestamp_subsec_nanos() as i32,
+    // };
     let new_customer_doc = doc! {
         "_id": ObjectId::new(),
         "phone" : updatable_customer.phone,

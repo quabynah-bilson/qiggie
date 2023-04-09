@@ -4,10 +4,21 @@ class Assets {
 
   static const String animError = 'assets/anim/error.json';
   static const String animInvestMoney = 'assets/anim/invest_money.json';
+  static const String animPhoneVerification = 'assets/anim/phone_verification.json';
   static const String animSaveMoney = 'assets/anim/save_money.json';
   static const String animSuccess = 'assets/anim/success.json';
   static const String animWelcomeNewUser = 'assets/anim/welcome_new_user.json';
   static const String animWorkInProgress = 'assets/anim/work_in_progress.json';
+  static const String avatarsLoreleiNeutral0 = 'assets/img/avatars/loreleiNeutral_0.png';
+  static const String avatarsLoreleiNeutral1 = 'assets/img/avatars/loreleiNeutral_1.png';
+  static const String avatarsLoreleiNeutral2 = 'assets/img/avatars/loreleiNeutral_2.png';
+  static const String avatarsLoreleiNeutral3 = 'assets/img/avatars/loreleiNeutral_3.png';
+  static const String avatarsLoreleiNeutral4 = 'assets/img/avatars/loreleiNeutral_4.png';
+  static const String avatarsLoreleiNeutral5 = 'assets/img/avatars/loreleiNeutral_5.png';
+  static const String avatarsLoreleiNeutral6 = 'assets/img/avatars/loreleiNeutral_6.png';
+  static const String avatarsLoreleiNeutral7 = 'assets/img/avatars/loreleiNeutral_7.png';
+  static const String avatarsLoreleiNeutral8 = 'assets/img/avatars/loreleiNeutral_8.png';
+  static const String avatarsLoreleiNeutral9 = 'assets/img/avatars/loreleiNeutral_9.png';
   static const String imgAppLogo = 'assets/img/app_logo.png';
   static const String imgPiggybankRejectedDribbble = 'assets/img/piggybank_rejected_dribbble.webp';
   static const String imgUserWallet = 'assets/img/user_wallet.webp';

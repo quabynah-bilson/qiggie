@@ -13,12 +13,31 @@ service AuthService {
   rpc login(LoginRequest) returns (AuthResponse);
   rpc create_account(CreateAccountRequest) returns (AuthResponse);
   rpc reset_password(google.protobuf.StringValue) returns (google.protobuf.StringValue);
-  rpc send_otp(google.protobuf.StringValue) returns (google.protobuf.StringValue);
-  rpc verify_otp(google.protobuf.Int32Value) returns (google.protobuf.StringValue);
+  rpc send_auth_code(google.protobuf.StringValue) returns (AuthCodeResponse);
+  rpc verify_auth_code(VerifyAuthCode) returns (AuthCodeResponse);
   rpc update_password(google.protobuf.StringValue) returns (google.protobuf.StringValue);
+  rpc update_account(Account) returns (Account);
   rpc logout(google.protobuf.StringValue) returns (google.protobuf.Empty);
   rpc refresh_token(google.protobuf.StringValue) returns (Session);
   rpc verify_token(google.protobuf.StringValue) returns (google.protobuf.BoolValue);
+}
+
+enum PhoneVerificationStatus {
+  none = 0;
+  code_sent = 1;
+  verified = 2;
+  error = 3;
+}
+
+message VerifyAuthCode {
+  int32 code = 1;
+  string phone_number = 2;
+}
+
+message AuthCodeResponse {
+  PhoneVerificationStatus status = 1;
+  bool successful = 2;
+  string message = 3;
 }
 
 message AuthResponse {

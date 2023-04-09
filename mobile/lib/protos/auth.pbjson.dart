@@ -8,6 +8,42 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use phoneVerificationStatusDescriptor instead')
+const PhoneVerificationStatus$json = const {
+  '1': 'PhoneVerificationStatus',
+  '2': const [
+    const {'1': 'none', '2': 0},
+    const {'1': 'code_sent', '2': 1},
+    const {'1': 'verified', '2': 2},
+    const {'1': 'error', '2': 3},
+  ],
+};
+
+/// Descriptor for `PhoneVerificationStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List phoneVerificationStatusDescriptor = $convert.base64Decode('ChdQaG9uZVZlcmlmaWNhdGlvblN0YXR1cxIICgRub25lEAASDQoJY29kZV9zZW50EAESDAoIdmVyaWZpZWQQAhIJCgVlcnJvchAD');
+@$core.Deprecated('Use verifyAuthCodeDescriptor instead')
+const VerifyAuthCode$json = const {
+  '1': 'VerifyAuthCode',
+  '2': const [
+    const {'1': 'code', '3': 1, '4': 1, '5': 5, '10': 'code'},
+    const {'1': 'phone_number', '3': 2, '4': 1, '5': 9, '10': 'phoneNumber'},
+  ],
+};
+
+/// Descriptor for `VerifyAuthCode`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List verifyAuthCodeDescriptor = $convert.base64Decode('Cg5WZXJpZnlBdXRoQ29kZRISCgRjb2RlGAEgASgFUgRjb2RlEiEKDHBob25lX251bWJlchgCIAEoCVILcGhvbmVOdW1iZXI=');
+@$core.Deprecated('Use authCodeResponseDescriptor instead')
+const AuthCodeResponse$json = const {
+  '1': 'AuthCodeResponse',
+  '2': const [
+    const {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.auth.PhoneVerificationStatus', '10': 'status'},
+    const {'1': 'successful', '3': 2, '4': 1, '5': 8, '10': 'successful'},
+    const {'1': 'message', '3': 3, '4': 1, '5': 9, '10': 'message'},
+  ],
+};
+
+/// Descriptor for `AuthCodeResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List authCodeResponseDescriptor = $convert.base64Decode('ChBBdXRoQ29kZVJlc3BvbnNlEjUKBnN0YXR1cxgBIAEoDjIdLmF1dGguUGhvbmVWZXJpZmljYXRpb25TdGF0dXNSBnN0YXR1cxIeCgpzdWNjZXNzZnVsGAIgASgIUgpzdWNjZXNzZnVsEhgKB21lc3NhZ2UYAyABKAlSB21lc3NhZ2U=');
 @$core.Deprecated('Use authResponseDescriptor instead')
 const AuthResponse$json = const {
   '1': 'AuthResponse',

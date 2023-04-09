@@ -10,6 +10,16 @@ class AuthBloc extends Bloc<AuthEvent, BlocState> {
   final _repo = getIt<BaseAuthRepository>();
 
   AuthBloc() : super(BlocState.initialState()) {
+    on<UpdateAccountAuthEvent>((event, emit) async {
+      emit(BlocState.loadingState());
+
+      var either = await _repo.updateAccount(event.account);
+      either.fold(
+        (l) => emit(BlocState<Account>.successState(data: l)),
+        (r) => emit(BlocState<String>.errorState(failure: r)),
+      );
+    });
+
     on<LoginAuthEvent>((event, emit) async {
       emit(BlocState.loadingState());
       var either =
@@ -20,11 +30,20 @@ class AuthBloc extends Bloc<AuthEvent, BlocState> {
       );
     });
 
-    on<LogoutEvent>((event, emit) async {
+    on<LogoutAuthEvent>((event, emit) async {
       emit(BlocState.loadingState());
       var either = await _repo.logout();
       either.fold(
         (l) => emit(BlocState<String>.successState(data: l)),
+        (r) => emit(BlocState<String>.errorState(failure: r)),
+      );
+    });
+
+    on<GetAccountAuthEvent>((event, emit) async {
+      emit(BlocState.loadingState());
+      var either = await _repo.getCurrentAccount();
+      either.fold(
+        (l) => emit(BlocState<Account>.successState(data: l)),
         (r) => emit(BlocState<String>.errorState(failure: r)),
       );
     });
@@ -46,7 +65,7 @@ class AuthBloc extends Bloc<AuthEvent, BlocState> {
       emit(BlocState.loadingState());
       var either = await _repo.sendVerificationCode(event.phoneNumber);
       either.fold(
-        (l) => emit(BlocState<String>.successState(data: l)),
+        (l) => emit(BlocState<AuthCodeResponse>.successState(data: l)),
         (r) => emit(BlocState<String>.errorState(failure: r)),
       );
     });
@@ -56,7 +75,7 @@ class AuthBloc extends Bloc<AuthEvent, BlocState> {
       var either = await _repo.verifyCode(
           phoneNumber: event.phoneNumber, code: event.code);
       either.fold(
-        (l) => emit(BlocState<String>.successState(data: l)),
+        (l) => emit(BlocState<AuthCodeResponse>.successState(data: l)),
         (r) => emit(BlocState<String>.errorState(failure: r)),
       );
     });

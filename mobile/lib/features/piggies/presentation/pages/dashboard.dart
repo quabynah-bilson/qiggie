@@ -7,6 +7,7 @@ import 'package:mobile/core/routing/router.dart';
 import 'package:mobile/core/utils/constants.dart';
 import 'package:mobile/core/utils/extensions.dart';
 import 'package:mobile/features/piggies/presentation/manager/bank_bloc.dart';
+import 'package:mobile/features/shared/presentation/manager/customer/customer_bloc.dart';
 import 'package:mobile/generated/assets.dart';
 import 'package:mobile/protos/bank.pb.dart';
 import 'package:shared_utils/shared_utils.dart';
@@ -19,7 +20,7 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  late final _bankBloc = context.read<BankBloc>();
+  late final _bankBloc = context.read<BankBloc>(), _customerBloc = context.read<CustomerBloc>();
 
   @override
   void initState() {

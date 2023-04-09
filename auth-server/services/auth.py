@@ -138,14 +138,57 @@ class AuthServer(pb_grpc.AuthServiceServicer):
     def update_password(self, request, context):
         return None
 
-    def verify_otp(self, request, context):
-        return None
+    def verify_auth_code(self, request, context):
+        if request.code == 0 or request.code != 123456:
+            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
+            context.set_details('Invalid verification code')
+            return None
 
-    def send_otp(self, request, context):
-        return None
+        response = pb.AuthCodeResponse(
+            message='Phone number verified successfully',
+            status=pb.PhoneVerificationStatus.verified,
+            successful=True,
+        )
+        return response
+
+    def send_auth_code(self, request, context):
+        print(f"request for OTP verification -> {request.value}")
+
+        # clean input (remove all unnecessary characters)
+        phone_number = request.value.replace(' ', '')
+        phone_number = phone_number[1:len(phone_number)]
+        phone_number = '+233' + phone_number
+        print(f'formatted phone number -> {phone_number}')
+
+        # todo -> send OTP to device
+        response = pb.AuthCodeResponse(
+            message=f'A verification code has been sent to {phone_number}',
+            status=pb.PhoneVerificationStatus.code_sent,
+            successful=True,
+        )
+        return response
 
     def reset_password(self, request, context):
+        # todo -> implement this
         return None
 
     def verify_token(self, request, context):
+        # todo -> implement this
         return None
+
+    async def update_account(self, request, context):
+        auth_col = await db.get_auth_collection()
+        account_filter = {"username": request.username}
+        account_doc = auth_col.find_one(account_filter)
+        if account_doc is None:
+            context.set_code(grpc.StatusCode.NOT_FOUND)
+            context.set_details('There seems to be a problem with this account. Please sign in again to continue')
+            return None
+
+        # format payload
+        formatted_doc = json.loads(MessageToJson(request, preserving_proto_field_name=True))
+        updated_doc = auth_col.update_one(account_filter, {"$set": formatted_doc})
+        print(f'updating account -> {updated_doc}')
+
+        return request
+#

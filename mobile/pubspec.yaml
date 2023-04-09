@@ -43,6 +43,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/img/
+    - assets/img/avatars/
     - assets/anim/
 
 # flutter pub run flutter_launcher_icons

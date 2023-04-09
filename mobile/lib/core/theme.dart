@@ -5,6 +5,7 @@ extension ThemeBuilderX on BuildContext {
   ThemeData get useLightTheme => ThemeData(
       useMaterial3: true,
       scaffoldBackgroundColor: const Color(0xffF7F6F0),
+      disabledColor: const Color(0xffe0e0e0),
       colorScheme: useColorScheme(),
       platform: TargetPlatform.iOS,
       textTheme: _textTheme());

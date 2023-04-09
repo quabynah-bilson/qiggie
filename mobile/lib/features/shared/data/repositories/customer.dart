@@ -1,8 +1,12 @@
 import 'package:dartz/dartz.dart';
+import 'package:grpc/grpc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mobile/features/shared/domain/repositories/customer.dart';
 import 'package:mobile/protos/customer.pbgrpc.dart';
+import 'package:protobuf_google/protobuf_google.dart';
+import 'package:shared_utils/shared_utils.dart';
 
+// TODO -> implement methods
 @Injectable(as: BaseCustomerRepository)
 class QiggyCustomerRepository extends BaseCustomerRepository {
   final CustomerServiceClient _client;
@@ -10,9 +14,24 @@ class QiggyCustomerRepository extends BaseCustomerRepository {
   QiggyCustomerRepository(this._client);
 
   @override
-  Future<Either<String, String>> createCustomer() async {
-    // TODO: implement createCustomer
-    throw UnimplementedError();
+  Future<Either<String, String>> createCustomer({
+    required String displayName,
+    required String username,
+    required String phoneNumber,
+    String? avatar,
+  }) async {
+    try {
+      var request = Customer(
+          avatar: avatar,
+          displayName: displayName,
+          username: username,
+          phone: phoneNumber);
+      var response = await _client.create_customer(request);
+      return left(response.value);
+    } on GrpcError catch (e) {
+      logger.e(e);
+      return right(e.message ?? e.codeName);
+    }
   }
 
   @override
@@ -23,8 +42,13 @@ class QiggyCustomerRepository extends BaseCustomerRepository {
 
   @override
   Future<Either<Stream<Customer>, String>> getCurrentCustomer() async {
-    // TODO: implement getCurrentCustomer
-    throw UnimplementedError();
+    try {
+      var stream = _client.get_current_customer(Empty());
+      return left(stream);
+    } on GrpcError catch (e) {
+      logger.e(e);
+      return right(e.message ?? e.codeName);
+    }
   }
 
   @override

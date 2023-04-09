@@ -30,6 +30,7 @@ class QiggyAuthRepository extends BaseAuthRepository {
       );
       var authResponse = await client.create_account(request);
       await storage.saveSession(authResponse.session);
+      await storage.saveAccount(authResponse.account);
       return left(authResponse.account);
     } on GrpcError catch (e) {
       logger.e(e);
@@ -46,6 +47,7 @@ class QiggyAuthRepository extends BaseAuthRepository {
       var request = LoginRequest(password: password, username: username);
       var authResponse = await client.login(request);
       await storage.saveSession(authResponse.session);
+      await storage.saveAccount(authResponse.account);
       return left(authResponse.account);
     } on GrpcError catch (e) {
       logger.e(e);
@@ -58,8 +60,12 @@ class QiggyAuthRepository extends BaseAuthRepository {
     try {
       var either = await storage.getCurrentSession();
       var session = either.fold((l) => l, (r) => null);
-      if (session == null) throw GrpcError.unauthenticated();
+      if (session == null) {
+        throw GrpcError.unauthenticated(
+            'Your session has expired. Please sign in again');
+      }
       await client.logout(StringValue(value: session.sessionId));
+      await storage.clearSessionAndAccount();
       return left('Signed out successfully');
     } on GrpcError catch (e) {
       logger.e(e);
@@ -68,11 +74,12 @@ class QiggyAuthRepository extends BaseAuthRepository {
   }
 
   @override
-  Future<Either<String, String>> sendVerificationCode(
+  Future<Either<AuthCodeResponse, String>> sendVerificationCode(
       String phoneNumber) async {
     try {
-      var response = await client.send_otp(StringValue(value: phoneNumber));
-      return left(response.value);
+      var response =
+          await client.send_auth_code(StringValue(value: phoneNumber));
+      return left(response);
     } on GrpcError catch (e) {
       logger.e(e);
       return right(e.message ?? e.codeName);
@@ -92,13 +99,42 @@ class QiggyAuthRepository extends BaseAuthRepository {
   }
 
   @override
-  Future<Either<String, String>> verifyCode({
+  Future<Either<AuthCodeResponse, String>> verifyCode({
     required String phoneNumber,
     required int code,
   }) async {
     try {
-      var response = await client.verify_otp(Int32Value(value: code));
-      return left(response.value);
+      var response = await client.verify_auth_code(
+          VerifyAuthCode(code: code, phoneNumber: phoneNumber));
+      return left(response);
+    } on GrpcError catch (e) {
+      logger.e(e);
+      return right(e.message ?? e.codeName);
+    }
+  }
+
+  @override
+  Future<Either<Account, String>> getCurrentAccount() async {
+    try {
+      var either = await storage.getCurrentAccount();
+      var account = either.fold((l) => l, (r) => null);
+      if (account == null) {
+        throw GrpcError.unauthenticated(
+            'Your session has expired. Please sign in again');
+      }
+      return left(account);
+    } on GrpcError catch (e) {
+      logger.e(e);
+      return right(e.message ?? e.codeName);
+    }
+  }
+
+  @override
+  Future<Either<Account, String>> updateAccount(Account account) async {
+    try {
+      var updatableAccount = await client.update_account(account);
+      await storage.saveAccount(updatableAccount);
+      return left(updatableAccount);
     } on GrpcError catch (e) {
       logger.e(e);
       return right(e.message ?? e.codeName);

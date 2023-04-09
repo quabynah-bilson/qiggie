@@ -10,21 +10,18 @@ import 'package:shared_utils/shared_utils.dart';
 @Injectable(as: BaseLocalStorageRepository)
 class QiggyLocalStorageRepository extends BaseLocalStorageRepository {
   final FlutterSecureStorage storage;
-  final _kSessionKey = 'qiggy-session-key';
+  final _kSessionKey = 'qiggy-session-key', _kAccountKey = 'qiggy-account-key';
 
   QiggyLocalStorageRepository(this.storage);
 
   @override
   Future<Either<Session, String>> getCurrentSession() async {
-    logger.d('reading session from persistent storage');
     var sessionJson = await storage.read(key: _kSessionKey);
     if (sessionJson.isNullOrEmpty()) {
       return right('No session created');
     }
     var decodedSessionJson = json.decode(sessionJson!);
-    var session = Session.fromJson(decodedSessionJson);
-    logger.d('session from json -> $session');
-    return left(session);
+    return left(Session.getDefault()..mergeFromProto3Json(decodedSessionJson));
   }
 
   @override
@@ -35,9 +32,28 @@ class QiggyLocalStorageRepository extends BaseLocalStorageRepository {
   }
 
   @override
-  Future<void> clearSession() async {
-    if (await storage.containsKey(key: _kSessionKey)) {
+  Future<void> clearSessionAndAccount() async {
+    if (await storage.containsKey(key: _kSessionKey) &&
+        await storage.containsKey(key: _kAccountKey)) {
       await storage.delete(key: _kSessionKey);
+      await storage.delete(key: _kAccountKey);
     }
+  }
+
+  @override
+  Future<Either<Account, String>> getCurrentAccount() async {
+    var accountJson = await storage.read(key: _kAccountKey);
+    if (accountJson.isNullOrEmpty()) {
+      return right('No account found');
+    }
+    var decodedSessionJson = json.decode(accountJson!);
+    return left(Account.getDefault()..mergeFromProto3Json(decodedSessionJson));
+  }
+
+  @override
+  Future<void> saveAccount(Account account) async {
+    var encodedAccountJson = json.encode(account.toProto3Json());
+    logger.d('writing account to persistent storage -> $encodedAccountJson');
+    await storage.write(key: _kAccountKey, value: encodedAccountJson);
   }
 }

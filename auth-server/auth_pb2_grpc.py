@@ -31,20 +31,25 @@ class AuthServiceStub(object):
                 request_serializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
                 )
-        self.send_otp = channel.unary_unary(
-                '/auth.AuthService/send_otp',
+        self.send_auth_code = channel.unary_unary(
+                '/auth.AuthService/send_auth_code',
                 request_serializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
+                response_deserializer=auth__pb2.AuthCodeResponse.FromString,
                 )
-        self.verify_otp = channel.unary_unary(
-                '/auth.AuthService/verify_otp',
-                request_serializer=google_dot_protobuf_dot_wrappers__pb2.Int32Value.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
+        self.verify_auth_code = channel.unary_unary(
+                '/auth.AuthService/verify_auth_code',
+                request_serializer=auth__pb2.VerifyAuthCode.SerializeToString,
+                response_deserializer=auth__pb2.AuthCodeResponse.FromString,
                 )
         self.update_password = channel.unary_unary(
                 '/auth.AuthService/update_password',
                 request_serializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
+                )
+        self.update_account = channel.unary_unary(
+                '/auth.AuthService/update_account',
+                request_serializer=auth__pb2.Account.SerializeToString,
+                response_deserializer=auth__pb2.Account.FromString,
                 )
         self.logout = channel.unary_unary(
                 '/auth.AuthService/logout',
@@ -84,19 +89,25 @@ class AuthServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def send_otp(self, request, context):
+    def send_auth_code(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def verify_otp(self, request, context):
+    def verify_auth_code(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def update_password(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def update_account(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -138,20 +149,25 @@ def add_AuthServiceServicer_to_server(servicer, server):
                     request_deserializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
                     response_serializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
             ),
-            'send_otp': grpc.unary_unary_rpc_method_handler(
-                    servicer.send_otp,
+            'send_auth_code': grpc.unary_unary_rpc_method_handler(
+                    servicer.send_auth_code,
                     request_deserializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
-                    response_serializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
+                    response_serializer=auth__pb2.AuthCodeResponse.SerializeToString,
             ),
-            'verify_otp': grpc.unary_unary_rpc_method_handler(
-                    servicer.verify_otp,
-                    request_deserializer=google_dot_protobuf_dot_wrappers__pb2.Int32Value.FromString,
-                    response_serializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
+            'verify_auth_code': grpc.unary_unary_rpc_method_handler(
+                    servicer.verify_auth_code,
+                    request_deserializer=auth__pb2.VerifyAuthCode.FromString,
+                    response_serializer=auth__pb2.AuthCodeResponse.SerializeToString,
             ),
             'update_password': grpc.unary_unary_rpc_method_handler(
                     servicer.update_password,
                     request_deserializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
                     response_serializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
+            ),
+            'update_account': grpc.unary_unary_rpc_method_handler(
+                    servicer.update_account,
+                    request_deserializer=auth__pb2.Account.FromString,
+                    response_serializer=auth__pb2.Account.SerializeToString,
             ),
             'logout': grpc.unary_unary_rpc_method_handler(
                     servicer.logout,
@@ -230,7 +246,7 @@ class AuthService(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def send_otp(request,
+    def send_auth_code(request,
             target,
             options=(),
             channel_credentials=None,
@@ -240,14 +256,14 @@ class AuthService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/auth.AuthService/send_otp',
+        return grpc.experimental.unary_unary(request, target, '/auth.AuthService/send_auth_code',
             google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
-            google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
+            auth__pb2.AuthCodeResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def verify_otp(request,
+    def verify_auth_code(request,
             target,
             options=(),
             channel_credentials=None,
@@ -257,9 +273,9 @@ class AuthService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/auth.AuthService/verify_otp',
-            google_dot_protobuf_dot_wrappers__pb2.Int32Value.SerializeToString,
-            google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
+        return grpc.experimental.unary_unary(request, target, '/auth.AuthService/verify_auth_code',
+            auth__pb2.VerifyAuthCode.SerializeToString,
+            auth__pb2.AuthCodeResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -277,6 +293,23 @@ class AuthService(object):
         return grpc.experimental.unary_unary(request, target, '/auth.AuthService/update_password',
             google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
             google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def update_account(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/auth.AuthService/update_account',
+            auth__pb2.Account.SerializeToString,
+            auth__pb2.Account.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

@@ -2,7 +2,12 @@ import 'package:dartz/dartz.dart';
 import 'package:mobile/protos/customer.pb.dart';
 
 abstract class BaseCustomerRepository {
-  Future<Either<String, String>> createCustomer();
+  Future<Either<String, String>> createCustomer({
+    required String displayName,
+    required String username,
+    required String phoneNumber,
+    String? avatar,
+  });
 
   Future<Either<Customer, String>> getCustomer(String id);
 
