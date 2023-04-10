@@ -9,7 +9,7 @@ class LogGrpcInterceptor implements ClientInterceptor {
       CallOptions options,
       ClientStreamingInvoker<Q, R> invoker) {
     logger.d(
-        'grpc streaming method: ${method.path} => metadata: ${options.metadata}');
+        'grpc streaming method: ${method.path} => metadata: ${options.metadata} => payload : $requests');
     // do nothing for now
     return invoker(method, requests, options)
       ..map((data) {

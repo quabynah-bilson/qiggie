@@ -7,6 +7,13 @@ class Validators {
     return null;
   }
 
+  static String? validateAuthCode(String? input) {
+    input = input?.replaceAll(' ', '');
+    if (input.isNullOrEmpty()) return 'Required';
+    var regex = RegExp(r'^\d{6}$');
+    return regex.hasMatch(input!.trim()) ? null : 'Auth code too short';
+  }
+
   static String? validatePhone(String? input) {
     input = input?.replaceAll(' ', '');
     if (input.isNullOrEmpty()) return 'Required';

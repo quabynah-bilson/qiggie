@@ -91,8 +91,8 @@ class AuthBloc extends Bloc<AuthEvent, BlocState> {
       emit(BlocState.loadingState());
       var either = await _repo.sendVerificationCode(event.phoneNumber);
       either.fold(
-            (l) => emit(BlocState<AuthCodeResponse>.successState(data: l)),
-            (r) => emit(BlocState<String>.errorState(failure: r)),
+        (l) => emit(BlocState<AuthCodeResponse>.successState(data: l)),
+        (r) => emit(BlocState<String>.errorState(failure: r)),
       );
     });
 
@@ -101,8 +101,8 @@ class AuthBloc extends Bloc<AuthEvent, BlocState> {
       var either = await _repo.verifyCode(
           phoneNumber: event.phoneNumber, code: event.code);
       either.fold(
-            (l) => emit(BlocState<AuthCodeResponse>.successState(data: l)),
-            (r) => emit(BlocState<String>.errorState(failure: r)),
+        (l) => emit(BlocState<AuthCodeResponse>.successState(data: l)),
+        (r) => emit(BlocState<String>.errorState(failure: r)),
       );
     });
   }

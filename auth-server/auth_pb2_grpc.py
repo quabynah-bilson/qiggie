@@ -66,6 +66,11 @@ class AuthServiceStub(object):
                 request_serializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_wrappers__pb2.BoolValue.FromString,
                 )
+        self.verify_phone_number = channel.stream_stream(
+                '/auth.AuthService/verify_phone_number',
+                request_serializer=auth__pb2.AuthCodeRequest.SerializeToString,
+                response_deserializer=auth__pb2.AuthCodeResponse.FromString,
+                )
 
 
 class AuthServiceServicer(object):
@@ -131,6 +136,13 @@ class AuthServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def verify_phone_number(self, request_iterator, context):
+        """experimental rpc
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_AuthServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -183,6 +195,11 @@ def add_AuthServiceServicer_to_server(servicer, server):
                     servicer.verify_token,
                     request_deserializer=google_dot_protobuf_dot_wrappers__pb2.StringValue.FromString,
                     response_serializer=google_dot_protobuf_dot_wrappers__pb2.BoolValue.SerializeToString,
+            ),
+            'verify_phone_number': grpc.stream_stream_rpc_method_handler(
+                    servicer.verify_phone_number,
+                    request_deserializer=auth__pb2.AuthCodeRequest.FromString,
+                    response_serializer=auth__pb2.AuthCodeResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -361,5 +378,22 @@ class AuthService(object):
         return grpc.experimental.unary_unary(request, target, '/auth.AuthService/verify_token',
             google_dot_protobuf_dot_wrappers__pb2.StringValue.SerializeToString,
             google_dot_protobuf_dot_wrappers__pb2.BoolValue.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def verify_phone_number(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/auth.AuthService/verify_phone_number',
+            auth__pb2.AuthCodeRequest.SerializeToString,
+            auth__pb2.AuthCodeResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/android/src/test/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/example/android/app/src/androidTest/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mobile/ios/.symlinks/plugins/sqflite/example/android/app/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/customer-server/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/mobile/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/mobile/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/mobile/build" />
@@ -60,6 +61,7 @@
       <excludeFolder url="file://$MODULE_DIR$/mobile/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/mobile/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/mobile/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows/build" />
+      <excludeFolder url="file://$MODULE_DIR$/customer-server/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

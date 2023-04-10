@@ -1,51 +1,53 @@
-extern crate dotenv;
+use env_logger;
 
-use console::Style;
-use dotenv::dotenv;
-use tonic::transport::Server;
+use server::CustomerServiceImpl;
 
-use crate::customer::customer_service_server::CustomerServiceServer;
-use crate::services::customer::CustomerServiceImpl;
+use crate::proto::customer_service_server::{CustomerServiceServer};
 
-pub mod config;
-pub(crate) mod services;
+mod server;
 
-pub mod customer {
+mod proto {
     tonic::include_proto!("customer");
+
+    pub(crate) const FILE_DESCRIPTOR_SET: &[u8] =
+        tonic::include_file_descriptor_set!("customer_descriptor");
 }
 
-pub const CUSTOMER_DESCRIPTOR_SET: &[u8] = tonic::include_file_descriptor_set!("customer_descriptor");
-
-// reference -> https://github.com/hyperium/tonic/blob/master/examples/routeguide-tutorial.md
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    // This line loads the environment variables from the ".env" file.
-    dotenv().ok();
+    // enable logging
+    env_logger::init();
 
-    // setup connection address
-    let addr = "0.0.0.0:1149".parse().unwrap();
-    let blue = Style::new().blue();
-    println!(
-        "connecting to rust customer grpc server using {}",
-        blue.apply_to(addr)
-    );
+    // initialize dotenv
+    dotenv::dotenv().ok();
 
-    // initialize database configuration
-    let collection = config::db::create_database().await?;
+    // initialize mongo database
+    let mongo_url = std::env::var("DATABASE_URI").expect("MONGO_URL must be set");
+    let mongo_db = std::env::var("DATABASE_NAME").expect("MONGO_DB must be set");
+    let customer_collection_name = std::env::var("CUSTOMER_COLLECTION").expect("MONGO_DB must be set");
+    let mongo_client = mongodb::Client::with_uri_str(&mongo_url).await?;
+    let mongo_db = mongo_client.database(&mongo_db);
 
-    // register services
-    let customer_service = CustomerServiceImpl::new(&collection);
-    let customer_svc = CustomerServiceServer::new(customer_service);
+    // create customer collection based on Customer proto
+    let customer_collection = mongo_db.collection::<proto::Customer>(&customer_collection_name);
+
+    // create customer service
+    let customer_service = CustomerServiceImpl::new(customer_collection.clone());
 
     // reflection service
-    let server_reflection = tonic_reflection::server::Builder::configure()
-        .register_encoded_file_descriptor_set(CUSTOMER_DESCRIPTOR_SET)
-        .build()?;
+    let service = tonic_reflection::server::Builder::configure()
+        .register_encoded_file_descriptor_set(proto::FILE_DESCRIPTOR_SET)
+        .build()
+        .unwrap();
 
-    // start grpc server
-    Server::builder()
-        .add_service(customer_svc)
-        .add_service(server_reflection)
+    // bind to address
+    let addr = "[::1]:1149".parse().unwrap();
+
+    // build grpc server
+    println!("starting rust customer server on {}", addr);
+    tonic::transport::Server::builder()
+        .add_service(service)
+        .add_service(CustomerServiceServer::new(customer_service))
         .serve(addr)
         .await?;
 

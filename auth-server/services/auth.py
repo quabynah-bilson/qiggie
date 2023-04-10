@@ -191,4 +191,43 @@ class AuthServer(pb_grpc.AuthServiceServicer):
         print(f'updating account -> {updated_doc}')
 
         return request
-#
+
+    async def verify_phone_number(self, request_iterator, context):
+        try:
+            # Set a 5-second deadline for the RPC request
+            # timeout_seconds = 5
+            # deadline = await grpc.aio.timeout(timeout_seconds).deadline()
+            print(f'object received -> {request_iterator}')
+            if request_iterator is grpc.aio.EOF:
+                context.set_code(grpc.StatusCode.DEADLINE_EXCEEDED)
+                context.set_details('You have exceeded the maximum allowed time for verification. Please start afresh')
+                yield None
+            print(f'type of request {type(request_iterator)}')
+            # for request in request_iterator:
+            #     print(f"request for OTP verification -> {request.phone_number}")
+
+                # clean input (remove all unnecessary characters)
+                # phone_number = request.phone_number.replace(' ', '')
+                # phone_number = phone_number[1:len(phone_number)]
+                # phone_number = '+233' + phone_number
+                # print(f'formatted phone number -> {phone_number}')
+
+                # todo -> implement OTP service
+
+                # send response
+                # yield pb.AuthCodeResponse(
+                #     successful=True,
+                #     status=pb.PhoneVerificationStatus.code_sent,
+                #     message='A verification code has been sent to '
+                # )
+
+            yield pb.AuthCodeResponse(
+                successful=True,
+                status=pb.PhoneVerificationStatus.code_sent,
+                message=f'A verification code has been sent to {request_iterator}'
+            )
+
+        except grpc.RpcError or TypeError:
+            context.set_code(grpc.StatusCode.DEADLINE_EXCEEDED)
+            context.set_details('You have exceeded the maximum allowed time for verification. Please start afresh')
+            yield None

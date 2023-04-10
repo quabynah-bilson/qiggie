@@ -13,7 +13,7 @@ service CustomerService {
   rpc get_customer_by_username(google.protobuf.StringValue) returns (Customer);
   rpc update_customer(Customer) returns (google.protobuf.Empty);
   rpc delete_customer(google.protobuf.StringValue) returns (google.protobuf.Empty);
-  rpc get_current_customer(google.protobuf.Empty) returns (stream Customer);
+  rpc GetCurrentCustomer(google.protobuf.Empty) returns (stream Customer);
 }
 
 message Customer {

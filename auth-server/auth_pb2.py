@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n\025io.qcodelabsllc.qiggyB\020QiggyAuthServiceP\001Z com.github/qcodelabsllc/qiggy;ms',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\nauth.proto\x12\x04\x61uth\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1bgoogle/protobuf/empty.proto\"4\n\x0eVerifyAuthCode\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x14\n\x0cphone_number\x18\x02 \x01(\t\"f\n\x10\x41uthCodeResponse\x12-\n\x06status\x18\x01 \x01(\x0e\x32\x1d.auth.PhoneVerificationStatus\x12\x12\n\nsuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"N\n\x0c\x41uthResponse\x12\x1e\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\r.auth.Account\x12\x1e\n\x07session\x18\x02 \x01(\x0b\x32\r.auth.Session\"2\n\x0cLoginRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"f\n\x14\x43reateAccountRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x03 \x01(\t\x12\x14\n\x0cphone_number\x18\x04 \x01(\t\"Y\n\x07\x41\x63\x63ount\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x03 \x01(\t\x12\x14\n\x0cphone_number\x18\x04 \x01(\t\"\xf1\x01\n\x07Session\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\x12\x37\n\x13\x61\x63\x63\x65ss_token_expiry\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x38\n\x14refresh_token_expiry\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\nsession_id\x18\x05 \x01(\t\x12\x32\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x02(\x01*K\n\x17PhoneVerificationStatus\x12\x08\n\x04none\x10\x00\x12\r\n\tcode_sent\x10\x01\x12\x0c\n\x08verified\x10\x02\x12\t\n\x05\x65rror\x10\x03\x32\x9f\x05\n\x0b\x41uthService\x12/\n\x05login\x12\x12.auth.LoginRequest\x1a\x12.auth.AuthResponse\x12@\n\x0e\x63reate_account\x12\x1a.auth.CreateAccountRequest\x1a\x12.auth.AuthResponse\x12L\n\x0ereset_password\x12\x1c.google.protobuf.StringValue\x1a\x1c.google.protobuf.StringValue\x12\x46\n\x0esend_auth_code\x12\x1c.google.protobuf.StringValue\x1a\x16.auth.AuthCodeResponse\x12@\n\x10verify_auth_code\x12\x14.auth.VerifyAuthCode\x1a\x16.auth.AuthCodeResponse\x12M\n\x0fupdate_password\x12\x1c.google.protobuf.StringValue\x1a\x1c.google.protobuf.StringValue\x12.\n\x0eupdate_account\x12\r.auth.Account\x1a\r.auth.Account\x12>\n\x06logout\x12\x1c.google.protobuf.StringValue\x1a\x16.google.protobuf.Empty\x12<\n\rrefresh_token\x12\x1c.google.protobuf.StringValue\x1a\r.auth.Session\x12H\n\x0cverify_token\x12\x1c.google.protobuf.StringValue\x1a\x1a.google.protobuf.BoolValueBM\n\x15io.qcodelabsllc.qiggyB\x10QiggyAuthServiceP\x01Z com.github/qcodelabsllc/qiggy;msb\x06proto3'
+  serialized_pb=b'\n\nauth.proto\x12\x04\x61uth\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1bgoogle/protobuf/empty.proto\"4\n\x0eVerifyAuthCode\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x14\n\x0cphone_number\x18\x02 \x01(\t\"5\n\x0f\x41uthCodeRequest\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x14\n\x0cphone_number\x18\x02 \x01(\t\"f\n\x10\x41uthCodeResponse\x12-\n\x06status\x18\x01 \x01(\x0e\x32\x1d.auth.PhoneVerificationStatus\x12\x12\n\nsuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"N\n\x0c\x41uthResponse\x12\x1e\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\r.auth.Account\x12\x1e\n\x07session\x18\x02 \x01(\x0b\x32\r.auth.Session\"2\n\x0cLoginRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"f\n\x14\x43reateAccountRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x03 \x01(\t\x12\x14\n\x0cphone_number\x18\x04 \x01(\t\"Y\n\x07\x41\x63\x63ount\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x03 \x01(\t\x12\x14\n\x0cphone_number\x18\x04 \x01(\t\"\xf1\x01\n\x07Session\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\x12\x37\n\x13\x61\x63\x63\x65ss_token_expiry\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x38\n\x14refresh_token_expiry\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\nsession_id\x18\x05 \x01(\t\x12\x32\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x02(\x01*K\n\x17PhoneVerificationStatus\x12\x08\n\x04none\x10\x00\x12\r\n\tcode_sent\x10\x01\x12\x0c\n\x08verified\x10\x02\x12\t\n\x05\x65rror\x10\x03\x32\xe9\x05\n\x0b\x41uthService\x12/\n\x05login\x12\x12.auth.LoginRequest\x1a\x12.auth.AuthResponse\x12@\n\x0e\x63reate_account\x12\x1a.auth.CreateAccountRequest\x1a\x12.auth.AuthResponse\x12L\n\x0ereset_password\x12\x1c.google.protobuf.StringValue\x1a\x1c.google.protobuf.StringValue\x12\x46\n\x0esend_auth_code\x12\x1c.google.protobuf.StringValue\x1a\x16.auth.AuthCodeResponse\x12@\n\x10verify_auth_code\x12\x14.auth.VerifyAuthCode\x1a\x16.auth.AuthCodeResponse\x12M\n\x0fupdate_password\x12\x1c.google.protobuf.StringValue\x1a\x1c.google.protobuf.StringValue\x12.\n\x0eupdate_account\x12\r.auth.Account\x1a\r.auth.Account\x12>\n\x06logout\x12\x1c.google.protobuf.StringValue\x1a\x16.google.protobuf.Empty\x12<\n\rrefresh_token\x12\x1c.google.protobuf.StringValue\x1a\r.auth.Session\x12H\n\x0cverify_token\x12\x1c.google.protobuf.StringValue\x1a\x1a.google.protobuf.BoolValue\x12H\n\x13verify_phone_number\x12\x15.auth.AuthCodeRequest\x1a\x16.auth.AuthCodeResponse(\x01\x30\x01\x42M\n\x15io.qcodelabsllc.qiggyB\x10QiggyAuthServiceP\x01Z com.github/qcodelabsllc/qiggy;msb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -57,8 +57,8 @@ _PHONEVERIFICATIONSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=843,
-  serialized_end=918,
+  serialized_start=898,
+  serialized_end=973,
 )
 _sym_db.RegisterEnumDescriptor(_PHONEVERIFICATIONSTATUS)
 
@@ -109,6 +109,45 @@ _VERIFYAUTHCODE = _descriptor.Descriptor(
 )
 
 
+_AUTHCODEREQUEST = _descriptor.Descriptor(
+  name='AuthCodeRequest',
+  full_name='auth.AuthCodeRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='code', full_name='auth.AuthCodeRequest.code', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='phone_number', full_name='auth.AuthCodeRequest.phone_number', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=168,
+  serialized_end=221,
+)
+
+
 _AUTHCODERESPONSE = _descriptor.Descriptor(
   name='AuthCodeResponse',
   full_name='auth.AuthCodeResponse',
@@ -150,8 +189,8 @@ _AUTHCODERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=168,
-  serialized_end=270,
+  serialized_start=223,
+  serialized_end=325,
 )
 
 
@@ -189,8 +228,8 @@ _AUTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=272,
-  serialized_end=350,
+  serialized_start=327,
+  serialized_end=405,
 )
 
 
@@ -228,8 +267,8 @@ _LOGINREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=352,
-  serialized_end=402,
+  serialized_start=407,
+  serialized_end=457,
 )
 
 
@@ -281,8 +320,8 @@ _CREATEACCOUNTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=404,
-  serialized_end=506,
+  serialized_start=459,
+  serialized_end=561,
 )
 
 
@@ -334,8 +373,8 @@ _ACCOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=508,
-  serialized_end=597,
+  serialized_start=563,
+  serialized_end=652,
 )
 
 
@@ -401,8 +440,8 @@ _SESSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=600,
-  serialized_end=841,
+  serialized_start=655,
+  serialized_end=896,
 )
 
 _AUTHCODERESPONSE.fields_by_name['status'].enum_type = _PHONEVERIFICATIONSTATUS
@@ -412,6 +451,7 @@ _SESSION.fields_by_name['access_token_expiry'].message_type = google_dot_protobu
 _SESSION.fields_by_name['refresh_token_expiry'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _SESSION.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 DESCRIPTOR.message_types_by_name['VerifyAuthCode'] = _VERIFYAUTHCODE
+DESCRIPTOR.message_types_by_name['AuthCodeRequest'] = _AUTHCODEREQUEST
 DESCRIPTOR.message_types_by_name['AuthCodeResponse'] = _AUTHCODERESPONSE
 DESCRIPTOR.message_types_by_name['AuthResponse'] = _AUTHRESPONSE
 DESCRIPTOR.message_types_by_name['LoginRequest'] = _LOGINREQUEST
@@ -427,6 +467,13 @@ VerifyAuthCode = _reflection.GeneratedProtocolMessageType('VerifyAuthCode', (_me
   # @@protoc_insertion_point(class_scope:auth.VerifyAuthCode)
   })
 _sym_db.RegisterMessage(VerifyAuthCode)
+
+AuthCodeRequest = _reflection.GeneratedProtocolMessageType('AuthCodeRequest', (_message.Message,), {
+  'DESCRIPTOR' : _AUTHCODEREQUEST,
+  '__module__' : 'auth_pb2'
+  # @@protoc_insertion_point(class_scope:auth.AuthCodeRequest)
+  })
+_sym_db.RegisterMessage(AuthCodeRequest)
 
 AuthCodeResponse = _reflection.GeneratedProtocolMessageType('AuthCodeResponse', (_message.Message,), {
   'DESCRIPTOR' : _AUTHCODERESPONSE,
@@ -481,8 +528,8 @@ _AUTHSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=921,
-  serialized_end=1592,
+  serialized_start=976,
+  serialized_end=1721,
   methods=[
   _descriptor.MethodDescriptor(
     name='login',
@@ -581,6 +628,16 @@ _AUTHSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE,
     output_type=google_dot_protobuf_dot_wrappers__pb2._BOOLVALUE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='verify_phone_number',
+    full_name='auth.AuthService.verify_phone_number',
+    index=10,
+    containing_service=None,
+    input_type=_AUTHCODEREQUEST,
+    output_type=_AUTHCODERESPONSE,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),
