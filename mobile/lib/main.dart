@@ -11,6 +11,12 @@ void main() async {
 
   await configureDependencies();
 
+  /// log crashes
+  FlutterError.onError = (FlutterErrorDetails details) {
+    logger.e(details.exceptionAsString());
+    logger.e(details.stack);
+  };
+
   runZonedGuarded(() => runApp(const PiggyBankApp()), (error, stack) {
     logger.e(error);
     logger.e(stack);

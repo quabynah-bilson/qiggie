@@ -7,36 +7,22 @@
     <cargoProject FILE="$PROJECT_DIR$/customer-server/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="Added sample authentication UI for new customers">
-      <change afterPath="$PROJECT_DIR$/.idea/protoeditor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-server/proto/customer.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-server/proto/googleapis/google/api/annotations.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-server/proto/googleapis/google/api/client.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-server/proto/googleapis/google/api/field_behavior.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-server/proto/googleapis/google/api/http.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-server/proto/googleapis/google/api/resource.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-server/proto/googleapis/google/pubsub/schema.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-server/proto/googleapis/google/pubsub/v1/pubsub.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-server/src/server.rs" afterDir="false" />
+    <list default="true" id="781cb91c-1e5e-4150-87be-7c893777ca85" name="Changes" comment="Recreated rust server.rs">
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-server/proto/googleapis" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/piggybank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/piggybank.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server/auth_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server/auth_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server/auth_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server/auth_pb2_grpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server/services/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server/services/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-server/config/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bank-server/config/db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-server/build.rs" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/build.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/protos/customer.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/config/db.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/config/mod.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/customer.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/customer-server/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/services/customer.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-server/src/services/mod.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/network/log.interceptor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/network/log.interceptor.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/core/utils/validator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/core/utils/validator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/onboarding/presentation/pages/phone.verification.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/onboarding/presentation/pages/phone.verification.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/auth/auth_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/auth/auth_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen-dart-protos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gen-dart-protos.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/features/shared/presentation/pages/welcome.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,10 +89,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="verify-phone-auth-code" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="be87c64e-623f-48b4-a288-ec2dfed43c24" />
@@ -128,43 +115,43 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "verify-phone-auth-code",
-    "go.import.settings.migrated": "true",
-    "io.flutter.reload.alreadyRun": "true",
-    "jdk.selected.JAVA_MODULE": "Android Studio default JDK",
-    "last_opened_file_path": "/Users/quabynah/src/projects/personal-studies/piggybank/customer-server/proto",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.13901947",
-    "project.structure.side.proportion": "0.28750002",
-    "ruby.rails.projectView.checked": "true",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "google.protobuf.language",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/crashlytics&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;Android Studio default JDK&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/quabynah/src/projects/personal-studies/piggybank/customer-server/proto&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.13901947&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.28750002&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;google.protobuf.language&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -177,11 +164,11 @@
       <recent name="$PROJECT_DIR$/bank-server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/customer-server/proto" />
       <recent name="$PROJECT_DIR$/mobile/lib/features/shared/presentation/manager/auth" />
       <recent name="$PROJECT_DIR$/savings-server" />
       <recent name="$PROJECT_DIR$/savings-server/server" />
       <recent name="$PROJECT_DIR$/savings-server/server/src/main/kotlin/io/qcodelabsllc/piggybank" />
-      <recent name="$PROJECT_DIR$/savings-server/protos/src/main/proto/io/qcodelabsllc/piggybank" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="io.qcodelabsllc.piggybank" />
@@ -319,7 +306,15 @@
       <workItem from="1680884927452" duration="37521000" />
       <workItem from="1680960797607" duration="90000" />
       <workItem from="1680960896245" duration="72694000" />
-      <workItem from="1681105878273" duration="6176000" />
+      <workItem from="1681105878273" duration="7893000" />
+      <workItem from="1681145764101" duration="10608000" />
+      <workItem from="1681231658212" duration="2368000" />
+      <workItem from="1681234801997" duration="13000" />
+      <workItem from="1681237703213" duration="18000" />
+      <workItem from="1681248026891" duration="1599000" />
+      <workItem from="1681524734483" duration="2174000" />
+      <workItem from="1681605618393" duration="1897000" />
+      <workItem from="1681640662800" duration="216000" />
     </task>
     <task id="LOCAL-00001" summary="rust works">
       <created>1680788053657</created>
@@ -419,11 +414,29 @@
       <option name="project" value="LOCAL" />
       <updated>1681058614606</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Recreated rust server.rs">
+      <created>1681119185241</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681119185241</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rust works" />
@@ -435,7 +448,8 @@
     <MESSAGE value="Updated protos" />
     <MESSAGE value="Added auth implementation" />
     <MESSAGE value="Added sample authentication UI for new customers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sample authentication UI for new customers" />
+    <MESSAGE value="Recreated rust server.rs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recreated rust server.rs" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

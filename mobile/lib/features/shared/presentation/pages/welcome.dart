@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
@@ -13,7 +12,6 @@ import 'package:mobile/protos/customer.pb.dart';
 import 'package:shared_utils/shared_utils.dart';
 
 /// welcome page for all users
-@RoutePage()
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
 
@@ -47,16 +45,6 @@ class _WelcomePageState extends State<WelcomePage>
         body: ResponsiveLayout(
           mobile: Stack(
             children: [
-              Positioned(
-                top: 12,
-                left: 16,
-                child: RotatedBox(
-                  quarterTurns: 1,
-                  child:
-                      kAppNameLong.overline(context, emphasis: kEmphasisMedium),
-                ),
-              ),
-
               /// main content
               Positioned.fill(
                 child: Column(
@@ -158,6 +146,17 @@ class _WelcomePageState extends State<WelcomePage>
                       ),
                     },
                   ],
+                ),
+              ),
+
+              /// developer info
+              Positioned(
+                top: 12,
+                left: 16,
+                child: RotatedBox(
+                  quarterTurns: 1,
+                  child:
+                  kAppNameLong.overline(context, emphasis: kEmphasisMedium),
                 ),
               ),
             ],

@@ -1,0 +1,6 @@
+[submodule "customer-server/googleapis"]
+	path = customer-server/googleapis
+	url = https://github.com/googleapis/googleapis
+[submodule "customer-server/proto/googleapis"]
+	path = customer-server/proto/googleapis
+	url = https://github.com/googleapis/googleapis

@@ -9,11 +9,6 @@ import (
 	"time"
 )
 
-const (
-	databaseName = "piggy_bank_test"
-	//databaseUri    = "mongodb+srv://qcodelabs-admin:<password>@devcluster.g9vgz1i.mongodb.net/?retryWrites=true&w=majority"
-)
-
 var BankCol *mongo.Collection
 
 func InitDatabaseConnection() {

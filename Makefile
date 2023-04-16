@@ -25,8 +25,13 @@ gen-auth-private-key:
 gen-mobile-avatars:
 	cd mobile/assets/img && \
 	mkdir -p avatars && cd avatars && \
-	dicebear loreleiNeutral . --format png --count 10
+	dicebear lorelei . --format png --count 10 --width 200 --height 200 --background "#ffffff" --radius 50 --margin 10 --outDir .
 
 format-avatar-names:
 	cd mobile/assets/img/avatars && ls -la && \
 	for file in *; do mv "$file" "$(echo "$file" | sed 's/-/_/g')"; done
+
+add-googleapis-to-protos:
+	cd customer-server/proto && \
+	git submodule add https://github.com/googleapis/googleapis && \
+	git submodule update --remote
