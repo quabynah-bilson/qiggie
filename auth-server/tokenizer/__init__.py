@@ -6,7 +6,7 @@ import jwt
 _key = b"qiggy@2023-qcodelabsllc"
 
 
-# create a paseto token that expires in 5 minutes (300 seconds)
+# create a JWT that expires in 5 minutes (300 seconds)
 def generate_token(username: str, uid: str, hours_old: int) -> str or None:
     try:
         now = datetime.datetime.utcnow()
